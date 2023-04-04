@@ -1,14 +1,13 @@
 # Milestone 1
 
 By the Group _In Viz Veritas_:
-Hannah Casey, Zoé Jeandupeux, Erik A. Wengle (297099)
+Hannah Casey (300981), Zoé Jeandupeux, Erik A. Wengle (297099)
 
 ## Dataset
 
-TODO: hannah can you further specify the source of these books? Of course I can no problem at all :)
-The dataset we're working on is a collection of rare travel guides form the rare books collection of the Bibliotheca Hertziana in Rome. The collection contains around 800 documents in several languages from the years 1550 up until 1930. They are sparsely illustrated and contain a lot of recognizable place names. Of the 800 so far only around 90 have been digitzed and also transcribed, meaning that we can access the metadata and the text of these documents.
+The dataset we're working on is a collection of old travel guides for Italy from the rare books collection of the Bibliotheca Hertziana in Rome (https://www.biblhertz.it/it/home). The founder of the Bibliotheca Hertziana, Henriette Hertz, collected guide books for Rome and Italy already more than 100 years ago. Since then the collection has grown substantially and contains around 800 documents in several languages from the years 1550 up until 1930. They are sparsely illustrated and contain a lot of recognizable place names. All of them have been recently digitized, but only around 80 have also been transcribed using Transkribus (https://readcoop.eu/transkribus/?sc=Transkribus), meaning that we can access the metadata as well as the text of these documents.
 
-We scraped a total of 78 distinct books from various years, written in different languages. While the quality of the book transcriptions is sufficiently high, our dataset will require a large amount of pre-processing in order to extract data of interest (e.g. visited locations, overall perception of the visited places). The fact that these books were written in different languages, some of them being extinct such as old italian or old german, further complexifies the task. Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
+We scraped a total of 78 distinct books from various years using the Transkribus API. While the quality of the book transcriptions is sufficiently high, our dataset will require a large amount of pre-processing in order to extract data of interest (e.g. visited locations, overall perception of the visited places). The fact that these books were written in different languages, some of them being extinct such as old italian or old german, further complexifies the task. Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
 
 ## Problematic
 
@@ -48,4 +47,5 @@ After a brief exploratory data analysis, we found the following:
 
 ## Related Work
 
-TODO: Who wants to do this? Not me (I think Hannah could ask to the max planck institute)
+As far as the current director of the library of the Bibliotheca Hertziana knows, there has been no work done yet on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the collection of early modern guide books for Rome and Italy and published his work in the 19030s. 
+As of yet here has been no work done yet to visualize the text and appearance of placenames and associated sentiment, which makes the task even more intriguing. 
