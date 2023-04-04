@@ -5,11 +5,18 @@ Hannah Casey (300981), Zoé Jeandupeux, Erik A. Wengle (297099)
 
 ## Dataset - Travel Guides from 1550 to 1930
 
-The dataset we are working on is a collection of old travel guides for Italy from the rare books collection of the Bibliotheca Hertziana in Rome (https://www.biblhertz.it/it/home). The founder of the Bibliotheca Hertziana, Henriette Hertz, collected guide books for Rome and Italy already more than 100 years ago. Since then the collection has grown substantially and contains around 800 documents in several languages from the years 1550 up until 1930. They are sparsely illustrated and contain a lot of recognizable place names. All of them have been recently digitized, but only around 80 have also been transcribed using Transkribus (https://readcoop.eu/transkribus/?sc=Transkribus), meaning that we can access the metadata as well as the text of these documents.
+The dataset we are working on is a collection of old travel guides for Italy from the rare books collection of the Bibliotheca Hertziana in Rome (https://www.biblhertz.it/it/home). 
+The collection contains around 800 documents in several languages from the years 1550 up until 1930. 
+They are sparsely illustrated and contain a lot of recognizable place names. 
+All of them have been recently digitized, but only around 80 have also been transcribed using Transkribus (https://readcoop.eu/transkribus/?sc=Transkribus). Tranksribus is a AI suuported platforms for text recognition and transcriptions. 
 
-We scraped a total of 78 distinct books from various years using the Transkribus API. While the quality of the book transcriptions is sufficiently high, our dataset will require a large amount of preprocessing in order to extract data of interest. The fact that these books were written in different languages, some of them being extinct such as old italian or old german, further complexifies the task. Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group of experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
+The textual data we scraped from Transkribus and the metadata obtained from the Bibliotheca Hertziana, gives us access to data that can be of interest for a vizualisation. We have access to metadata like title and author, year and place of publication, language of the text, and several other columns that might be of lesser interest, such as format of the document. Since the texts are in several languages, one of the potential challenges is how to use NLP techniques on the text to extract for example place names and sentiment. 
 
-The data we thus scraped from Transkribus and the metadata obtained from the Bibliotheca Hertziana, gives us access to different kinds of data that can be of interest for a vizualisation. We have access to metadata like title and author, year and place of publication, language of the text, and several other columns that might be of lesser interest, such as format of the document. Since the texts are in several languages, one of the potential challenges is how to use NLP techniques on the text to extract for example place names and sentiment. 
+While the quality of the book transcriptions is sufficiently high, our dataset will require a large amount of preprocessing in order to extract data of interest.
+The fact that these books were written in different languages, some of them being extinct such as old italian or old german, further complexifies the task. 
+
+Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group of experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
+
 
 ## Problematic
 
