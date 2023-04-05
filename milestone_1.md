@@ -88,12 +88,14 @@ The books have been written between 1550 and 1911. We have more books in the per
 
 ## Related Work
 
-As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far.
+As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. 
 
 (HANNAH REF TO HIS WORK?, WHAT HAVE THEY DONE WITH THEIR DATA? THEY DID NOTHING WITH DATA PER SE. IT'S AN ART HISTORICAL WORK MEANING QUALITATIVE AND NOT QUANTITATIVE RESEARCH :) IF YOU WANT TO READ THE 200 PAGE BOOK PLEASE GO AHEAD) 
 
 Other attempts to visualize datasets from the Digital Humanities referencing to literary texts include the following: 
 - [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Mapping of published books from the Brown library
 - [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Specifically the trade routes are a nice reference, in case we want to vizualise the travel routes
+- [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizig networks in text. Can be interesting if we want to analyze co-occurrence of placenames
+Some of these visualizations are older and serve as inspiration. 
 
-Some of these visualizations are older and serve more as inspiration. 
+A visualization of great importance that is also related to travel is of course the [Minard map](https://bigthink.com/strange-maps/229-vital-statistics-of-a-deadly-campaign-the-minard-map/), which can to serve as historical inspiration. 
