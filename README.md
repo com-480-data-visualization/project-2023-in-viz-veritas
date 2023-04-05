@@ -4,13 +4,13 @@
 | -------------- | ------ |
 | Erik A. Wengle| 297099|
 | Hannah Casey| 300981 |
-| Zoé Jeandupeux| |
+| Zoé Jeandupeux| 301373 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
 ## Milestone 1 (7th April, 5pm)
 
-## Dataset - Travel Guides from 1550 to 1930
+### Dataset - Travel Guides from 1550 to 1930
 
 The dataset we are working on is a collection of old travel guides for Italy from the rare books collection of the [Bibliotheca Hertziana](https://www.biblhertz.it/it/home) in Rome . 
 The collection contains around 800 documents in several languages from the years 1550 up until 1930. 
@@ -25,7 +25,7 @@ The fact that these books were written in different languages, some of them bein
 Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group of experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
 
 
-## Problematic
+#### Problematic
 
 The main axis we would like to develop is the overall travel routes taken through Italy over time, as well as the writer's perception of the visited locations in terms of valence and arousal. We would like to detect and emphasize common denominators which stay constant over time (and languages), and which factors may have changed, ideally even illustrating why these changes may have occured.
 
@@ -35,12 +35,12 @@ While this component is more on the playful side, we intend to also show deeper 
 
 Our main motivation for this is combining the current definition of travel guides with the perception of various travellers from different locations thoughout various time periods.
 
-## Exploratory Data Analysis
+#### Exploratory Data Analysis
 
-> For detailed computations and analysis regarding the EDA, see `expl_data_analysis.iypnb`
+> For detailed computations and analysis regarding the EDA, see [expl_data_analysis.iypnb](expl_data_analysis.iypnb)
 
 
-### Basic Book statistics
+##### Basic Book statistics
 
 
 
@@ -68,7 +68,7 @@ Our main motivation for this is combining the current definition of travel guide
     | Unknown     | 1     |
 
 
-### Analysis of Book metadata
+#### Analysis of Book metadata
 
 
 The language field provided by Transkribus seemed to be erroneous in most cases, which is why we checked the language of each transcribed book manually and corrected the corresponding fields.
@@ -90,7 +90,7 @@ The location of the guidebooks coincide well with the language in which they wer
 
 The books have been written between 1550 and 1911. We have more books in the period between 1750 and 1870 and it is only from this period that the transcribed books are in English. There are mainly French authors around 1700-1710. The German books, though fewer than the English ones, were also written around 1800-1870. 
 
-### Proof of concept location extraction
+#### Proof of concept location extraction
 
 > For detailed location extraction see [LocationTagger.ipynb](LocationTagger.ipynb)
 
@@ -103,7 +103,7 @@ The spacy module can be tuned more easily to our specific case (namely cities in
 ![city_counts](./plots/Rome_Florence_counts_ex.png)
 
 
-## Related Work
+### Related Work
 
 As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. 
 
