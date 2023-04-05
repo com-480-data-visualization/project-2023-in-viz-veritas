@@ -88,7 +88,9 @@ The books have been written between 1550 and 1911. We have more books in the per
 
 ## Related Work
 
-As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. 
+As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. 
+
+There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
 
 (HANNAH REF TO HIS WORK?, WHAT HAVE THEY DONE WITH THEIR DATA? THEY DID NOTHING WITH DATA PER SE. IT'S AN ART HISTORICAL WORK MEANING QUALITATIVE AND NOT QUANTITATIVE RESEARCH :) IF YOU WANT TO READ THE 200 PAGE BOOK PLEASE GO AHEAD) 
 
