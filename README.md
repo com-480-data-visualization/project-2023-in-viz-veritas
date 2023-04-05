@@ -112,10 +112,10 @@ There has been no attempt so far to do quantitative analysis and data visualizat
 Other attempts to visualize datasets from the Digital Humanities referencing to literary texts include the following: 
 - [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Mapping of published books from the Brown library
 - [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Specifically the trade routes are a nice reference, in case we want to vizualise the travel routes
-- [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizig networks in text. Can be interesting if we want to analyze co-occurrence of placenames
-Some of these visualizations are older and serve as inspiration. 
+- [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizig networks in text. This may be of interest to us if we want to analyze co-occurrence of placenames
+Some of these visualizations are older and serve solely as inspiration. 
 
-A visualization of great importance that is also related to travel is of course the [Minard map](https://bigthink.com/strange-maps/229-vital-statistics-of-a-deadly-campaign-the-minard-map/), which can to serve as historical inspiration. 
+The [Minard map](https://bigthink.com/strange-maps/229-vital-statistics-of-a-deadly-campaign-the-minard-map/) is a travel-related visualization of great importance, which may also serve as historical inspiration. 
  
 
 
