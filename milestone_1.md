@@ -85,6 +85,8 @@ The books have been written between 1550 and 1911. We have more books in the per
 
 ### Proof of concept location extraction
 
+> For detailed location extraction see `LocationTagger.iypnb`
+
 In order to show that the extraction of location works on the texts in the dataset, we did preliminary testing on english texts by one author. Two Named Entity Recognition modules were used, namely [locationtagger](https://pypi.org/project/locationtagger/) and [spacy entity recognizer](https://spacy.io/api/entityrecognizer). 
 
 The spacy module can be tuned more easily to our specific case (namely cities in Italy) and performs better than the locationtagger. We counted the occurence of place names and additionally mapped the occurrence of Rome and Florence per page number. This can be potentially used as a timeline of travel. 
