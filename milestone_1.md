@@ -88,8 +88,12 @@ The books have been written between 1550 and 1911. We have more books in the per
 
 ## Related Work
 
-As far as the current director of the library of the Bibliotheca Hertziana knows, there has been no work done yet on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the collection of early modern guide books for Rome and Italy and published his work in the 1930s. (HANNAH REF TO HIS WORK?, WHAT HAVE THEY DONE WITH THEIR DATA?)
-As of yet here has been no work done yet to visualize the text and appearance of placenames and associated sentiment, which makes the task even more intriguing. 
+As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far.
 
+(HANNAH REF TO HIS WORK?, WHAT HAVE THEY DONE WITH THEIR DATA? THEY DID NOTHING WITH DATA PER SE. IT'S AN ART HISTORICAL WORK MEANING QUALITATIVE AND NOT QUANTITATIVE RESEARCH :) IF YOU WANT TO READ THE 200 PAGE BOOK PLEASE GO AHEAD) 
+
+Other attempts to visualize datasets from the Digital Humanities referencing to literary texts include the following: 
 - [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Mapping of published books from the Brown library
 - [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Specifically the trade routes are a nice reference, in case we want to vizualise the travel routes
+
+Some of these visualizations are older and serve more as inspiration. 
