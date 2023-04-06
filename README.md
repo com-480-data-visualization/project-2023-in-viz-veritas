@@ -29,11 +29,13 @@ Nonetheless, we do want to stick to this problematic as it is a topic of great i
 
 The main axis we would like to develop is the overall travel routes taken through Italy over time, as well as the writer's perception of the visited locations in terms of valence and arousal. We would like to detect and emphasize common denominators which stay constant over time (and languages), and which factors may have changed, ideally even illustrating why these changes may have occured.
 
-Our main vision consists of creating a website targeted to travelers wanting to visit Italy or enthusiasts who are interested about travel routes in Italy. The main component of our page should consist of a landing page, allowing visitors to specify locations in Italy they want to visit as well as languages they speak. In return, our page will provide them with travel guides of our dataset that may be of interest to them.
-
+Our main vision consists of creating a website targeted to travelers wanting to visit Italy in acient times or enthusiasts who are interested about old travel routes in Italy. The main component of our page should consist of a landing page, allowing visitors to specify locations in Italy they want to visit as well as languages they speak. In return, our page will provide them with travel guides of our dataset that may be of interest to them.
 While this component is more on the playful side, we intend to also show deeper insights gained from the analysis of our dataset, which reflect our main development axis.
+ If we can effectively extract the travel routes of the guidebooks, we can also display them on an interactive map of Italy and one could select the time/language/location they want to show specific routes. In order to highlight similar aspects as well as differences in the testimonies of the travelers, clicking on them would make appear some additional data and statistics about the guides.
 
-Our main motivation for this is combining the current definition of travel guides with the perception of various travellers from different locations thoughout various time periods.
+If we do not obtain sufficiently enough information from our dataset (or if we do and have enough time), we can merge it with another one about [Airbnb's in Italy](https://www.kaggle.com/datasets/alessiocrisafulli/airbnb-italy) from kaggle. We could then compare travelling back in the ancient times to current tourism.
+
+Our main motivation for this is combining the current definition of travel guides with the perception of various travellers from different locations thoughout various time periods, and providing an insight into what travelling in Italy between the mid 16th century and early 20th century meant. 
 
 #### Exploratory Data Analysis
 
@@ -88,7 +90,7 @@ The location of the guidebooks coincide well with the language in which they wer
 
 ![language distribution](./plots/lang_yr.png)
 
-The books have been written between 1550 and 1911. We have more books in the period between 1750 and 1870 and it is only from this period that the transcribed books are in English. There are mainly French authors around 1700-1710. The German books, though fewer than the English ones, were also written around 1800-1870. 
+The books have been published between 1550 and 1911. We have more books in the period between 1750 and 1870 and it is only from this period that the transcribed books are in English. There are mainly French authors around 1700-1710. The German books, though fewer than the English ones, were also written around 1800-1870. 
 
 #### Proof of concept location extraction
 
@@ -105,7 +107,8 @@ The spacy module can be tuned more easily to our specific case (namely cities in
 
 ### Related Work
 
-As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his work in the 1930 and 1950s. 
+As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, [_Italienreisen im 17. und 18. Jahrhundert_](https://digi.ub.uni-heidelberg.de/diglit/schudt1959?ui_lang=eng) (Travels to Italy of the 17th and 18th Centuries) in 1959.
+Unfortunately for us, it is an art historical piece of work and not a quantitative data-driven study.
 
 There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
 
