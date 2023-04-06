@@ -112,9 +112,9 @@ Unfortunately for us, it is an art historical piece of work and not a quantitati
 There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
 
 Other attempts to visualize datasets from the Digital Humanities referencing to literary texts include the following: 
-- [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Mapping of published books from the Brown library
-- [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Specifically the trade routes are a nice reference, in case we want to vizualise the travel routes
-- [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizig networks in text. This may be of interest to us if we want to analyze co-occurrence of placenames
+- [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Interactive visualization of the early printing history in Europe. Specifically the trade routes are a nice reference to vizualise the travel routes.
+- [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Mapping of published books from the Brown library that might give us ideas to visualize metadata about the books.
+- [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizing networks in text. This may be of interest to us if we want to analyze co-occurrence of placenames.
 Some of these visualizations are older and serve solely as inspiration. 
 
 The [Minard map](https://bigthink.com/strange-maps/229-vital-statistics-of-a-deadly-campaign-the-minard-map/) is a travel-related visualization of great importance, which may also serve as historical inspiration. 
