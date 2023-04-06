@@ -25,7 +25,7 @@ The fact that these books were written in different languages, some of them bein
 Nonetheless, we do want to stick to this problematic as it is a topic of great interest to us. As a group of experienced data scientists we will gladly tackle the extra challenge of the possibly cumbersome preprocessing.
 
 
-#### Problematic
+### Problematic
 
 The main axis we would like to develop is the overall travel routes taken through Italy over time, as well as the writer's perception of the visited locations in terms of valence and arousal. We would like to detect and emphasize common denominators which stay constant over time (and languages), and which factors may have changed, ideally even illustrating why these changes may have occured.
 
@@ -37,12 +37,12 @@ If we do not obtain sufficiently enough information from our dataset (or if we d
 
 Our main motivation for this is combining the current definition of travel guides with the perception of various travellers from different locations thoughout various time periods, and providing an insight into what travelling in Italy between the mid 16th century and early 20th century meant. 
 
-#### Exploratory Data Analysis
+### Exploratory Data Analysis
 
 > For detailed computations and analysis regarding the EDA, see [expl_data_analysis.iypnb](expl_data_analysis.iypnb)
 
 
-##### Basic Book statistics
+#### Basic Book statistics
 
 
 
