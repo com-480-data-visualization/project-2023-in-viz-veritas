@@ -115,6 +115,7 @@ Other attempts to visualize datasets from the Digital Humanities referencing to 
 - [The Mapping Colonial Americas Publishing Project](http://cds.library.brown.edu/mapping-genres/): Interactive visualization of the early printing history in Europe. Specifically the trade routes are a nice reference to vizualise the travel routes.
 - [Atlas of early printing](http://atlas.lib.uiowa.edu/#): Mapping of published books from the Brown library that might give us ideas to visualize metadata about the books.
 - [Visualizing Shakespeare plays](https://www.martingrandjean.ch/network-visualization-shakespeare/): Visualizing networks in text. This may be of interest to us if we want to analyze co-occurrence of placenames.
+
 Some of these visualizations are older and serve solely as inspiration. 
 
 The [Minard map](https://bigthink.com/strange-maps/229-vital-statistics-of-a-deadly-campaign-the-minard-map/) is a travel-related visualization of great importance, which may also serve as historical inspiration. 
