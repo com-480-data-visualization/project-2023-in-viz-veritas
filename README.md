@@ -96,9 +96,8 @@ The books have been published between 1550 and 1911. We have more books in the p
 
 > For detailed location extraction see [LocationTagger.ipynb](LocationTagger.ipynb)
 
-In order to show that the extraction of location works on our dataset, we did preliminary testing on english texts by one author. Two Named Entity Recognition modules were used, namely [locationtagger](https://pypi.org/project/locationtagger/) and [spacy entity recognizer](https://spacy.io/api/entityrecognizer). 
-
-The spacy module can be tuned more easily to our specific case (namely cities in Italy) and performs better than the locationtagger. We counted the occurrence of place names and mapped the occurrence of Rome and Florence per page number. This can be potentially used as a timeline of travel. 
+In order to show that the extraction of location works on our dataset, we did preliminary testing on english texts by one author, using [locationtagger](https://pypi.org/project/locationtagger/) and [spacy entity recognizer](https://spacy.io/api/entityrecognizer). 
+We counted the occurrence of place names and mapped the occurrence of Rome and Florence per page number using the spacy module, which performed better than locationtagger. This can be potentially used as a timeline of travel. 
 
 ![city_counts](./plots/locationtagger_ex.png)
 
@@ -107,7 +106,7 @@ The spacy module can be tuned more easily to our specific case (namely cities in
 
 ### Related Work
 
-As far as we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, _Italienreisen im 17. und 18. Jahrhundert_ (Travels to Italy of the 17th and 18th Centuries) in 1959.
+As far as we know, there has been only few work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, _Italienreisen im 17. und 18. Jahrhundert_ (Travels to Italy of the 17th and 18th Centuries) in 1959.
 Unfortunately for us, it is an art historical piece of work and not a quantitative data-driven study.
 
 There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
