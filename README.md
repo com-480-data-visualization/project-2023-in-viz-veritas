@@ -107,7 +107,7 @@ The spacy module can be tuned more easily to our specific case (namely cities in
 
 ### Related Work
 
-As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, [_Italienreisen im 17. und 18. Jahrhundert_](https://digi.ub.uni-heidelberg.de/diglit/schudt1959?ui_lang=eng) (Travels to Italy of the 17th and 18th Centuries) in 1959.
+As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, _Italienreisen im 17. und 18. Jahrhundert_ (Travels to Italy of the 17th and 18th Centuries) in 1959.
 Unfortunately for us, it is an art historical piece of work and not a quantitative data-driven study.
 
 There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
