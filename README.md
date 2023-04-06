@@ -46,7 +46,7 @@ Our main motivation for this is combining the current definition of travel guide
 
 
 
-- There is a total of **78** distinct books.
+- There is **78** distinct books.
 
 - Page count per book:
   | Min | Max |  Mean   | Std_dev |
@@ -77,12 +77,12 @@ The language field provided by Transkribus seemed to be erroneous in most cases,
 
 ![language distribution](./plots/language_distribution.png)
 
-Almost half of the books we have are written in English, followed by French, German and Italian. Interestingly enough, two are in latin, one in Dutch and one in a language that could not be identified.
+Almost half of the books are written in English, followed by French, German and Italian. Interestingly enough, two are in latin, one in Dutch and one that was badly mistranscribed from French and cannot be used.
 
 
 ![language distribution](./plots/location_distr.png)
 
-We see that most books have been written in London, then Paris, which is in accordance with the fact that English is the most common language the guidebooks have been written in, followed by French. 
+We see that most books have been published in London, then Paris, which is in accordance with the fact that English is the most common language the guidebooks have been written in, followed by French. 
 
 ![language distribution](./plots/language_publish.png)
 
@@ -90,15 +90,15 @@ The location of the guidebooks coincide well with the language in which they wer
 
 ![language distribution](./plots/lang_yr.png)
 
-The books have been published between 1550 and 1911. We have more books in the period between 1750 and 1870 and it is only from this period that the transcribed books are in English. There are mainly French authors around 1700-1710. The German books, though fewer than the English ones, were also written around 1800-1870. 
+The books have been published between 1550 and 1911. We have more books in the period between 1750 and 1870 and it is only from this period that the transcribed books are in English. There are mainly French authors around 1700-1710. The German books were written around 1800-1870. 
 
 #### Proof of concept location extraction
 
 > For detailed location extraction see [LocationTagger.ipynb](LocationTagger.ipynb)
 
-In order to show that the extraction of location works on the texts in the dataset, we did preliminary testing on english texts by one author. Two Named Entity Recognition modules were used, namely [locationtagger](https://pypi.org/project/locationtagger/) and [spacy entity recognizer](https://spacy.io/api/entityrecognizer). 
+In order to show that the extraction of location works on our dataset, we did preliminary testing on english texts by one author. Two Named Entity Recognition modules were used, namely [locationtagger](https://pypi.org/project/locationtagger/) and [spacy entity recognizer](https://spacy.io/api/entityrecognizer). 
 
-The spacy module can be tuned more easily to our specific case (namely cities in Italy) and performs better than the locationtagger. We counted the occurence of place names and additionally mapped the occurrence of Rome and Florence per page number. This can be potentially used as a timeline of travel. 
+The spacy module can be tuned more easily to our specific case (namely cities in Italy) and performs better than the locationtagger. We counted the occurrence of place names and mapped the occurrence of Rome and Florence per page number. This can be potentially used as a timeline of travel. 
 
 ![city_counts](./plots/locationtagger_ex.png)
 
@@ -107,7 +107,7 @@ The spacy module can be tuned more easily to our specific case (namely cities in
 
 ### Related Work
 
-As far we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, _Italienreisen im 17. und 18. Jahrhundert_ (Travels to Italy of the 17th and 18th Centuries) in 1959.
+As far as we know, there has been only very little work done on the collection of travel guides for Italy. One of the former directors of the library, Ludwig Schudt, worked on the [collection of early modern guide books for Rome and Italy](https://digi.ub.uni-heidelberg.de/diglit/schudt1959/) and published his long-term research, _Italienreisen im 17. und 18. Jahrhundert_ (Travels to Italy of the 17th and 18th Centuries) in 1959.
 Unfortunately for us, it is an art historical piece of work and not a quantitative data-driven study.
 
 There has been no attempt so far to do quantitative analysis and data visualization on the guide books so far, meaning that our approach of extracting placenames and associated sentiment is novel for this dataset. Additionally, giving a visitor to the website an opportunity to explore this collection of guidebooks is new, as they are usually locked up and not publicly available. 
