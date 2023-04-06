@@ -46,7 +46,7 @@ Our main motivation for this is combining the current definition of travel guide
 
 
 
-- There is **78** distinct books.
+- There are **78** books.
 
 - Page count per book:
   | Min | Max |  Mean   | Std_dev |
