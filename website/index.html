@@ -9,9 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link href="src/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css">
      
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
     
   </head>
   <body>
@@ -20,9 +21,10 @@
         <h1>Welcome to your historical travelguide</h1>
         <p>This is the basic skeleton of our website.</p>
 
-        <div id ="viz1" class="row">
-            <h2>This will be Viz number 1</h2>
-        </div>
+        
+        <svg id ="viz1"> </svg>
+        <script src="src/timeline.js"></script>
+    
         <div id="viz2" class="row">
           <h2>This will be Viz number 2</h2>
         </div>

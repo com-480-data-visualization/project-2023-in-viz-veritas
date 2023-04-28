@@ -1,0 +1,20 @@
+#viz1 {
+    margin: 20px;
+    position: relative;
+  }
+  
+  .tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #000000;
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+  }
+  
+  circle {
+    fill: #000000;
+    stroke: #000000;
+    stroke-width: 2px;
+  }
