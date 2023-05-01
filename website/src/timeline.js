@@ -2,8 +2,8 @@
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
 var height = 400;
-const radius = 10;
-const enlarged = radius * 8;
+const radius = 8;
+const enlarged = radius * 5;
 
 
 d3.csv("./src/data/books.csv").then( function(data) {
@@ -71,39 +71,54 @@ var circles = svg.selectAll("circle")
     .attr("fill", "black")
     .attr("z-index", null)
         
-    tooltip.style("visibility", "hidden");
-    tooltip.select("text").remove();
+    // tooltip.style("visibility", "hidden");
+    // tooltip.select("text").remove();
 })
 
 .on("click", function(e, d) {
 
     e.stopPropagation(); // Prevent click event from bubbling up to the SVG element
     var circle = d3.select(this);
-    var tooltipWidth = 100;
-    var tooltipHeight = 50;
+    var tooltipWidth = 300;
+    var tooltipHeight = 100;
     var tooltipX = (containerWidth - tooltipWidth) / 2;
     var tooltipY = height + radius + 5; // position below the timeline
     tooltip.style("left", tooltipX + "px")
-            .style("top", tooltipY + "px")
-            .style("visibility", "visible")
-            .append("rect")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", tooltipWidth)
-            .attr("height", tooltipHeight)
-            .attr("fill", "white")
-            .attr("stroke", "black")
-            .attr("rx", 5)
-            .attr("ry", 5)
+          .style("top", tooltipY + "px")
+          .style("visibility", "visible");
+    
+    // Remove existing elements before adding new elements
+    tooltip.selectAll("*").remove();
+    
+    // Add SVG element inside tooltip
+    var tooltipSvg = tooltip.append("svg")
+                            .attr("width", tooltipWidth)
+                            .attr("height", tooltipHeight)
+                            .style("background-color", "white")
+                            .style("border", "1px solid black");
 
-    // Remove existing text before adding new text
-    tooltip.selectAll("text").remove();
-    tooltip.append("text")
-            .text(d.author + " (" + d.year + ")")
-            .attr("x", tooltipWidth / 2)
-            .attr("y", tooltipHeight / 2)
-            .style("text-anchor", "middle")
-            .style("alignment-baseline", "middle");
+    // Add image to tooltip
+    var imageWidth = 120;
+    var imageHeight = 120;
+    var imageX = 0;
+    var imageY = (tooltipHeight - imageHeight) / 2;
+    tooltipSvg.append("rect")
+                .attr("x", imageX)
+                .attr("y", imageY)
+                .attr("width", imageWidth)
+                .attr("height", imageHeight)
+                .attr("fill", "url(#testImage-" + d.book_id + ")" );
+    
+    // Add text to tooltip
+    var textX = imageX + imageWidth + 10;
+    var textY = tooltipHeight / 2;
+    tooltipSvg.append("text")
+                .text(d.author + " (" + d.year + ")")
+                .attr("x", textX)
+                .attr("y", textY)
+                .style("text-anchor", "start")
+                .style("alignment-baseline", "middle")
+                .style("font-size", "16px");
 });
 
 // Add axes and labels
