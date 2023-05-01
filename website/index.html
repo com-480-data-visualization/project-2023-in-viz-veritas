@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./src/style.css">
-     
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
-    
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 fixed-left">
+  <link rel="stylesheet" href="./src/style.css">
 
-          <h2>This will be the scrollbar</h2>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
 
-          <ul>
-            <li><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-          </ul>
-  
-        </div>
-  
-        <div class="col-md-9 scrollable-right">
-  
-          <div class="row">
-            <div class="col-md-12">
-  
-              <h1>Welcome to your historical travelguide</h1>
-              <p>This is the basic skeleton of our website.</p>
-  
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="col-md-9">
-  
-              <svg id ="viz1"> </svg>
-              <script src="src/timeline.js"></script>
-  
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="col-md-6">
-              <h2>This will be Viz number 2</h2>
-  
-            </div>
-  
-            <div class="col-md-6">
-              <h2>This will be Viz number 3</h2>
-  
-            </div>
-          </div>
-        </div>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 fixed-left">
+
+        <h2>This will be the scrollbar</h2>
+
+        <ul>
+          <li><a href="#viz1">Overview</a></li>
+          <li><a href="#viz2">Viz 1</a></li>
+          <li><a href="#viz3">Viz 3</a></li>
+        </ul>
+        <script src="src/scrollbar.js"></script>
 
       </div>
-    
+
+      <div class="col-md-9 scrollable-right">
+
+        <div class="row">
+          <div class="col-md-12">
+
+            <h1>Welcome to your historical travelguide</h1>
+            <p>This is the basic skeleton of our website.</p>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9">
+
+            <svg id="viz1"> </svg>
+            <script src="src/timeline.js"></script>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h2>This will be Viz number 2</h2>
+
+          </div>
+
+          <div class="col-md-6">
+            <h2>This will be Viz number 3</h2>
+
+          </div>
+        </div>
+      </div>
+
     </div>
-  
-  </body>
+
+  </div>
+
+</body>
 
 </html>
