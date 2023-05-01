@@ -1,21 +1,63 @@
+:root {
+  --primary-color: #446900;
+  --secondary-color: #586249;
+  --background-color: #fefcf5;
+  --text-color: #111f00 ;
+  --link-color: #dce7c7;
+  --secondary-container: #dce7c7;
+  --hover : #c3f27e;
+}
+
 .fixed-left {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   width: 250px;
-  background-color: #eee;
+  padding: 20px;
+  overflow-y: scroll;
   height: 100vh;
-  z-index: 1;
+  background-color: var(--secondary-color);
+}
+
+.fixed-left h2 {
+ color: var(--secondary-container);
+ font-family: Georgia, serif;
+}
+
+.fixed-left li {
+  color: var(--secondary-container)
+}
+.fixed-left a:hover{
+  color: var(--hover)
+
 }
 
 .scrollable-right {
-  position: relative; /* Set the position to relative */
-  left: 250px; /* Set the left position to the width of the fixed container */
+  position: relative;
+  left: 250px;
   height: 100vh;
   overflow-y: scroll;
   z-index: 0;
+  padding: 20px;
+  background-color: var(--background-color);
 }
+
+body {
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+a,p {
+  color: #201a1a;
+  font-family: Georgia, serif;
+}
+
 
 
 #viz1 {
@@ -34,6 +76,11 @@
   }
   
   circle {
-    stroke: black;
+    stroke: var(--text-color);
     stroke-width: 2px;
+  }
+
+  .wrap-text {
+    white-space: normal !important;
+    word-break: break-word;
   }
