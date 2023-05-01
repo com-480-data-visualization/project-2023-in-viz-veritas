@@ -17,21 +17,51 @@
   </head>
   <body>
 
-    <div class="container">
-        <h1>Welcome to your historical travelguide</h1>
-        <p>This is the basic skeleton of our website.</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 bg-light fixed-left">
 
-        
-        <svg id ="viz1"> </svg>
-        <script src="src/timeline.js"></script>
-    
-        <div id="viz2" class="row">
-          <h2>This will be Viz number 2</h2>
+          <h2>This will be the scrollbar</h2>
+  
         </div>
-        <div id="viz3" class="row">
-          <h2>This will be Viz number 3</h2>
-        </div> 
+  
+        <div class="col-md-9 scrollable-right">
+  
+          <div class="row">
+            <div class="col-md-9">
+  
+              <h1>Welcome to your historical travelguide</h1>
+              <p>This is the basic skeleton of our website.</p>
+  
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-9">
+  
+              <svg id ="viz1"> </svg>
+              <script src="src/timeline.js"></script>
+  
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <h2>This will be Viz number 2</h2>
+  
+            </div>
+  
+            <div class="col-md-6">
+              <h2>This will be Viz number 3</h2>
+  
+            </div>
+          </div>
+        </div>
+
       </div>
+    
+    </div>
+  
   </body>
 
 </html>

@@ -1,3 +1,23 @@
+.fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  background-color: #eee;
+  height: 100vh;
+  z-index: 1;
+}
+
+.scrollable-right {
+  position: relative; /* Set the position to relative */
+  left: 250px; /* Set the left position to the width of the fixed container */
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 0;
+}
+
+
 #viz1 {
     margin: 20px;
     position: relative;
@@ -18,3 +38,4 @@
     stroke: #000000;
     stroke-width: 2px;
   }
+
