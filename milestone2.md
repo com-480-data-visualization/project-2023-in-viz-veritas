@@ -20,3 +20,21 @@ For this visualisation we can use the d3 bubblegraphs inputting the counts of me
 The visualisation allows for a lot of extensions, for example mapping the cities to their geolocation on an Italy map, as shown in the figure below. This will require geojson data for each of the cities, and would mean that we would pre-filter the data so show only cities in Italy.
 
 ![bubbles](./plots/places_italy.png)
+
+
+## Emotions
+
+We would like to analyze the emotions expressed by the authors in their books. For each book (or at least the ones written in English where the extraction should be easier), we want to represent the emotions perceived in terms of *valence* and *arousal*. We can first describe the development of the two over the course of the book, by aggregating both valence and arousal per page and displaying it in a line chart. Conversely, we can use a scatter plot to place the pages. This allows to categorize each page. When hovering over a dot in the scatter plot, the page number will be displayed as well as the perceived emotion. It will also be linked to the line charts to display where in the book we currently are. Upon clicking, the entire page can be displayed and read.
+
+Both the scatter plot and the line charts can be created using the d3 library, the images provided below are mere sketches of how the result should look like.
+
+
+
+
+
+![va_per_page](./plots/v_a_per_page.png)
+![page_per_v_a](./plots/page_per_v_a.png)
+
+
+A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map on a map of Italy, or 
+aggregating them per book and doing the same two visualizations described above on a per-book basis.
