@@ -2,8 +2,8 @@
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
 var height = 400;
-const radius = 8;
-const enlarged = radius * 5;
+const radius = 5;
+const enlarged = radius * 8;
 
 
 

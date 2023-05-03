@@ -1,4 +1,8 @@
-# Historical Travel Guide
+# Historical Travel Guides
+
+## Welcome to our Data Viz project 
+
+
 
 | Student's name | SCIPER |
 | -------------- | ------ |
