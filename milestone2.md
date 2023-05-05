@@ -33,8 +33,15 @@ Both the scatter plot and the line charts can be created using the d3 library, t
 
 ## Emotions and places
 
-A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this, we will compute overall valence and emotion score for each city. We define the overall valence score $VS$ of a city as the following :
+A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this, we will compute overall valence and emotion weighted score per book for each city. We define the overall valence score per book $VS_{book}$ of a city as the following :
 
-$$ VS =\frac{1}{T\cdot P} \sum_{p \in pages} count\cdot V(p) $$
+$$ VS_{book} =\frac{1}{T\cdot P} \sum_{p \in pages} w(p)\cdot V(p) $$
+
+where $T$ is the total number of times the city name appears in the book, $P$ is the total number of pages in the book, $w(p)$ is the count for page $p$ and $V(p)$ is the valence score of page $p$. Indeed, we want to attribute more weight to the valence score of the pages where the city appears mutiple times, as there is an increased chance that the two will be related. Then we combine all books to have an overall valence score for the city $VS$ :
+
+$$VS=\frac{1}{B}\sum_{b \in books}VS_{b}$$
+
+where $B$ is the total number of books. To get the overall emotion score we do the same except that we replace the 1D valence score by a 2D emotion vector $E=(VS, AS)$ where $AS$ is the overall arousal score, computed in a similar manner. We thus classify the city by their overall emotion score as shown in the figure below, with the radius of the bubbles depending on the arousal score. Upon clicking on one city, two plots will appear. The first one will be showing how the valence score of the city evolved over time (using the dates of parution of the guidebooks as a timeline) and the other one will be a histogram with the percentage of the different emotions for the city (or the main ones if there are too many), calculated from the emotion score of all books. There would be a timeline with a time window to choose from which periods we want to know the emotions associated to the city.
+
 
 ![cities](./plots/cities.png)
