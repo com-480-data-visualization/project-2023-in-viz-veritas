@@ -66,8 +66,7 @@ a,p {
   }
   
   .tooltip {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #000000;
+    color: var(--secondary-container);
     font-size: 12px;
     padding: 5px;
     position: absolute;

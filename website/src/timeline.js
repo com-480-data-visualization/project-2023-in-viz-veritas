@@ -1,18 +1,18 @@
 
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
-var height = 400;
+var height = 1000;
 
 // Size of circles
-const radius = 3;
+const radius = 10;
 const enlarged = radius * 8;
 
 // Define the radius of the hover effect
 var hoverRadius = 20;
 // Define the maximum increase in radius when hovered
-var hoverIncrease = 3;
+var hoverIncrease = 10;
 
-var dis_circles = 3; 
+var dis_circles = 2; 
 
 
 
@@ -28,7 +28,6 @@ d3.csv("./src/data/books.csv").then(function (data) {
     var tooltip = d3.select("body")
         .append("div")
         .style("position", "absolute")
-        .style("background-color", "white")
         .style("padding", "5px")
         .style("border-radius", "5px")
         .style("box-shadow", "0 2px 5px rgba(0, 0, 0, 0.3)")
@@ -63,7 +62,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Set up the simulation
     var simulation = d3.forceSimulation(data)
         .force("x", d3.forceX(function (d) { return xScale(d.date); }))
-        .force("y", d3.forceY(height / 2))
+        .force("y", d3.forceY(height /4))
         .force("collide", d3.forceCollide(radius + dis_circles))
         .stop();
 
@@ -82,18 +81,17 @@ d3.csv("./src/data/books.csv").then(function (data) {
         .attr("r", radius)
         .attr("cx", function (d) { return d.x; })
         .attr("cy", function (d) { return d.y; })
-        .style("fill", null)
+        .attr("fill", function (d) { return "url(#" + d.book_id + ")" })
         .attr("z-index", 0)
         .on("mouseover", function (e, d) {
 
             // Get the mouse position
             var mouse = d3.pointer(e);
-            console.log(mouse)
+
 
             // Iterate over all circles and calculate the distance between the mouse and each circle
             beeswarm.each(function (d) {
                 var circle = d3.select(this);
-                console.log(circle)
                 var distance = Math.sqrt(Math.pow(circle.attr("cx") - mouse[0], 2) + Math.pow(circle.attr("cy") - mouse[1], 2));
 
                 // If the circle is within the hover radius, increase its size based on distance from mouse
@@ -107,7 +105,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
             d3.selectAll("circle")
                 .attr("r", radius)
                 .attr("z-index", null)
-                .attr('fill', null)
+                
 
         })
 
@@ -115,11 +113,11 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
             e.stopPropagation(); // Prevent click event from bubbling up to the SVG element
             var circle = d3.select(this);
-            circle.attr("fill", function (d) { return "url(#" + d.book_id + ")" });
-            var tooltipWidth = 300;
-            var tooltipHeight = 100;
-            var tooltipX = (containerWidth - tooltipWidth) / 2;
-            var tooltipY = height + radius + 5; // position below the timeline
+            var tooltipWidth = 500;
+            var tooltipHeight = 250;
+            var tooltipX = e.x;
+            var tooltipY = e.y; // position below the timeline
+            console.log(tooltipY)
             tooltip.style("left", tooltipX + "px")
                 .style("top", tooltipY + "px")
                 .style("visibility", "visible");
@@ -131,12 +129,10 @@ d3.csv("./src/data/books.csv").then(function (data) {
             var tooltipSvg = tooltip.append("svg")
                 .attr("width", tooltipWidth)
                 .attr("height", tooltipHeight)
-                .style("background-color", "white")
-                .style("border", "1px solid black");
 
             // Add image to tooltip
-            var imageWidth = 120;
-            var imageHeight = 120;
+            var imageWidth = 300;
+            var imageHeight = 300;
             var imageX = 0;
             var imageY = (tooltipHeight - imageHeight) / 2;
             tooltipSvg.append("rect")
@@ -151,14 +147,13 @@ d3.csv("./src/data/books.csv").then(function (data) {
             var textY = tooltipHeight / 2;
             var tooltipText = tooltipSvg.append("foreignObject")
                 .attr("x", textX)
-                .attr("y", 0)
+                .attr("y", textY)
                 .attr("width", tooltipWidth - imageWidth - 20)
                 .attr("height", tooltipHeight)
                 .append("xhtml:p")
                 .attr("class", "text-justify")
                 .style("font-size", "10px")
-                .style("font-weight", "bold")
-                .text(d.title);
+                .text("Title: " + d.title);
 
 
         });
@@ -171,7 +166,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Add axes and labels
     var xAxis = d3.axisBottom(xScale);
     svg.append("g")
-        .attr("transform", "translate(0, " + height / 2 + " )")
+        .attr("transform", "translate(0, " + (height / 2)+ " )")
         .call(xAxis);
 
 
