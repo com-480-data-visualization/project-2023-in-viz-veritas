@@ -7,7 +7,7 @@ To give a general overview over all the travel books in the dataset, we want to 
 
 ![overview](./plots/overview.png)
 
-The timeline can be created using the d3 libary, specifically the time scaled axis and circles. This timeline is the minimal viable product, but it can be potentially extended in several ways. One possibility is to display the books according to language or publication place and such giving the user the possibility to filter.
+The timeline can be created using the d3 libary, specifically the time scaled axis and circles. This timeline is the minimal viable product, but it can be potentially extended in several ways. One possibility is to display the books according to language or publication place and such, giving the user the possibility to filter.
 
 ## Places
 
@@ -17,7 +17,7 @@ For each travelguide in english we can extract the top mentioned placenames and 
 
 For this visualisation we can use the d3 bubblegraphs inputting the counts of mentions for each book. Again the lecture on interaction is important for this visualisation, as it allows the user to brush the data. 
 
-The visualisation allows for a lot of extensions, for example mapping the cities to their geolocation on an Italy map, as shown in the figure below. This will require geojson data for each of the cities, and would mean that we would pre-filter the data so show only cities in Italy.
+The visualisation allows for a lot of extensions, for example mapping the cities to their geolocation on an Italy map, as shown in the figure below. This will require geojson data for each of the cities, and would mean that we would pre-filter the data so show only cities in Italy. It would be implemented with the leaflet.js library, introduced in the lecture on maps.
 
 ![bubbles](./plots/places_italy.png)
 
@@ -28,14 +28,13 @@ We would like to analyze the emotions expressed by the authors in their books. F
 
 Both the scatter plot and the line charts can be created using the d3 library, the images provided below are mere sketches of how the result should look like.
 
-
-
-
-
 ![va_per_page](./plots/v_a_per_page.png)
 ![page_per_v_a](./plots/page_per_v_a.png)
 
+## Emotions and places
 
-A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this,.....
+A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this, we will compute overall valence and emotion score for each city. We define the overall valence score $VS$ of a city as the following :
+
+$VS= \frac{1}{T*P}\sum_{p\in pages}count*V(p)$
 
 ![cities](./plots/cities.png)
