@@ -38,14 +38,13 @@ d3.csv("./src/data/books.csv").then(function (data) {
     var defs = svg.append("defs");
     data.forEach(function (d) {
         defs.append("pattern")
-            //.attr("id", d.id) for later
-            .attr("id", "testImage-" + d.book_id) // using unique id for each pattern
+            .attr("id", d.book_id)
             .attr("patternContentUnits", "objectBoundingBox")
             .attr("width", 1)
             .attr("height", 1)
             .append("image")
 
-            .attr("xlink:href", "src/img/example.png")
+            .attr("xlink:href", "src/img/thumbnails/"+d.book_id+".png")
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("width", 1)
             .attr("height", 1)
@@ -64,7 +63,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
         .on("mouseover", function (d) {
             d3.select(this)
                 .attr("r", enlarged)
-                .attr("fill", function (d) { return "url(#testImage-" + d.book_id + ")" })
+                .attr("fill", function (d) { return "url(#" + d.book_id + ")" })
                 .attr("z-index", 1)
         })
         .on("mouseout", function (d) {
@@ -108,7 +107,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
                 .attr("y", imageY)
                 .attr("width", imageWidth)
                 .attr("height", imageHeight)
-                .attr("fill", "url(#testImage-" + d.book_id + ")");
+                .attr("fill", "url(#" + d.book_id + ")");
 
             // Add text to tooltip
             var textX = imageX + imageWidth + 10;
