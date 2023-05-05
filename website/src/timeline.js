@@ -2,8 +2,18 @@
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
 var height = 400;
-const radius = 5;
+
+// Size of circles
+const radius = 3;
 const enlarged = radius * 8;
+
+// Define the radius of the hover effect
+var hoverRadius = 20;
+// Define the maximum increase in radius when hovered
+var hoverIncrease = 3;
+
+var dis_circles = 3; 
+
 
 
 
@@ -32,7 +42,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Set up the scales
     var xScale = d3.scaleTime()
         .domain([new Date(1440, 0, 1), new Date()])
-        .range([50, containerWidth - 50]);
+        .range([0, containerWidth - 200]);
 
     // Add the image pattern definitions
     var defs = svg.append("defs");
@@ -44,41 +54,68 @@ d3.csv("./src/data/books.csv").then(function (data) {
             .attr("height", 1)
             .append("image")
 
-            .attr("xlink:href", "src/img/thumbnails/"+d.book_id+".png")
+            .attr("xlink:href", "src/img/thumbnails/" + d.book_id + ".png")
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("width", 1)
             .attr("height", 1)
     });
 
-    // Add circles
-    var circles = svg.selectAll("circle")
+    // Set up the simulation
+    var simulation = d3.forceSimulation(data)
+        .force("x", d3.forceX(function (d) { return xScale(d.date); }))
+        .force("y", d3.forceY(height / 2))
+        .force("collide", d3.forceCollide(radius + dis_circles))
+        .stop();
+
+    // Manually run simulation
+    for (let i = 0; i < data.length; ++i) {
+        simulation.tick(10);
+    }
+
+
+
+    // Add the beeswarm
+    var beeswarm = svg.selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function (d) { return xScale(d.date); })
-        .attr("cy", height / 2)
         .attr("r", radius)
+        .attr("cx", function (d) { return d.x; })
+        .attr("cy", function (d) { return d.y; })
+        .style("fill", null)
+        .attr("z-index", 0)
+        .on("mouseover", function (e, d) {
 
+            // Get the mouse position
+            var mouse = d3.pointer(e);
+            console.log(mouse)
 
-        .on("mouseover", function (d) {
-            d3.select(this)
-                .attr("r", enlarged)
-                .attr("fill", function (d) { return "url(#" + d.book_id + ")" })
-                .attr("z-index", 1)
+            // Iterate over all circles and calculate the distance between the mouse and each circle
+            beeswarm.each(function (d) {
+                var circle = d3.select(this);
+                console.log(circle)
+                var distance = Math.sqrt(Math.pow(circle.attr("cx") - mouse[0], 2) + Math.pow(circle.attr("cy") - mouse[1], 2));
+
+                // If the circle is within the hover radius, increase its size based on distance from mouse
+                if (distance <= hoverRadius) {
+                    var increase = hoverIncrease * (1 - distance / hoverRadius);
+                    circle.attr("r", radius + increase);
+                }
+            });
         })
         .on("mouseout", function (d) {
-            d3.select(this).attr("r", radius)
+            d3.selectAll("circle")
+                .attr("r", radius)
                 .attr("z-index", null)
                 .attr('fill', null)
 
-            // tooltip.style("visibility", "hidden");
-            // tooltip.select("text").remove();
         })
 
         .on("click", function (e, d) {
 
             e.stopPropagation(); // Prevent click event from bubbling up to the SVG element
             var circle = d3.select(this);
+            circle.attr("fill", function (d) { return "url(#" + d.book_id + ")" });
             var tooltipWidth = 300;
             var tooltipHeight = 100;
             var tooltipX = (containerWidth - tooltipWidth) / 2;
@@ -125,6 +162,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
 
         });
+
     // Add click event listener to document object
     d3.select(document).on("click", function () {
         tooltip.style("visibility", "hidden");
