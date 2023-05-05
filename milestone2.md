@@ -36,5 +36,6 @@ Both the scatter plot and the line charts can be created using the d3 library, t
 ![page_per_v_a](./plots/page_per_v_a.png)
 
 
-A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map on a map of Italy, or 
-aggregating them per book and doing the same two visualizations described above on a per-book basis.
+A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this,.....
+
+![cities](./plots/cities.png)
