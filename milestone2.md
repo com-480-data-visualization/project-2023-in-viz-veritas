@@ -35,6 +35,6 @@ Both the scatter plot and the line charts can be created using the d3 library, t
 
 A further extension of displaying the emotions would be to link them to the locations visited and display the result as a bubble map. In order to do this, we will compute overall valence and emotion score for each city. We define the overall valence score $VS$ of a city as the following :
 
-$` VS =\frac{1}{T*P} \sum_{p \in pages}count*V(p) `$
+$$ VS =\frac{1}{T*P}$$ 
 
 ![cities](./plots/cities.png)
