@@ -1,11 +1,11 @@
 
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
-var height = 1000;
+var height = 400;
 
 // Size of circles
-const radius = 10;
-const enlarged = radius * 8;
+var radius = 10;
+var enlarged = radius * 8;
 
 // Define the radius of the hover effect
 var hoverRadius = 20;
@@ -13,8 +13,6 @@ var hoverRadius = 20;
 var hoverIncrease = 10;
 
 var dis_circles = 2; 
-
-
 
 
 d3.csv("./src/data/books.csv").then(function (data) {
@@ -169,7 +167,9 @@ d3.csv("./src/data/books.csv").then(function (data) {
         .attr("transform", "translate(0, " + (height / 2)+ " )")
         .call(xAxis);
 
+    
 
 
 });
+
 
