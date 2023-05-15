@@ -115,7 +115,6 @@ d3.csv("./src/data/books.csv").then(function (data) {
             var tooltipHeight = 250;
             var tooltipX = e.x;
             var tooltipY = e.y; // position below the timeline
-            console.log(tooltipY)
             tooltip.style("left", tooltipX + "px")
                 .style("top", tooltipY + "px")
                 .style("visibility", "visible");
