@@ -18,6 +18,8 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
 
         function createBubbleGraph(bookId) {
+            const threshold = 30; 
+
             // Clear previous graph content
             d3.select("#bubble-graph").html("");
 
@@ -30,38 +32,67 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
             const bubble = d3.pack()
                 .size([diameter, diameter])
-                .padding(1.5);
+                .padding(1);
 
             const div = d3.select("#bubble-graph")
                 .append("div")
                 .style("width", `${diameter}px`)
                 .style("height", `${diameter}px`)
                 .style("position", "relative")
-                .style("border", "1px solid black");
+
 
             const root = d3.hierarchy({ children: Object.entries(bubbleData) })
-                .sum(d => d[1]);
+                .sum(d => d[1])
+                .sort((a, b) => b.value - a.value);
 
             bubble(root);
 
             const node = div.selectAll(".node")
-                .data(root.children)
+                .data(root.descendants().slice(1))
                 .enter()
                 .append("div")
                 .attr("class", "node")
                 .style("position", "absolute")
-                .style("left", d => `${d.x}px`)
-                .style("top", d => `${d.y}px`)
+                .style("left", d => `${d.x - d.r}px`)
+                .style("top", d => `${d.y - d.r}px`)
                 .style("width", d => `${d.r * 2}px`)
                 .style("height", d => `${d.r * 2}px`)
                 .style("background-color", (d, i) => color(i))
-                .style("border-radius", "50%");
+                .style("border-radius", "50%")
+                .on("mouseover", function (d) {
+                    if (d.r <= threshold) {
+                        d3.select(this)
+                            .append("div")
+                            .attr("class", "tooltip")
+                            .text(d => d.data[0]);
+                    }
+                })
+                .on("mouseout", function (d) {
+                    if (d.r <= threshold) {
+                        d3.select(this).select(".tooltip").remove();
+                    }
+                });
 
-            node.append("span")
-                .style("display", "block")
-                .style("text-align", "center")
+            const span = node.append("span")
+                .style("display", "flex")
+                .style("align-items", "center")
+                .style("justify-content", "center")
+                .style("height", "100%");
+
+            span.filter(d => d.r > threshold)
+                .text(d => d.data[0]);
+
+            // TODO Append tooltip for small bubbles
+            node.filter(d => d.r <= threshold)
+                .append("div")
+                .attr("class", "tooltip")
                 .text(d => d.data[0]);
         }
+
+
+
+
+
 
 
 
