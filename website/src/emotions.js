@@ -11,9 +11,9 @@ d3.csv("./src/data/page_emotions.csv").then(function (data) {
 
     var parseDate = d3.timeParse("%Y");
     data.forEach(function (d) {
-        d.page_number = Number(d.page_number)
-        d.valence = Number(d.valence)
-        d.arousal = Number(d.arousal)   
+        d.page_number = Number(d.page_number);
+        d.valence = Number(d.valence);
+        d.arousal = Number(d.arousal);  
     });
 
     // // Set up the tooltip
@@ -32,7 +32,7 @@ d3.csv("./src/data/page_emotions.csv").then(function (data) {
         .attr("height", height/2);
 
     var x = d3.scaleLinear()
-      .domain(d3.extent(data, function(d) { return +d.page_number; }))
+      .domain(d3.extent(data, (d) => { return d.page_number; }))
       .range([ 0, containerWidth ]);
     svg.append("g")
       .attr("transform", "translate(0," + height/2 + ")")
@@ -50,11 +50,12 @@ d3.csv("./src/data/page_emotions.csv").then(function (data) {
       .datum(data)
       .attr("fill", "none")
       .attr("stroke", "#111f00")
-      .attr("stroke-width", 2)
+      .attr("stroke-width", 1)
       .attr("d", d3.line()
         .x(function(d) { return x(d.page_number) })
         .y(function(d) { return y(d.valence) })
         )
+
 
 });
 

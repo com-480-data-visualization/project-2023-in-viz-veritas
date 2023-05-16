@@ -1,0 +1,2427 @@
+{
+    "nr_pages": 484,
+    "language": "eng",
+    "hierarchy": "Rome/Rome_after_1800/Italy and its inhabitants | an account of a tour in that country in 1816 and 1817 ; containing a view of characters, manners, customs ... ; with some remarks on the origin of Rome and of the Latin language/BV038797846",
+    "pages": [
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.368,
+            "arousal": 0.035,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5012,
+            "arousal": 0.026000000000000023,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.7003,
+            "arousal": 0.049,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.1288,
+            "arousal": 0.015,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.2695,
+            "arousal": 0.023999999999999994,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.1531,
+            "arousal": -0.006999999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9628,
+            "arousal": 0.10099999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.5267,
+            "arousal": 0.023999999999999997,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.6124,
+            "arousal": -0.012999999999999998,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.8979,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.4404,
+            "arousal": 0.018000000000000002,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.5719,
+            "arousal": 0.033,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.4588,
+            "arousal": 0.023000000000000003,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.0258,
+            "arousal": 0.0010000000000000009,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.3818,
+            "arousal": -0.007000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9902,
+            "arousal": 0.167,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.9771,
+            "arousal": -0.11199999999999999,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9771,
+            "arousal": 0.131,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.7987,
+            "arousal": -0.04100000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.7895,
+            "arousal": -0.038,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9643,
+            "arousal": 0.1,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.6322,
+            "arousal": 0.006000000000000005,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.1531,
+            "arousal": 0.006999999999999992,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.4588,
+            "arousal": -0.023000000000000007,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9349,
+            "arousal": -0.051000000000000004,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7011,
+            "arousal": 0.008,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9672,
+            "arousal": 0.082,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.6961,
+            "arousal": 0.016,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.6616,
+            "arousal": -0.013999999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.3779,
+            "arousal": 0.015,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9109,
+            "arousal": 0.057999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.3407,
+            "arousal": 0.017,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.3126,
+            "arousal": -0.0010000000000000009,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9481,
+            "arousal": -0.073,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9894,
+            "arousal": 0.20900000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.2734,
+            "arousal": 0.008999999999999994,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.4872,
+            "arousal": -0.006000000000000005,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9777,
+            "arousal": 0.092,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9909,
+            "arousal": 0.162,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9921,
+            "arousal": 0.16,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.4213,
+            "arousal": 0.007999999999999993,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9194,
+            "arousal": 0.052000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.4644,
+            "arousal": 0.0050000000000000044,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9603,
+            "arousal": 0.069,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9331,
+            "arousal": 0.05500000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8904,
+            "arousal": 0.053,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9942,
+            "arousal": 0.172,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.4705,
+            "arousal": 0.020000000000000004,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.3717,
+            "arousal": 0.011999999999999997,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.8613,
+            "arousal": 0.061,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9044,
+            "arousal": 0.066,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9633,
+            "arousal": 0.076,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.684,
+            "arousal": 0.022999999999999996,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9811,
+            "arousal": 0.101,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.951,
+            "arousal": 0.064,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9884,
+            "arousal": 0.166,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9179,
+            "arousal": 0.056999999999999995,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.3506,
+            "arousal": 0.006000000000000005,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9615,
+            "arousal": 0.07699999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.8006,
+            "arousal": -0.026999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.988,
+            "arousal": 0.11800000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9636,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9688,
+            "arousal": 0.08300000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9177,
+            "arousal": 0.047999999999999994,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9762,
+            "arousal": 0.131,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9934,
+            "arousal": 0.189,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9956,
+            "arousal": 0.233,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8131,
+            "arousal": 0.015999999999999986,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9612,
+            "arousal": 0.137,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.1993,
+            "arousal": 0.011000000000000003,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9752,
+            "arousal": 0.137,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9528,
+            "arousal": 0.079,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8246,
+            "arousal": 0.035,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9617,
+            "arousal": 0.103,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9816,
+            "arousal": 0.128,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7953,
+            "arousal": 0.036,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9111,
+            "arousal": 0.063,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9543,
+            "arousal": 0.09,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9829,
+            "arousal": 0.118,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9891,
+            "arousal": 0.11599999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9935,
+            "arousal": 0.191,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.9552,
+            "arousal": -0.069,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.8375,
+            "arousal": 0.037000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9866,
+            "arousal": 0.151,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9939,
+            "arousal": 0.19399999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8678,
+            "arousal": 0.049,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9508,
+            "arousal": 0.09399999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.8232,
+            "arousal": -0.030000000000000013,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9794,
+            "arousal": 0.11900000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8157,
+            "arousal": 0.021000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8625,
+            "arousal": 0.071,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.7939,
+            "arousal": 0.046,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.7759,
+            "arousal": 0.022999999999999993,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.6124,
+            "arousal": -0.019000000000000003,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9953,
+            "arousal": 0.208,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9838,
+            "arousal": 0.153,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9798,
+            "arousal": 0.10500000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.4829,
+            "arousal": 0.023,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.6999,
+            "arousal": 0.024000000000000007,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.6533,
+            "arousal": 0.045,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.4404,
+            "arousal": 0.016,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.0525,
+            "arousal": 0.0050000000000000044,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.8196,
+            "arousal": 0.030000000000000013,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9811,
+            "arousal": 0.111,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9502,
+            "arousal": 0.086,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8732,
+            "arousal": 0.059,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9891,
+            "arousal": 0.16499999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9853,
+            "arousal": 0.12300000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9689,
+            "arousal": 0.07899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.1871,
+            "arousal": -0.00399999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.348,
+            "arousal": 0.009000000000000008,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.8862,
+            "arousal": -0.047000000000000014,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0575,
+            "arousal": 0.006000000000000005,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.2289,
+            "arousal": -0.008000000000000007,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5282,
+            "arousal": 0.015,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.036,
+            "arousal": -0.010000000000000002,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9695,
+            "arousal": 0.079,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.781,
+            "arousal": 0.032,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9652,
+            "arousal": 0.102,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.9795,
+            "arousal": -0.082,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9859,
+            "arousal": 0.159,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9964,
+            "arousal": 0.24500000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9927,
+            "arousal": 0.163,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9947,
+            "arousal": 0.21100000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9693,
+            "arousal": 0.084,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.5566,
+            "arousal": 0.016,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.948,
+            "arousal": 0.061000000000000006,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.3809,
+            "arousal": -0.006999999999999999,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.6756,
+            "arousal": 0.040999999999999995,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.673,
+            "arousal": 0.027999999999999997,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.0448,
+            "arousal": -0.0010000000000000009,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9717,
+            "arousal": 0.087,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9906,
+            "arousal": 0.135,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7343,
+            "arousal": 0.024000000000000007,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9716,
+            "arousal": -0.092,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9069,
+            "arousal": 0.047999999999999994,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9719,
+            "arousal": 0.103,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.2925,
+            "arousal": 0.02600000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9591,
+            "arousal": 0.089,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9837,
+            "arousal": 0.131,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.898,
+            "arousal": -0.065,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.741,
+            "arousal": 0.02500000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9767,
+            "arousal": 0.09899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.994,
+            "arousal": 0.198,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9924,
+            "arousal": 0.161,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9959,
+            "arousal": 0.199,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9942,
+            "arousal": 0.239,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9224,
+            "arousal": 0.07500000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9822,
+            "arousal": 0.11699999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9871,
+            "arousal": 0.14800000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.8969,
+            "arousal": -0.05399999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.8271,
+            "arousal": -0.314,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.5064,
+            "arousal": 0.029999999999999992,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9378,
+            "arousal": 0.06699999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9883,
+            "arousal": 0.152,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8156,
+            "arousal": 0.043,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9472,
+            "arousal": 0.06899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8303,
+            "arousal": 0.053000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.8799,
+            "arousal": -0.026999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.1131,
+            "arousal": -0.008999999999999994,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.9811,
+            "arousal": -0.092,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.1048,
+            "arousal": 0.001999999999999995,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9602,
+            "arousal": 0.086,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8449,
+            "arousal": 0.013999999999999985,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9383,
+            "arousal": -0.038000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9912,
+            "arousal": -0.159,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.6626,
+            "arousal": 0.022999999999999993,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9172,
+            "arousal": 0.03899999999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.0281,
+            "arousal": 0.0030000000000000027,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.6322,
+            "arousal": -0.022000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9657,
+            "arousal": 0.083,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9655,
+            "arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9201,
+            "arousal": 0.095,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.522,
+            "arousal": 0.014000000000000005,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.6705,
+            "arousal": 0.079,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.9118,
+            "arousal": -0.078,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.3291,
+            "arousal": -0.017999999999999988,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7996,
+            "arousal": 0.034999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9953,
+            "arousal": 0.214,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9637,
+            "arousal": 0.10600000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.4588,
+            "arousal": -0.019999999999999997,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9006,
+            "arousal": -0.05500000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.812,
+            "arousal": 0.041,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8479,
+            "arousal": 0.046000000000000006,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.6386,
+            "arousal": -0.018000000000000002,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9969,
+            "arousal": 0.249,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9652,
+            "arousal": 0.29000000000000004,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8886,
+            "arousal": 0.07,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9611,
+            "arousal": 0.097,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.0557,
+            "arousal": 0.016,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9792,
+            "arousal": -0.09,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9602,
+            "arousal": 0.067,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9508,
+            "arousal": 0.057999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9575,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9907,
+            "arousal": 0.17400000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9936,
+            "arousal": 0.17700000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.9799,
+            "arousal": -0.10500000000000001,
+            "emotion": "Tired"
+        },
+        {
+            "valence": -0.2238,
+            "arousal": -0.013000000000000005,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.6405,
+            "arousal": 0.013999999999999985,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.9562,
+            "arousal": -0.074,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7139,
+            "arousal": 0.040999999999999995,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9761,
+            "arousal": 0.109,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.2018,
+            "arousal": 0.0040000000000000036,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.9938,
+            "arousal": -0.165,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9101,
+            "arousal": 0.041999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8982,
+            "arousal": 0.048,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.979,
+            "arousal": 0.102,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9719,
+            "arousal": 0.09300000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.8296,
+            "arousal": -0.037,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9889,
+            "arousal": 0.15800000000000003,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.6055,
+            "arousal": 0.020999999999999998,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.4767,
+            "arousal": 0.079,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.8275,
+            "arousal": -0.05499999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.963,
+            "arousal": 0.08199999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.4039,
+            "arousal": 0.012999999999999998,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.7033,
+            "arousal": -0.025999999999999995,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.2621,
+            "arousal": 0.009999999999999995,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9389,
+            "arousal": 0.08800000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9404,
+            "arousal": 0.059,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8616,
+            "arousal": 0.052000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9857,
+            "arousal": 0.137,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.4425,
+            "arousal": -0.024999999999999994,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9644,
+            "arousal": 0.085,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8048,
+            "arousal": 0.039999999999999994,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9441,
+            "arousal": -0.064,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.6717,
+            "arousal": -0.03,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9331,
+            "arousal": 0.06299999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.5785,
+            "arousal": -0.040999999999999995,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9231,
+            "arousal": 0.07100000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9864,
+            "arousal": 0.138,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.993,
+            "arousal": 0.199,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9859,
+            "arousal": 0.13,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9595,
+            "arousal": 0.067,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8253,
+            "arousal": 0.04700000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.4123,
+            "arousal": 0.02600000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9938,
+            "arousal": 0.17200000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9766,
+            "arousal": 0.11499999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9383,
+            "arousal": 0.068,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.1135,
+            "arousal": 0.006999999999999992,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9867,
+            "arousal": 0.135,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9575,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9818,
+            "arousal": 0.10400000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.5326,
+            "arousal": 0.010999999999999996,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9857,
+            "arousal": 0.112,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.6908,
+            "arousal": -0.020000000000000004,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.6727,
+            "arousal": 0.01200000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.8983,
+            "arousal": -0.04099999999999998,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9713,
+            "arousal": -0.08099999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.836,
+            "arousal": -0.223,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9043,
+            "arousal": 0.08199999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.8519,
+            "arousal": -0.044000000000000004,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9385,
+            "arousal": 0.055,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.1376,
+            "arousal": -0.005999999999999998,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9389,
+            "arousal": 0.07799999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9467,
+            "arousal": 0.07600000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9921,
+            "arousal": 0.17700000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8632,
+            "arousal": 0.036000000000000004,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9281,
+            "arousal": 0.069,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9838,
+            "arousal": 0.13799999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.974,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9614,
+            "arousal": 0.07899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9672,
+            "arousal": 0.09,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9971,
+            "arousal": 0.25799999999999995,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.996,
+            "arousal": 0.20900000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9655,
+            "arousal": 0.096,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9936,
+            "arousal": 0.125,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9861,
+            "arousal": 0.131,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.862,
+            "arousal": 0.034,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9434,
+            "arousal": 0.082,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8601,
+            "arousal": 0.07100000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9675,
+            "arousal": 0.132,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9928,
+            "arousal": 0.173,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8763,
+            "arousal": 0.038,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9929,
+            "arousal": 0.166,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.978,
+            "arousal": 0.10499999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8555,
+            "arousal": 0.027999999999999997,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9898,
+            "arousal": 0.172,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9926,
+            "arousal": 0.165,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9675,
+            "arousal": 0.095,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9896,
+            "arousal": 0.183,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9788,
+            "arousal": 0.09699999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.3715,
+            "arousal": 0.006999999999999999,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9621,
+            "arousal": 0.091,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9926,
+            "arousal": 0.173,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9494,
+            "arousal": 0.06400000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.994,
+            "arousal": 0.172,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9676,
+            "arousal": 0.155,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8974,
+            "arousal": 0.066,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.879,
+            "arousal": 0.051000000000000004,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9796,
+            "arousal": 0.10900000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.8482,
+            "arousal": -0.043,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9895,
+            "arousal": 0.16,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.99,
+            "arousal": 0.16299999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9774,
+            "arousal": 0.10999999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9946,
+            "arousal": 0.164,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9418,
+            "arousal": 0.052000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8761,
+            "arousal": 0.03799999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.893,
+            "arousal": 0.045,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9413,
+            "arousal": 0.067,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8759,
+            "arousal": 0.057999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.907,
+            "arousal": 0.049,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8278,
+            "arousal": 0.04800000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9593,
+            "arousal": 0.085,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9062,
+            "arousal": 0.07200000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.7439,
+            "arousal": 0.04,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7579,
+            "arousal": -0.018000000000000002,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.124,
+            "arousal": -0.010999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.6463,
+            "arousal": 0.031,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.931,
+            "arousal": -0.074,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.7844,
+            "arousal": -0.020999999999999998,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7602,
+            "arousal": 0.033,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.985,
+            "arousal": 0.14200000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.9737,
+            "arousal": -0.08600000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.8754,
+            "arousal": 0.051,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9545,
+            "arousal": -0.069,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9544,
+            "arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9244,
+            "arousal": 0.06899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7869,
+            "arousal": -0.03200000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.1779,
+            "arousal": -0.008,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.936,
+            "arousal": -0.061000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.8579,
+            "arousal": 0.044,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9385,
+            "arousal": 0.065,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.2023,
+            "arousal": 0.0049999999999999975,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9336,
+            "arousal": 0.059000000000000004,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.475,
+            "arousal": -0.022000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7456,
+            "arousal": 0.09300000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.6815,
+            "arousal": 0.028,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.4215,
+            "arousal": -0.018999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9927,
+            "arousal": 0.181,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.6704,
+            "arousal": 0.031,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.9669,
+            "arousal": -0.078,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9435,
+            "arousal": 0.11900000000000001,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.451,
+            "arousal": -0.016999999999999994,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.3237,
+            "arousal": -0.013999999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9423,
+            "arousal": -0.079,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9318,
+            "arousal": 0.074,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8898,
+            "arousal": 0.075,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8126,
+            "arousal": 0.07500000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8793,
+            "arousal": 0.05499999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9664,
+            "arousal": 0.09799999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8163,
+            "arousal": 0.041999999999999996,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9531,
+            "arousal": 0.08400000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.962,
+            "arousal": 0.05699999999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8098,
+            "arousal": 0.037000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9445,
+            "arousal": -0.06499999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9494,
+            "arousal": 0.072,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.986,
+            "arousal": 0.098,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.653,
+            "arousal": -0.009999999999999995,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7984,
+            "arousal": 0.06499999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9413,
+            "arousal": 0.08400000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9076,
+            "arousal": 0.044,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8651,
+            "arousal": 0.061000000000000006,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.7436,
+            "arousal": 0.036,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.3301,
+            "arousal": -0.011999999999999997,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9641,
+            "arousal": 0.063,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9743,
+            "arousal": 0.085,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9455,
+            "arousal": -0.07,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.1513,
+            "arousal": 0.0030000000000000027,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.8627,
+            "arousal": 0.044,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9943,
+            "arousal": 0.16299999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.7244,
+            "arousal": -0.02600000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9428,
+            "arousal": 0.06100000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9666,
+            "arousal": 0.094,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8954,
+            "arousal": 0.073,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9849,
+            "arousal": 0.153,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9356,
+            "arousal": 0.104,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.98,
+            "arousal": 0.11599999999999999,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7841,
+            "arousal": 0.177,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9423,
+            "arousal": 0.084,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9403,
+            "arousal": 0.068,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.794,
+            "arousal": 0.033,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9053,
+            "arousal": 0.054000000000000006,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7881,
+            "arousal": -0.04800000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.3045,
+            "arousal": 0.024,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.3542,
+            "arousal": 0.005999999999999998,
+            "emotion": "Calm"
+        },
+        {
+            "valence": -0.0961,
+            "arousal": -0.010999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7223,
+            "arousal": 0.04699999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7741,
+            "arousal": -0.036,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9848,
+            "arousal": 0.134,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.975,
+            "arousal": 0.124,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.5733,
+            "arousal": -0.022999999999999996,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.8835,
+            "arousal": -0.039,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.7411,
+            "arousal": 0.018000000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9817,
+            "arousal": -0.11200000000000002,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9082,
+            "arousal": 0.06299999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.2663,
+            "arousal": 0.015,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9144,
+            "arousal": 0.074,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9127,
+            "arousal": 0.059000000000000004,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.9861,
+            "arousal": -0.20199999999999999,
+            "emotion": "Tired"
+        },
+        {
+            "valence": -0.9764,
+            "arousal": -0.18,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9565,
+            "arousal": 0.136,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9598,
+            "arousal": 0.106,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.4847,
+            "arousal": 0.040999999999999995,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9827,
+            "arousal": 0.152,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9923,
+            "arousal": 0.182,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.2753,
+            "arousal": 0.021999999999999992,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9446,
+            "arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9726,
+            "arousal": 0.126,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7202,
+            "arousal": 0.04000000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7351,
+            "arousal": -0.022000000000000006,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5267,
+            "arousal": 0.015000000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9687,
+            "arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9961,
+            "arousal": 0.225,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.996,
+            "arousal": 0.185,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.5387,
+            "arousal": -0.01899999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.3612,
+            "arousal": -0.024999999999999994,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9738,
+            "arousal": 0.1,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8872,
+            "arousal": 0.05499999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.2247,
+            "arousal": 0.0049999999999999906,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0946,
+            "arousal": 0.03,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.3818,
+            "arousal": -0.013000000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.8807,
+            "arousal": -0.04000000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9664,
+            "arousal": 0.103,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7195,
+            "arousal": 0.026000000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9814,
+            "arousal": 0.127,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9296,
+            "arousal": 0.073,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.7895,
+            "arousal": 0.033,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.8163,
+            "arousal": 0.05399999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.2323,
+            "arousal": 0.013999999999999999,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.8225,
+            "arousal": 0.074,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9649,
+            "arousal": 0.11400000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9243,
+            "arousal": 0.09100000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.936,
+            "arousal": 0.07300000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9949,
+            "arousal": 0.207,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9521,
+            "arousal": 0.08000000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.5439,
+            "arousal": 0.021000000000000005,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.9719,
+            "arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9279,
+            "arousal": 0.06899999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9824,
+            "arousal": 0.13699999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.7029,
+            "arousal": 0.015,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9942,
+            "arousal": 0.20700000000000002,
+            "emotion": "Content"
+        },
+        {
+            "valence": -0.1036,
+            "arousal": 0.010000000000000009,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.4083,
+            "arousal": -0.017,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.915,
+            "arousal": 0.045,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.988,
+            "arousal": 0.16399999999999998,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.2863,
+            "arousal": 0.0,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9738,
+            "arousal": 0.097,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7668,
+            "arousal": -0.041,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9808,
+            "arousal": 0.143,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8,
+            "arousal": 0.024999999999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.2606,
+            "arousal": 0.007999999999999993,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9672,
+            "arousal": 0.072,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.4402,
+            "arousal": -0.013999999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.9874,
+            "arousal": 0.145,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.9607,
+            "arousal": 0.055999999999999994,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.274,
+            "arousal": -0.014000000000000002,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9366,
+            "arousal": -0.064,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.777,
+            "arousal": 0.028999999999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7654,
+            "arousal": -0.033,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5741,
+            "arousal": 0.008,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.3962,
+            "arousal": -0.0040000000000000036,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.433,
+            "arousal": -0.009000000000000008,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9853,
+            "arousal": -0.137,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.9098,
+            "arousal": 0.053000000000000005,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": -0.7495,
+            "arousal": -0.04400000000000001,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5215,
+            "arousal": -0.0030000000000000027,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": -0.7455,
+            "arousal": -0.030000000000000013,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9808,
+            "arousal": -0.07599999999999998,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.8999,
+            "arousal": -0.054,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9947,
+            "arousal": -0.183,
+            "emotion": "Tired"
+        },
+        {
+            "valence": -0.9605,
+            "arousal": -0.098,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": -0.9898,
+            "arousal": -0.153,
+            "emotion": "Tired"
+        },
+        {
+            "valence": 0.2762,
+            "arousal": 0.009000000000000008,
+            "emotion": "Calm"
+        },
+        {
+            "valence": 0.9802,
+            "arousal": 0.118,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.8881,
+            "arousal": 0.030999999999999986,
+            "emotion": "Relaxed"
+        },
+        {
+            "valence": 0.9913,
+            "arousal": 0.233,
+            "emotion": "Content"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.5719,
+            "arousal": 0.07,
+            "emotion": "Relieved"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        },
+        {
+            "valence": 0.0,
+            "arousal": 0.0,
+            "emotion": "Neutral"
+        }
+    ]
+}
