@@ -82,7 +82,6 @@ p {
   color: var(--primary-color);
   font-size: 12px;
   padding: 5px;
-  position: absolute;
   visibility: hidden;
   z-index: 10;
   background: var(--background-color);
@@ -108,46 +107,8 @@ circle {
 
 .row{
     margin-bottom:20px;
+    margin-left: 20px;
 }
 
-#book-card {
-    display: flex;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .book-image {
-    width: 300px;
-    height: 400px;
-    background-color: #fff;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .book-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  .book-details {
-    flex: 1;
-  }
-  
-  .book-title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .book-hierarchy,
-  .book-language,
-  .book-pages {
-    margin: 5px 0;
-  }
+
   
