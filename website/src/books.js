@@ -1,67 +1,94 @@
 // Get the width of the Bootstrap container
-var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
+var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var containerHeight = 600;
 
+const navigationBar = document.getElementById("navigation-bar");
+var selectedBook = document.getElementById("book-name");
+const showSvgButton = document.getElementById("show-svg-button");
+const booksSvg = document.getElementById("books");
+
+function createBookCards(container, books) {
+  container.html("");
+
+  //FIXME: background color not independent of card
+  const bookCardContainer = container
+    .append("div")
+    .attr("class", "book-card-container");
+
+  const bookCards = bookCardContainer
+    .selectAll(".book-card")
+    .data(books)
+    .enter()
+    .append("div")
+    .attr("class", "book-card");
+
+  const imageContainer = bookCards
+    .append("div")
+    .attr("class", "image-container");
+
+  imageContainer
+    .append("img")
+    .attr("src", (book) => "./src/img/thumbnails/" + book.book_id + ".png")
+    .attr("alt", (book) => book.title);
+
+  const bookInfo = bookCards.append("div").attr("class", "book-info");
+
+  bookInfo.append("h3").text((book) => book.title);
+
+  bookInfo.append("p").text((book) => book.author);
+
+  bookInfo.append("p").text((book) => parseInt(book.year) + ", " + book.place);
+
+  // Add event listener to book cards
+  bookCards.on("click", function (event, d) {
+    console.log(d);
+    createBubbleGraph(d.book_id);
+    createEmotionViz(d.book_id);
+    // Hide the SVG
+    booksSvg.style.display = "none";
+
+    // Show the navigation bar
+    navigationBar.style.display = "flex";
+
+    // Update the selected book name
+    selectedBook.textContent = "Selected Book: " + d.title;
+  });
+
+  return bookCardContainer;
+}
+
 d3.csv("./src/data/books.csv").then(function (data) {
+  data = data.filter((d) => d.language === "eng");
 
-    data = data.filter(d => d.language === 'eng');
+  d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
+    const svg = d3
+      .select("#books")
+      .attr("width", containerWidth)
+      .attr("height", containerHeight);
 
-    d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
-        
-        function createBookCards(container, books) {
-            container.html("");
+    const bookCardContainer = svg
+      .append("foreignObject")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", containerWidth)
+      .attr("height", containerHeight)
+      .append("xhtml:div")
+      .attr("id", "book-cards");
 
-            const bookCardContainer = container.append("div")
-                .attr("class", "book-card-container");
+    // Create book cards for each work
+    const bookCards = createBookCards(bookCardContainer, data);
+  });
+});
 
-            const bookCards = bookCardContainer.selectAll(".book-card")
-                .data(books)
-                .enter()
-                .append("div")
-                .attr("class", "book-card");
+function showBooks() {
+  // Show the SVG
+  booksSvg.style.display = "block";
 
-            const imageContainer = bookCards.append("div")
-                .attr("class", "image-container");
+  // Hide the navigation bar
+  navigationBar.style.display = "none";
+}
 
-            imageContainer.append("img")
-                .attr("src", book => "./src/img/thumbnails/" + book.book_id + ".png")
-                .attr("alt", book => book.title);
-
-            const bookInfo = bookCards.append("div")
-                .attr("class", "book-info");
-
-            bookInfo.append("h3")
-                .text(book => book.title);
-
-            bookInfo.append("p")
-                .text(book => book.author);
-
-            bookInfo.append("p")
-                .text(book => parseInt(book.year) + ', ' + book.place);
-
-            // Add event listener to book cards
-            bookCards.on("click", function (event, d) {
-                console.log(d)
-                createBubbleGraph(d.book_id);
-            });
-
-            return bookCardContainer;
-        }
-
-        const svg = d3.select("#books")
-            .attr("width", containerWidth)
-            .attr("height", containerHeight);
-
-        const bookCardContainer = svg.append("foreignObject")
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("width", containerWidth)
-            .attr("height", containerHeight)
-            .append("xhtml:div")
-            .attr("id", "book-cards");
-
-        // Create book cards for each work
-        const bookCards = createBookCards(bookCardContainer, data);
-
-    });
+// Add event listener for showing the SVG
+showSvgButton.addEventListener("click", function () {
+  showBooks();
 });

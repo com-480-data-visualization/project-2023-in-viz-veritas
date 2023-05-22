@@ -4,77 +4,14 @@ const primaryColor = getComputedStyle(
 console.log(primaryColor);
 
 var pages; // Declare the variable outside the scope
-const bookSelector = document.getElementById("book-selector");
-
-
-// Function to update the book card
-function updateBookCard(bookData) {
-  // Update the book title
-  var bookCard = d3.select("#book-card");
-  bookCard.select(".book-title").text(bookData.hierarchy.split("/")[2]);
-
-  // Update the book hierarchy
-   bookCard.select(".book-hierarchy").text(bookData.hierarchy.split("/")[1].replace(/_/g, " "));
-
-  // Update the book language
-  bookCard.select(".book-language").text("Language: " + bookData.language);
-
-  // Update the number of pages
-  bookCard.select(".book-pages").text("Number of Pages: " + bookData.nr_pages);
-
-  // Update the book image
-  var image = bookCard.select(".book-image").selectAll("img").data([bookData]);
-
-  // Enter new image (if any)
-  image
-    .enter()
-    .append("img")
-    .merge(image)
-    .attr("src", function (d) {
-      return "./src/img/thumbnails/" + bookSelector.value + ".png";
-    })
-    .attr("width", 300);
-
-  // Exit removed image (if any)
-  image.exit().remove();
-}
-
-
-
-
-
-
-
-// Add a selector to choose the book
-fetch("./src/data/emotions/")
-  .then((response) => response.text())
-  .then((fileListHTML) => {
-    const filenames = Array.from(
-      fileListHTML.matchAll(/\/(\d+\.json)/g),
-      (match) => match[1]
-    );
-
-    // Populate the options
-    filenames.forEach((filename) => {
-      const option = document.createElement("option");
-      option.value = filename.split(".")[0]; // Remove the file extension
-      option.textContent = "Book " + option.value;
-      bookSelector.appendChild(option);
-    });
-  })
-  .catch((error) => {
-    console.log("Error fetching file list:", error);
-  });
-
-bookSelector.addEventListener("change", function () {
-  var selectedBook = bookSelector.value;
+function createEmotionViz(bookid) {
 
   // Clear previous charts
   d3.select("#valence-chart").selectAll("*").remove();
   d3.select("#arousal-chart").selectAll("*").remove();
 
   // Load the selected book's data
-  d3.json("./src/data/emotions/" + selectedBook + ".json")
+  d3.json("./src/data/emotions/" + bookid + ".json")
     .then(function (data) {
       pages = data.pages; // Assign the value to the variable
 
@@ -91,13 +28,12 @@ bookSelector.addEventListener("change", function () {
       createLineChart(valenceData, "Valence", "valence-chart");
       createLineChart(arousalData, "Arousal", "arousal-chart");
       createScatterPlot(pages, "Emotion Scatter Plot", "emotion-scatter");
-      updateBookCard(data);
       console.log("Loaded emotion data correctly");
     })
     .catch(function (error) {
       console.log("Error fetching data:", error);
     });
-});
+}
 
 function createScatterPlot(data, title, chartId) {
   // Set up the dimensions and margins of the chart
@@ -192,7 +128,7 @@ function createScatterPlot(data, title, chartId) {
 
 function createLineChart(data, title, chartId) {
   var width = d3
-    .select(".scrollable-right")
+    .select(".row")
     .node()
     .getBoundingClientRect().width;
   var height = 400;

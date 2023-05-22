@@ -2,6 +2,9 @@ function createBubbleGraph(bookId) {
     const threshold = 30;
 
     // Clear previous graph content
+
+
+    
     d3.select("#bubblegraph").html("");
 
     d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
@@ -16,7 +19,6 @@ function createBubbleGraph(bookId) {
             .padding(1);
 
         const div = d3.select("#bubblegraph")
-            .append("div")
             .style("width", `${diameter}px`)
             .style("height", `${diameter}px`)
             .style("position", "relative");

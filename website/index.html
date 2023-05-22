@@ -1,93 +1,198 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/book-card.css" />
 
+<<<<<<< HEAD
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
+  </head>
+
+  <body>
+    <div class="row" id="title">
+      <div class="image-container">
+        <img src="./src/img/maps/ancient_map_italy.jpg" alt="map" />
+        <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <p>
+          NOTE: THIS IS JUST PLACEHOLDER TEXT, BUT HERE WE SHALL DESCRIBE OUR
+          PROJECT <br />
+          The dataset we are working on is a collection of old travel guides for
+          Italy from the rare books collection of the
+          <a href="https://https://www.biblhertz.it/it/home">
+            Bibliotheca Hertziana
+          </a>
+          in Rome. The collection contains around 800 documents in several
+          languages from the years 1550 up until 1930. They are sparsely
+          illustrated and contain a lot of recognizable place names. All of them
+          have been recently digitized, but only around 80 have also been
+          transcribed using
+          <a href="https://readcoop.eu/transkribus/?sc=Transkribus"
+            >Transkribus</a
+          >. Tranksribus is an AI supported platform for text recognition and
+          transcriptions. We scraped the transcripts from Transkribus and
+          obtained the metadata directly from the Bibliotheca Hertziana, which
+          kindly provides us access to data that can be of interest for
+          vizualisation. We have access to metadata like title and author, year
+          and place of publication, language of the text, and several other
+          columns that might be of lesser interest, such as format of the
+          document. Since the texts are in several languages, one of the
+          potential challenges is how to use NLP techniques on the text to
+          extract for example place names and sentiment.
+        </p>
+      </div>
+      <div class="row">
+        <h2>Timeline: The Books across Time</h2>
+        <svg id="viz1"></svg>
+        <p>
+          Some text describing this Viz, Also TODO: fix the Tooltip for the
+          books, also this Viz has a height issue.
+        </p>
+      </div>
+      <div class="row">
+        <h2>Distribution: The Books across Europe</h2>
+        <p>
+          Idk some Viz on where the books were written, I can add this with
+          leaflet or something.
+        </p>
+      </div>
+
+
+      <div class="row">
+        <h2>Taking a deeper look: NLP</h2>
+        <p>
+          For the english books we did some rad NLP, extracting sentiment and locations visited.
+          Select a book you wild like to analyze further!
+          TODO: Make navigation bar + book list appear / disappear with an animation
+        </p>
+      </div>
+      
+      <div id="navigation-bar" style="display: none">
+        <button id="show-svg-button">Show Books</button>
+        <div id="selected-book">
+          <span id="book-name"></span>
+        </div>
+      </div>
+      <div class="row">
+          <svg id="books"></svg>
+      </div>
+
+      <div class="row">
+        <h2>Locations mentioned in this book</h2>
+        <p> Yada yada there have been locations mentioned. Also change the palette of these bubbles.</p>
+        <div id="bubblegraph"></div>
+      </div>
+
+      <div class="row">
+        <h2>Emotions in this book</h2>
+        <p> Yada Yada Sentiment analysis, Stick those three vizzes together so that it looks nicer</p>
+        <svg id="valence-chart"></svg>
+      </div>
+
+      <div class="row">
+        <svg id="arousal-chart"></svg>
+      </div>
+
+      <div class="row">
+        <svg id="emotion-scatter"></svg>
+      </div>
+
+      <div>
+        <h2>Link between Emotions and Locations</h2>
+        <h2>We urgently need the third Viz here</h2>
+
+      </div>
+    </div>
+
+    <script src="src/timeline.js"></script>
+    <script src="src/emotions.js"></script>
+    <script src="src/bubblegraph.js"></script>
+    <script src="src/books.js"></script>
+=======
   <link rel="stylesheet" href="./src/style.css">
   <link rel="stylesheet" href="./src/book-card.css">
 
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="row">
-
-
-      <div class="col-md-9 scrollable-right">
-        <div class="row">
-          <div class="col-md-12">
+  <body>
+    <div class="container">
+          <div class="row">
             <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
+              <br>
+              <p>This is the basic skeleton of our website.</p>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <svg id="viz1"></svg>
-            <script src="src/timeline.js"></script>
+          <div class="row">
+              <svg id="viz1"></svg>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <svg id="books"></svg>
-            <script src="src/books.js"></script>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12">
+          <div class="row">
             <svg id="bubblegraph"></svg>
-            <script src="src/bubblegraph.js"></script>
+
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <select id="book-selector">
-              <option value="0">Select a book</option>
-            </select>
-            <div id="book-card">
-              <div class="book-image"></div>
-              <div class="book-details">
-                <h3 class="book-title"></h3>
-                <p class="book-hierarchy"></p>
-                <p class="book-language"></p>
-                <p class="book-pages"></p>
+          <div class="row">
+              <select id="book-selector">
+                <option value="0">Select a book</option>
+              </select>
+              <div id="book-card">
+                <div class="book-image"></div>
+                <div class="book-details">
+                  <h3 class="book-title"></h3>
+                  <p class="book-hierarchy"></p>
+                  <p class="book-language"></p>
+                  <p class="book-pages"></p>
+                </div>
               </div>
-            </div>
-            <svg id="valence-chart"></svg>
-            <script src="src/emotions.js"></script>
+              <svg id="valence-chart"></svg>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-9">
-            <svg id="arousal-chart"></svg>
+          <div class="row">
+              <svg id="arousal-chart"></svg>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-9">
-            <svg id="emotion-scatter"></svg>
+          <div class="row">
+              <svg id="emotion-scatter"></svg>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-9">
+          <div class="row">
+              <img src="src/img/emotions_per_cities.png" alt="Image for viz3" />
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
 
+
+    <script src="src/emotions.js"></script>
+    <script src="src/bubbles.js"></script>
+    <script src="src/timeline.js"></script>
+    <script src="src/bubblegraph.js"></script>
+
+
+   
+>>>>>>> master
+  </body>
 </html>
