@@ -1,7 +1,7 @@
 
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
-var containerHeight = 400;
+var containerHeight = 600;
 
 d3.csv("./src/data/books.csv").then(function (data) {
 
@@ -18,7 +18,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
 
         function createBubbleGraph(bookId) {
-            const threshold = 30; 
+            const threshold = 30;
 
             // Clear previous graph content
             d3.select("#bubble-graph").html("");
@@ -90,43 +90,71 @@ d3.csv("./src/data/books.csv").then(function (data) {
         }
 
 
+        function createBookCards(container, books) {
+            // Clear previous card content
+            container.html("");
+
+            // Create the book cards
+            const bookCards = container.selectAll(".book-card")
+                .data(books)
+                .enter()
+                .append("div")
+                .attr("class", "book-card");
+
+            const imageContainer = bookCards.append("div")
+                .attr("class", "image-container");
+
+            imageContainer.append("img")
+                .attr("src", book => "./src/img/thumbnails/" + book.book_id + ".png")
+                .attr("alt", book => book.title);
+
+            const bookInfo = bookCards.append("div")
+                .attr("class", "book-info");
+
+            bookInfo.append("h3")
+                .text(book => book.title);
+
+            bookInfo.append("p")
+                .text(book => book.author);
+
+            return bookCards;
+        }
 
 
 
-
-
-
-
-        var svg = d3.select("#bubbles")
+        const svg = d3.select("#bubbles")
             .attr("width", containerWidth)
             .attr("height", containerHeight);
 
-
-        const row_div = svg.append("foreignObject")
+        const rowDiv = svg.append("foreignObject")
             .attr("x", 0)
             .attr("y", 0)
             .attr("width", "100%")
             .attr("height", "100%")
             .append("xhtml:div")
             .attr("class", "row");
-        // Create the author selection section within the SVG element
-        const auth_div = row_div.append("foreignObject")
-            .append("xhtml:div")
+
+
+        // Create the author selection section
+        const authorSelectionDiv = rowDiv.append("div")
             .attr("id", "author-selection")
-            .attr("class", "col-sm-6");
+            .attr("class", "row");
 
-        // Create the book selection section within the SVG element
-        const book_div = row_div.append("foreignObject")
-            .append("xhtml:div")
+        // Create the book selection section
+        const bookSectionDiv = rowDiv.append("div")
             .attr("id", "book-section")
-            .attr("class", "col-sm-6");
+            .attr("class", "row")
+            .style("display", "flex")
+            .style("justify-content", "center");
 
-        // Create the bubble graph section within the SVG element
-        const bubble_div = row_div.append("foreignObject")
+        // Create the column for the bubble graph
+        const bubbleGraphDiv = rowDiv.append("foreignObject")
+            .attr("class", "col-sm-6")
             .append("xhtml:div")
             .attr("id", "bubble-graph")
-            .attr("class", "col-sm-6");
 
+        bookSectionDiv.style("margin-top", "10px");
+        bubbleGraphDiv.style("height", "100%");
 
         const authorSelection = d3.select("#author-selection");
         const authors = d3.group(data, d => d.author)
@@ -139,36 +167,32 @@ d3.csv("./src/data/books.csv").then(function (data) {
             .text(d => d[0])
             .attr("value", function (d) { return d[0] });
 
-
         const bookSection = d3.select("#book-section");
-        const bookSelection = bookSection.append("select");
+        // const bookSelection = bookSection.append("select");
+
+        const bookCardContainer = bookSection.append("div")
+            .attr("id", "book-cards");
 
         authorSelection.select("select").on("change", function () {
             const author = d3.select(this).property("value");
             const works = data.filter(d => d.author === author);
-            console.log(works);
 
-            bookSelection.selectAll("*").remove(); // Clear previous book selection
+            // Clear previous book cards
+            bookCardContainer.html(""); // Clear previous book selection
 
-            bookSelection.selectAll("option")
-                .data(works)
-                .enter()
-                .append("option")
-                .text(d => d.title)
-                .attr("value", d => d.book_id);
+            // Create book cards for each work
+            const bookCards = createBookCards(bookCardContainer, works)
+            const firstbookId = works[0].book_id;
+                createBubbleGraph(firstbookId);
 
-            // Trigger the change event on the book selection to select the first book by default
-            bookSelection.node().value = works[0].book_id;
-            createBubbleGraph(works[0].book_id);
+            // Add event listener to book cards
+            bookCards.on("click", function () {
+                const bookId = d3.select(this).datum().book_id;
+                createBubbleGraph(bookId);
+            });
         });
 
-        bookSelection.on("change", function () {
-            const bookId = d3.select(this).property("value");
-            createBubbleGraph(bookId);
-        });
-
-        authorSelection.select("select").dispatch("change");
-
+        authorSelection.dispatch("change");
 
     });
 
