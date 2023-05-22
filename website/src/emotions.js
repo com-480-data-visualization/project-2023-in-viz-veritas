@@ -1,63 +1,299 @@
+const primaryColor = getComputedStyle(
+  document.documentElement
+).getPropertyValue("--primary-color");
+console.log(primaryColor);
 
-// Get the width of the Bootstrap container
-var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
-var height = 400;
-// const radius = 5;
-// const enlarged = radius * 8;
+var pages; // Declare the variable outside the scope
+const bookSelector = document.getElementById("book-selector");
+
+
+// Function to update the book card
+function updateBookCard(bookData) {
+  // Update the book title
+  var bookCard = d3.select("#book-card");
+  bookCard.select(".book-title").text(bookData.hierarchy.split("/")[2]);
+
+  // Update the book hierarchy
+   bookCard.select(".book-hierarchy").text(bookData.hierarchy.split("/")[1].replace(/_/g, " "));
+
+  // Update the book language
+  bookCard.select(".book-language").text("Language: " + bookData.language);
+
+  // Update the number of pages
+  bookCard.select(".book-pages").text("Number of Pages: " + bookData.nr_pages);
+
+  // Update the book image
+  var image = bookCard.select(".book-image").selectAll("img").data([bookData]);
+
+  // Enter new image (if any)
+  image
+    .enter()
+    .append("img")
+    .merge(image)
+    .attr("src", function (d) {
+      return "./src/img/thumbnails/" + bookSelector.value + ".png";
+    })
+    .attr("width", 300);
+
+  // Exit removed image (if any)
+  image.exit().remove();
+}
 
 
 
-d3.csv("./src/data/page_emotions.csv").then(function (data) {
 
-    var parseDate = d3.timeParse("%Y");
-    data.forEach(function (d) {
-        d.page_number = Number(d.page_number);
-        d.valence = Number(d.valence);
-        d.arousal = Number(d.arousal);  
+
+
+
+// Add a selector to choose the book
+fetch("./src/data/emotions/")
+  .then((response) => response.text())
+  .then((fileListHTML) => {
+    const filenames = Array.from(
+      fileListHTML.matchAll(/\/(\d+\.json)/g),
+      (match) => match[1]
+    );
+
+    // Populate the options
+    filenames.forEach((filename) => {
+      const option = document.createElement("option");
+      option.value = filename.split(".")[0]; // Remove the file extension
+      option.textContent = "Book " + option.value;
+      bookSelector.appendChild(option);
     });
+  })
+  .catch((error) => {
+    console.log("Error fetching file list:", error);
+  });
 
-    // // Set up the tooltip
-    // var tooltip = d3.select("body")
-    //     .append("div")
-    //     .style("position", "absolute")
-    //     .style("background-color", "white")
-    //     .style("padding", "5px")
-    //     .style("border-radius", "5px")
-    //     .style("box-shadow", "0 2px 5px rgba(0, 0, 0, 0.3)")
-    //     .style("visibility", "hidden");
+bookSelector.addEventListener("change", function () {
+  var selectedBook = bookSelector.value;
 
-    // Set up the SVG
-    var svg = d3.select("#viz2")
-        .attr("width", containerWidth)
-        .attr("height", height/2);
+  // Clear previous charts
+  d3.select("#valence-chart").selectAll("*").remove();
+  d3.select("#arousal-chart").selectAll("*").remove();
 
-    var x = d3.scaleLinear()
-      .domain(d3.extent(data, (d) => { return d.page_number; }))
-      .range([ 0, containerWidth ]);
-    svg.append("g")
-      .attr("transform", "translate(0," + height/2 + ")")
-      .call(d3.axisBottom(x));
+  // Load the selected book's data
+  d3.json("./src/data/emotions/" + selectedBook + ".json")
+    .then(function (data) {
+      pages = data.pages; // Assign the value to the variable
 
-    // Add Y axis
-    var y = d3.scaleLinear()
-      .domain([-1, 1])
-      .range([ height/2, 0 ]);
-    svg.append("g")
-      .call(d3.axisLeft(y));
+      // Extract valence and arousal values
+      var valenceData = pages.map(function (page) {
+        return page.valence;
+      });
 
-    // Add the line
-    svg.append("path")
-      .datum(data)
-      .attr("fill", "none")
-      .attr("stroke", "#111f00")
-      .attr("stroke-width", 1)
-      .attr("d", d3.line()
-        .x(function(d) { return x(d.page_number) })
-        .y(function(d) { return y(d.valence) })
-        )
+      var arousalData = pages.map(function (page) {
+        return page.arousal;
+      });
 
-
+      // Call the function to create line charts
+      createLineChart(valenceData, "Valence", "valence-chart");
+      createLineChart(arousalData, "Arousal", "arousal-chart");
+      createScatterPlot(pages, "Emotion Scatter Plot", "emotion-scatter");
+      updateBookCard(data);
+      console.log("Loaded emotion data correctly");
+    })
+    .catch(function (error) {
+      console.log("Error fetching data:", error);
+    });
 });
 
+function createScatterPlot(data, title, chartId) {
+  // Set up the dimensions and margins of the chart
+  var margin = { top: 20, right: 20, bottom: 30, left: 40 },
+    width = 600 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
+  // Create the SVG element
+  var svg = d3
+    .select("#" + chartId)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+  // Set the x-axis scale
+  var x = d3.scaleLinear().domain([-1, 1]).nice().range([0, width]);
+
+  // Set the y-axis scale
+  var y = d3.scaleLinear().domain([-1, 1]).nice().range([height, 0]);
+
+  // Create the x-axis
+  svg
+    .append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+
+  // Create the y-axis
+  svg.append("g").attr("class", "y-axis").call(d3.axisLeft(y));
+
+  // Create the scatterplot points
+  svg
+    .selectAll(".dot")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("class", "dot")
+    .attr("cx", (d) => x(d.valence))
+    .attr("cy", (d) => y(d.arousal))
+    .attr("r", 3)
+    .style("fill", primaryColor);
+
+  // Add title
+  svg
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", 0 - margin.top / 2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text(title);
+
+  // Add tooltip
+  var tooltip = d3
+    .select("body")
+    .append("div")
+    .attr("class", "emotion-tooltip")
+    .style("visibility", "hidden");
+
+  // Add mouseover event handler to scatterplot points
+  svg
+    .selectAll(".dot")
+    .on("mouseover", function (event, d) {
+      tooltip.style("visibility", "visible");
+
+      var page = data.indexOf(d) + 1;
+      var valence = d.valence;
+      var arousal = d.arousal;
+      var emotion = d.emotion;
+      var valText = "Valence: " + valence.toFixed(2);
+      var arousalText = "Arousal: " + arousal.toFixed(2);
+
+      tooltip
+        .html(
+          "Page: " +
+            page +
+            "<br>" +
+            valText +
+            "<br>" +
+            arousalText +
+            "<br>" +
+            "Emotion: " +
+            emotion
+        )
+        .style("left", event.pageX + 10 + "px")
+        .style("top", event.pageY + 10 + "px");
+    })
+    .on("mouseout", function () {
+      tooltip.style("visibility", "hidden");
+    });
+}
+
+function createLineChart(data, title, chartId) {
+  var width = d3
+    .select(".scrollable-right")
+    .node()
+    .getBoundingClientRect().width;
+  var height = 400;
+  var margin = { top: 20, right: 20, bottom: 40, left: 40 };
+  var chartWidth = width - margin.left - margin.right;
+  var chartHeight = height - margin.top - margin.bottom;
+
+  var svg = d3
+    .select("#" + chartId)
+    .attr("width", width)
+    .attr("height", height);
+
+  var chart = svg
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  // Set the scales for x and y axes
+  var xScale = d3
+    .scaleLinear()
+    .domain([0, data.length - 1])
+    .range([0, chartWidth]);
+  var yScale = d3.scaleLinear().domain([-1, 1]).range([chartHeight, 0]);
+
+  // Define the line generator
+  var line = d3
+    .line()
+    .x(function (d, i) {
+      return xScale(i);
+    })
+    .y(function (d) {
+      return yScale(d);
+    });
+
+  // Append the line path to the chart
+  chart
+    .append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", primaryColor)
+    .attr("stroke-width", 1.5)
+    .attr("d", line);
+
+  // Add x-axis
+  chart
+    .append("g")
+    .attr("transform", "translate(0," + chartHeight + ")")
+    .call(d3.axisBottom(xScale));
+
+  // Add y-axis
+  chart.append("g").call(d3.axisLeft(yScale));
+
+  // Add dashed line at y = 0
+  chart
+    .append("line")
+    .attr("x1", 0)
+    .attr("x2", chartWidth)
+    .attr("y1", yScale(0))
+    .attr("y2", yScale(0))
+    .attr("stroke", "black")
+    .attr("stroke-dasharray", "3 3");
+
+  // Add chart title
+  chart
+    .append("text")
+    .attr("x", chartWidth / 2)
+    .attr("y", -margin.top / 2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "16px")
+    .text(title);
+
+  // Add tooltip
+  //TODO : modularize this
+  var tooltip = d3
+    .select("body")
+    .append("div")
+    .attr("class", "emotion-tooltip")
+    .style("visibility", "hidden");
+
+  // Add mouseover event handler
+  chart
+    .on("mouseover", function () {
+      tooltip.style("visibility", "visible");
+    })
+    .on("mouseout", function () {
+      tooltip.style("visibility", "hidden");
+    })
+    .on("mousemove", function (event) {
+      var mouseX = d3.pointer(event)[0];
+      var mouseY = d3.pointer(event)[1];
+
+      var index = Math.round(xScale.invert(mouseX));
+      var val = data[index];
+      var page = index + 1;
+      var emotion = pages[index].emotion;
+      var valText = title + ": " + val.toFixed(2);
+
+      tooltip
+        .html(
+          "Page: " + page + "<br>" + valText + "<br>" + "Emotion: " + emotion
+        )
+        .style("left", event.x + 10 + "px")
+        .style("top", event.y + 10 + "px");
+    });
+}

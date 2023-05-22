@@ -2,10 +2,10 @@
   --primary-color: #446900;
   --secondary-color: #586249;
   --background-color: #fefcf5;
-  --text-color: #111f00 ;
+  --text-color: #111f00;
   --link-color: #dce7c7;
   --secondary-container: #dce7c7;
-  --hover : #c3f27e;
+  --hover: #c3f27e;
 }
 
 .fixed-left {
@@ -21,16 +21,15 @@
 }
 
 .fixed-left h2 {
- color: var(--secondary-container);
- font-family: Georgia, serif;
+  color: var(--secondary-container);
+  font-family: Georgia, serif;
 }
 
 .fixed-left li {
-  color: var(--secondary-container)
+  color: var(--secondary-container);
 }
-.fixed-left a:hover{
-  color: var(--hover)
-
+.fixed-left a:hover {
+  color: var(--hover);
 }
 
 .scrollable-right {
@@ -47,39 +46,108 @@ body {
   background-color: var(--background-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Georgia, serif;
   font-weight: bold;
   color: var(--primary-color);
 }
 
-a,p {
+a,
+p {
   color: #201a1a;
   font-family: Georgia, serif;
 }
 
-
-
 #viz1 {
-    margin: 20px;
-    position: relative;
-  }
-  
-  .tooltip {
-    color: var(--secondary-container);
-    font-size: 12px;
-    padding: 5px;
-    position: absolute;
-    visibility: hidden;
-    z-index: 10;
-  }
-  
-  circle {
-    stroke: var(--text-color);
-    stroke-width: 2px;
-  }
+  margin: 20px;
+  position: relative;
+}
 
-  .wrap-text {
-    white-space: normal !important;
-    word-break: break-word;
+/** this will conflict if we use several tooltips **/
+.tooltip {
+  color: var(--secondary-container);
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.emotion-tooltip {
+  color: var(--primary-color);
+  font-size: 12px;
+  padding: 5px;
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+  background: var(--background-color);
+}
+
+circle {
+  stroke: var(--text-color);
+  stroke-width: 2px;
+}
+
+.wrap-text {
+  white-space: normal !important;
+  word-break: break-word;
+}
+
+.svg-container {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.row{
+    margin-bottom:20px;
+}
+
+#book-card {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 4px;
+    width: 100%;
   }
+  
+  .book-image {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .book-details {
+    flex: 1;
+  }
+  
+  .book-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .book-hierarchy,
+  .book-language,
+  .book-pages {
+    margin: 5px 0;
+  }
+  
