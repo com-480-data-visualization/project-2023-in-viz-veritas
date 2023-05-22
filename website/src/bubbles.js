@@ -10,12 +10,6 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
     d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
 
-        const maxFrequency = d3.max(Object.values(jsonData), d => d3.max(Object.values(d)));
-
-        const bubbleScale = d3.scaleLinear()
-            .domain([0, maxFrequency])
-            .range([5, 30]);
-
 
         function createBubbleGraph(bookId) {
             const threshold = 30;
@@ -25,7 +19,6 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
             // Retrieve the cities data for the selected book
             const bubbleData = jsonData[bookId];
-            console.log(bubbleData);
 
             const diameter = 400; // Diameter of the bubble graph
             const color = d3.scaleOrdinal(d3.schemeCategory10); // Color scale for bubbles
@@ -47,6 +40,13 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
             bubble(root);
 
+            // Add tooltip
+            var tooltip = d3
+                .select("#bubble-graph")
+                .append("div")
+                .attr("class", "bubble-tooltip")
+                .style("visibility", "hidden");
+
             const node = div.selectAll(".node")
                 .data(root.descendants().slice(1))
                 .enter()
@@ -59,18 +59,24 @@ d3.csv("./src/data/books.csv").then(function (data) {
                 .style("height", d => `${d.r * 2}px`)
                 .style("background-color", (d, i) => color(i))
                 .style("border-radius", "50%")
-                .on("mouseover", function (d) {
-                    if (d.r <= threshold) {
-                        d3.select(this)
-                            .append("div")
-                            .attr("class", "tooltip")
-                            .text(d => d.data[0]);
-                    }
+                .on("mouseover", function (event, d) {
+                    const containerRect = div.node().getBoundingClientRect();
+                    const tooltipWidth = parseInt(tooltip.style("width"), 10);
+                    const tooltipHeight = parseInt(tooltip.style("height"), 10);
+                    const mouseX = event.clientX - containerRect.left;
+                    const mouseY = event.clientY - containerRect.top;
+                
+                    const tooltipX = mouseX - tooltipWidth / 2;
+                    const tooltipY = mouseY - tooltipHeight - 10;
+                
+                    tooltip
+                        .html(d.data[0] + "<br>")
+                        .style("left", `${tooltipX}px`)
+                        .style("top", `${tooltipY}px`)
+                        .style("visibility", "visible");
                 })
                 .on("mouseout", function (d) {
-                    if (d.r <= threshold) {
-                        d3.select(this).select(".tooltip").remove();
-                    }
+                    tooltip.style("visibility", "hidden");
                 });
 
             const span = node.append("span")
@@ -82,11 +88,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
             span.filter(d => d.r > threshold)
                 .text(d => d.data[0]);
 
-            // TODO Append tooltip for small bubbles
-            node.filter(d => d.r <= threshold)
-                .append("div")
-                .attr("class", "tooltip")
-                .text(d => d.data[0]);
+        
         }
 
 
@@ -132,24 +134,18 @@ d3.csv("./src/data/books.csv").then(function (data) {
             .attr("width", "100%")
             .attr("height", "100%")
             .append("xhtml:div")
-            .attr("class", "row");
-
 
         // Create the author selection section
         const authorSelectionDiv = rowDiv.append("div")
             .attr("id", "author-selection")
-            .attr("class", "row");
+
 
         // Create the book selection section
         const bookSectionDiv = rowDiv.append("div")
             .attr("id", "book-section")
-            .attr("class", "row")
-            .style("display", "flex")
-            .style("justify-content", "center");
 
         // Create the column for the bubble graph
         const bubbleGraphDiv = rowDiv.append("foreignObject")
-            .attr("class", "col-sm-6")
             .append("xhtml:div")
             .attr("id", "bubble-graph")
 
@@ -183,7 +179,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
             // Create book cards for each work
             const bookCards = createBookCards(bookCardContainer, works)
             const firstbookId = works[0].book_id;
-                createBubbleGraph(firstbookId);
+            createBubbleGraph(firstbookId);
 
             // Add event listener to book cards
             bookCards.on("click", function () {

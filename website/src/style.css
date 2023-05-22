@@ -87,7 +87,6 @@ p {
   color: var(--primary-color);
   font-size: 12px;
   padding: 5px;
-  position: absolute;
   visibility: hidden;
   z-index: 10;
   background: var(--background-color);

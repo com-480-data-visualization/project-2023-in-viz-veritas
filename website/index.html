@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="stylesheet" href="./src/book-card.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/book-card.css">
 
   <body>
     <div class="container">
           <div class="row">
-              <h1>Welcome to your historical travelguide</h1>
+            <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
               <br>
               <p>This is the basic skeleton of our website.</p>
           </div>
+        </div>
 
           <div class="row">
               <svg id="viz1"></svg>
           </div>
+        </div>
 
           <div class="row">
-              <svg id="bubbles"></svg>
+            <svg id="bubblegraph"></svg>
+
           </div>
+        </div>
 
           <div class="row">
               <select id="book-selector">
@@ -54,14 +48,17 @@
               </div>
               <svg id="valence-chart"></svg>
           </div>
+        </div>
 
           <div class="row">
               <svg id="arousal-chart"></svg>
           </div>
+        </div>
 
           <div class="row">
               <svg id="emotion-scatter"></svg>
           </div>
+        </div>
 
           <div class="row">
               <img src="src/img/emotions_per_cities.png" alt="Image for viz3" />
@@ -74,6 +71,7 @@
     <script src="src/emotions.js"></script>
     <script src="src/bubbles.js"></script>
     <script src="src/timeline.js"></script>
+    <script src="src/bubblegraph.js"></script>
 
 
    
