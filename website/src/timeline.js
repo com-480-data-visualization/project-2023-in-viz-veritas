@@ -1,6 +1,6 @@
 
 // Get the width of the Bootstrap container
-var containerWidth = d3.select(".scrollable-right").node().getBoundingClientRect().width;
+var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var height = 400;
 
 // Size of circles

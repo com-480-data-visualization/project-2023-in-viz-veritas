@@ -192,7 +192,7 @@ function createScatterPlot(data, title, chartId) {
 
 function createLineChart(data, title, chartId) {
   var width = d3
-    .select(".scrollable-right")
+    .select(".row")
     .node()
     .getBoundingClientRect().width;
   var height = 400;

@@ -24,44 +24,22 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 fixed-left">
-          <h2>This will be the scrollbar</h2>
-
-
-          <ul>
-            <li><a href="#viz1">Overview</a></li>
-            <li><a href="#viz2">Emotions</a></li>
-            <li><a href="#viz3">Emotions and cities</a></li>
-          </ul>
-          <script src="src/scrollbar.js"></script>
-        </div>
-
-        <div class="col-md-9 scrollable-right">
+    <div class="container">
           <div class="row">
-            <div class="col-md-12">
               <h1>Welcome to your historical travelguide</h1>
+              <br>
               <p>This is the basic skeleton of our website.</p>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <svg id="viz1"></svg>
-              <script src="src/timeline.js"></script>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <svg id="bubbles"></svg>
-              <script src="src/bubbles.js"></script>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <select id="book-selector">
                 <option value="0">Select a book</option>
               </select>
@@ -75,29 +53,29 @@
                 </div>
               </div>
               <svg id="valence-chart"></svg>
-              <script src="src/emotions.js"></script>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <svg id="arousal-chart"></svg>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <svg id="emotion-scatter"></svg>
-            </div>
           </div>
 
           <div class="row">
-            <div class="col-md-9">
               <img src="src/img/emotions_per_cities.png" alt="Image for viz3" />
-            </div>
           </div>
         </div>
       </div>
     </div>
+
+
+    <script src="src/emotions.js"></script>
+    <script src="src/bubbles.js"></script>
+    <script src="src/timeline.js"></script>
+
+
+   
   </body>
 </html>
