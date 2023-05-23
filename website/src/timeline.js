@@ -1,7 +1,10 @@
 
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
+var margin = { top: 20, right: 20, bottom: 30, left: 40 };
+var width = containerWidth - margin.left - margin.right;
 var height = 400;
+
 
 // Size of circles
 var radius = 10;
@@ -12,7 +15,7 @@ var hoverRadius = 20;
 // Define the maximum increase in radius when hovered
 var hoverIncrease = 10;
 
-var dis_circles = 2; 
+var dis_circles = 2;
 
 
 d3.csv("./src/data/books.csv").then(function (data) {
@@ -22,25 +25,18 @@ d3.csv("./src/data/books.csv").then(function (data) {
         d.date = parseDate(Number(d.year))
     });
 
-    // Set up the tooltip
-    var tooltip = d3.select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("padding", "5px")
-        .style("border-radius", "5px")
-        .style("background", "var(--secondary-container)")
-        .style("box-shadow", "0 2px 5px rgba(0, 0, 0, 0.3)")
-        .style("visibility", "hidden");
-
-    // Set up the SVG
     var svg = d3.select("#viz1")
-        .attr("width", containerWidth)
-        .attr("height", height);
+        .attr("width", width)
+        .attr("height", height + margin.top + margin.bottom);
+
+    // actual width and height
+    width = d3.select("#viz1").node().getBoundingClientRect().width
+    height = d3.select("#viz1").node().getBoundingClientRect().height
 
     // Set up the scales
     var xScale = d3.scaleTime()
         .domain([new Date(1440, 0, 1), new Date()])
-        .range([0, containerWidth - 200]);
+        .range([0, width]);
 
     // Add the image pattern definitions
     var defs = svg.append("defs");
@@ -61,19 +57,21 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Set up the simulation
     var simulation = d3.forceSimulation(data)
         .force("x", d3.forceX(function (d) { return xScale(d.date); }))
-        .force("y", d3.forceY(height /4))
+        .force("y", d3.forceY(height / 4))
         .force("collide", d3.forceCollide(radius + dis_circles))
         .stop();
 
-    // Manually run simulation
     for (let i = 0; i < data.length; ++i) {
         simulation.tick(10);
     }
 
-
+    var tooltip = d3.select("body").append("div")
+        .attr("class", "timeline-tooltip")
+        .style("visibility", "hidden");
 
     // Add the beeswarm
-    var beeswarm = svg.selectAll("circle")
+    var beeswarm = svg
+        .selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
@@ -82,12 +80,11 @@ d3.csv("./src/data/books.csv").then(function (data) {
         .attr("cy", function (d) { return d.y; })
         .attr("fill", function (d) { return "url(#" + d.book_id + ")" })
         .attr("z-index", 0)
+
         .on("mouseover", function (e, d) {
 
             // Get the mouse position
             var mouse = d3.pointer(e);
-
-
             // Iterate over all circles and calculate the distance between the mouse and each circle
             beeswarm.each(function (d) {
                 var circle = d3.select(this);
@@ -104,54 +101,30 @@ d3.csv("./src/data/books.csv").then(function (data) {
             d3.selectAll("circle")
                 .attr("r", radius)
                 .attr("z-index", null)
-                
 
         })
 
-        .on("click", function (e, d) {
+        .on("click", function (event, d) {
 
-            e.stopPropagation(); // Prevent click event from bubbling up to the SVG element
-            var circle = d3.select(this);
-            var tooltipWidth = 500;
-            var tooltipHeight = 250;
-            var tooltipX = e.x;
-            var tooltipY = e.y; // position below the timeline
-            tooltip.style("left", tooltipX + "px")
-                .style("top", tooltipY + "px")
-                .style("visibility", "visible");
+            event.stopPropagation(); // Prevent click event from bubbling up to the SVG element
 
-            // Remove existing elements before adding new elements
+            tooltip.style("visibility", "visible")
+                .style("left", event.pageX + 10 + "px")
+                .style("top", event.pageY + 10 + "px");
+
             tooltip.selectAll("*").remove();
 
-            // Add SVG element inside tooltip
-            var tooltipSvg = tooltip.append("svg")
-                .attr("width", tooltipWidth)
-                .attr("height", tooltipHeight)
+            // Create a container element for the book card
+            var bookCardContainer = tooltip.append("div")
 
-            // Add image to tooltip
-            var imageWidth = 300;
-            var imageHeight = 300;
-            var imageX = 0;
-            var imageY = (tooltipHeight - imageHeight) / 2;
-            tooltipSvg.append("rect")
-                .attr("x", imageX)
-                .attr("y", imageY)
-                .attr("width", imageWidth)
-                .attr("height", imageHeight)
-                .attr("fill", "url(#" + d.book_id + ")");
+            // Call the createBookCards function to populate the book card container with the book card
+            createBookCards(bookCardContainer, [d]);
 
-            // Add text to tooltip
-            var textX = imageX + imageWidth + 10;
-            var textY = tooltipHeight / 2;
-            var tooltipText = tooltipSvg.append("foreignObject")
-                .attr("x", textX)
-                .attr("y", textY)
-                .attr("width", tooltipWidth - imageWidth - 20)
-                .attr("height", tooltipHeight)
-                .append("xhtml:p")
-                .attr("class", "text-justify")
-                .style("font-size", "10px")
-                .text("Title: " + d.title);
+            // Position the book card container relative to the mouse cursor
+            bookCardContainer.style("left", event.pageX + 10 + "px")
+                .style("top", event.pageY + 10 + "px");
+
+
 
 
         });
@@ -164,10 +137,10 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Add axes and labels
     var xAxis = d3.axisBottom(xScale);
     svg.append("g")
-        .attr("transform", "translate(0, " + (height / 2)+ " )")
+        .attr("transform", "translate(0, " + (height / 2) + " )")
         .call(xAxis);
 
-    
+
 
 
 });
