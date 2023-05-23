@@ -39,22 +39,7 @@ function createBookCards(container, books) {
 
   bookInfo.append("p").text((book) => parseInt(book.year) + ", " + book.place);
 
-  // Add event listener to book cards
-  bookCards.on("click", function (event, d) {
-    console.log(d);
-    createBubbleGraph(d.book_id);
-    createEmotionViz(d.book_id);
-    // Hide the SVG
-    booksSvg.style.display = "none";
-
-    // Show the navigation bar
-    navigationBar.style.display = "flex";
-
-    // Update the selected book name
-    selectedBook.textContent = "Selected Book: " + d.title;
-  });
-
-  return bookCardContainer;
+  return bookCards;
 }
 
 d3.csv("./src/data/books.csv").then(function (data) {
@@ -77,6 +62,24 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
     // Create book cards for each work
     const bookCards = createBookCards(bookCardContainer, data);
+
+    
+    // Add event listener to book cards
+    bookCards.on("click", function (event, d) {
+      console.log(d);
+      createBubbleGraph(d.book_id);
+      createEmotionViz(d.book_id);
+      // Hide the SVG
+      booksSvg.style.display = "none";
+
+      // Show the navigation bar
+      navigationBar.style.display = "flex";
+
+      // Update the selected book name
+      selectedBook.textContent = "Selected Book: " + d.title;
+    });
+
+    
   });
 });
 

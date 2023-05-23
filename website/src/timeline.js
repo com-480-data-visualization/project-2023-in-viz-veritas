@@ -18,6 +18,7 @@ var hoverIncrease = 10;
 var dis_circles = 2;
 
 
+
 d3.csv("./src/data/books.csv").then(function (data) {
 
     var parseDate = d3.timeParse("%Y");
