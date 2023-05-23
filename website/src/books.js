@@ -2,9 +2,9 @@
 var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var containerHeight = 600;
 
-const navigationBar = document.getElementById("navigation-bar");
 var selectedBook = document.getElementById("book-name");
 const showSvgButton = document.getElementById("show-svg-button");
+const bookInfoContainer = document.getElementById("book-info-container");
 const booksSvg = document.getElementById("books");
 
 function createBookCards(container, books) {
@@ -73,7 +73,8 @@ d3.csv("./src/data/books.csv").then(function (data) {
       booksSvg.style.display = "none";
 
       // Show the navigation bar
-      navigationBar.style.display = "flex";
+      bookInfoContainer.style.display = "flex";
+
 
       // Update the selected book name
       selectedBook.textContent = "Selected Book: " + d.title;
@@ -86,12 +87,12 @@ d3.csv("./src/data/books.csv").then(function (data) {
 function showBooks() {
   // Show the SVG
   booksSvg.style.display = "block";
-
   // Hide the navigation bar
-  navigationBar.style.display = "none";
+  bookInfoContainer.style.display = "none";
 }
 
 // Add event listener for showing the SVG
 showSvgButton.addEventListener("click", function () {
   showBooks();
 });
+

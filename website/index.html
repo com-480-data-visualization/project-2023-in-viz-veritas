@@ -15,6 +15,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/70fe63f301.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/book-card.css" />
@@ -24,11 +25,9 @@
   </head>
 
   <body>
-    <div class="row" id="title">
-      <div class="image-container">
-        <img src="./src/img/maps/ancient_map_italy.jpg" alt="map" />
-        <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
-      </div>
+    <div class="image-container" id="title">
+      <img src="./src/img/maps/ancient_map_italy.jpg" alt="map" />
+      <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
     </div>
     <div class="container">
       <div class="row">
@@ -75,56 +74,71 @@
         </p>
       </div>
 
-
       <div class="row">
         <h2>Taking a deeper look: NLP</h2>
         <p>
-          For the english books we did some rad NLP, extracting sentiment and locations visited.
-          Select a book you wild like to analyze further!
-          TODO: Make navigation bar + book list appear / disappear with an animation
+          For the english books we did some rad NLP, extracting sentiment and
+          locations visited. Select a book you wild like to analyze further!
+          TODO: Make navigation bar + book list appear / disappear with an
+          animation
         </p>
       </div>
-      
-      <div id="navigation-bar" style="display: none">
-        <button id="show-svg-button">Show Books</button>
+
+      <div class="row">
+        <svg id="books"></svg>
+      </div>
+    </div>
+
+    <div id="book-info-container" style="display: none">
+      <div id="navigation-bar">
         <div id="selected-book">
           <span id="book-name"></span>
         </div>
-      </div>
-      <div class="row">
-          <svg id="books"></svg>
+        <button id="show-svg-button">Return Book to shelf</button>
       </div>
 
-      <div class="row">
+      <div class="page" id="bubbles">
         <h2>Locations mentioned in this book</h2>
-        <p> Yada yada there have been locations mentioned. Also change the palette of these bubbles.</p>
+        <p>
+          Yada yada there have been locations mentioned. Also change the palette
+          of these bubbles.
+        </p>
         <div id="bubblegraph"></div>
       </div>
 
-      <div class="row">
+      <div class="page" id="emotions">
         <h2>Emotions in this book</h2>
-        <p> Yada Yada Sentiment analysis, Stick those three vizzes together so that it looks nicer</p>
+        <p>
+          Yada Yada Sentiment analysis, Stick those three vizzes together so
+          that it looks nicer
+        </p>
         <svg id="valence-chart"></svg>
-      </div>
 
-      <div class="row">
         <svg id="arousal-chart"></svg>
-      </div>
 
-      <div class="row">
         <svg id="emotion-scatter"></svg>
       </div>
-
-      <div>
-        <h2>Link between Emotions and Locations</h2>
-        <h2>We urgently need the third Viz here</h2>
-
+      <div class="page" id="viz3">
+        <div>
+          <h2>Link between Emotions and Locations</h2>
+          <h2>We urgently need the third Viz here</h2>
+        </div>
       </div>
+
+      <!-- Navigation elements -->
+      <div id="navigation">
+        <div id="left-arrow"><i class="fas fa-arrow-left"></i></div>
+        <div id="right-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <!-- Page indicator dots -->
+      <div id="page-dots"></div>
     </div>
 
     <script src="src/timeline.js"></script>
     <script src="src/emotions.js"></script>
     <script src="src/bubblegraph.js"></script>
     <script src="src/books.js"></script>
+    <script src="src/navigation.js"></script>
   </body>
 </html>
