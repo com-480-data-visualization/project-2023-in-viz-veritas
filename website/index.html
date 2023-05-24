@@ -1,144 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <script src="https://kit.fontawesome.com/70fe63f301.js" crossorigin="anonymous"></script>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <link rel="stylesheet" href="./src/style.css" />
-    <link rel="stylesheet" href="./src/book-card.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/70fe63f301.js" crossorigin="anonymous"></script>
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
-  </head>
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="stylesheet" href="./src/book-card.css" />
 
-  <body>
-    <div class="image-container" id="title">
-      <img src="./src/img/maps/ancient_map_italy.jpg" alt="map" />
-      <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <p>
-          NOTE: THIS IS JUST PLACEHOLDER TEXT, BUT HERE WE SHALL DESCRIBE OUR
-          PROJECT <br />
-          The dataset we are working on is a collection of old travel guides for
-          Italy from the rare books collection of the
-          <a href="https://https://www.biblhertz.it/it/home">
-            Bibliotheca Hertziana
-          </a>
-          in Rome. The collection contains around 800 documents in several
-          languages from the years 1550 up until 1930. They are sparsely
-          illustrated and contain a lot of recognizable place names. All of them
-          have been recently digitized, but only around 80 have also been
-          transcribed using
-          <a href="https://readcoop.eu/transkribus/?sc=Transkribus"
-            >Transkribus</a
-          >. Tranksribus is an AI supported platform for text recognition and
-          transcriptions. We scraped the transcripts from Transkribus and
-          obtained the metadata directly from the Bibliotheca Hertziana, which
-          kindly provides us access to data that can be of interest for
-          vizualisation. We have access to metadata like title and author, year
-          and place of publication, language of the text, and several other
-          columns that might be of lesser interest, such as format of the
-          document. Since the texts are in several languages, one of the
-          potential challenges is how to use NLP techniques on the text to
-          extract for example place names and sentiment.
-        </p>
-      </div>
-      <div class="row">
-        <h2>Timeline: The Books across Time</h2>
-        <svg id="viz1"></svg>
-        <p>
-          Some text describing this Viz, Also TODO: fix the Tooltip for the
-          books, also this Viz has a height issue.
-        </p>
-      </div>
-      <div class="row">
-        <h2>Distribution: The Books across Europe</h2>
-        <p>
-          Idk some Viz on where the books were written, I can add this with
-          leaflet or something.
-        </p>
-      </div>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
+</head>
 
-      <div class="row">
-        <h2>Taking a deeper look: NLP</h2>
-        <p>
-          For the english books we did some rad NLP, extracting sentiment and
-          locations visited. Select a book you wild like to analyze further!
-          TODO: Make navigation bar + book list appear / disappear with an
-          animation
-        </p>
-      </div>
-
-      <div class="row">
-        <svg id="books"></svg>
-      </div>
+<body>
+  <div class="image-container" id="title">
+    <img src="./src/img/maps/825301/italy.png" alt="map" />
+    <h1>The historical travelguides of the Bibliotheca Hertziana</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <p>
+        Welcome traveler, on this page you will get to explore a collection of old travel guides for
+        Italy from the rare books collection of the
+        <a href="https://https://www.biblhertz.it/it/home">
+          Bibliotheca Hertziana
+        </a>
+        in Rome.
+        <br />
+        The collection contains around 800 documents in several
+        languages from the years 1550 up until 1930. They are sparsely
+        illustrated and contain a lot of recognizable place names. All of them
+        have been recently digitized, but only around 80 have also been
+        transcribed using
+        <a href="https://readcoop.eu/transkribus/?sc=Transkribus">Transkribus</a>. Tranksribus is an AI supported
+        platform for text recognition and
+        transcriptions. These are the books you will get to explore through the following visualisations. Enjoy!
+      </p>
     </div>
 
-    <div id="book-info-container" style="display: none">
-      <div id="navigation-bar">
-        <div id="selected-book">
-          <span id="book-name"></span>
-        </div>
-        <button id="show-svg-button">Return Book to shelf</button>
-      </div>
-
-      <div class="page" id="bubbles">
-        <h2>Locations mentioned in this book</h2>
-        <p>
-          Yada yada there have been locations mentioned. Also change the palette
-          of these bubbles.
-        </p>
-        <div id="bubblegraph"></div>
-      </div>
-
-      <div class="page" id="emotions">
-        <h2>Emotions in this book</h2>
-        <p>
-          Yada Yada Sentiment analysis, Stick those three vizzes together so
-          that it looks nicer
-        </p>
-        <svg id="valence-chart"></svg>
-
-        <svg id="arousal-chart"></svg>
-
-        <svg id="emotion-scatter"></svg>
-      </div>
-      <div class="page" id="viz3">
-        <div>
-          <h2>Link between Emotions and Locations</h2>
-          <h2>We urgently need the third Viz here</h2>
-        </div>
-      </div>
-
-      <!-- Navigation elements -->
-      <div id="navigation">
-        <div id="left-arrow"><i class="fas fa-arrow-left"></i></div>
-        <div id="right-arrow"><i class="fas fa-arrow-right"></i></div>
-      </div>
-
-      <!-- Page indicator dots -->
-      <div id="page-dots"></div>
+    <div class="row">
+      <h2>Timeline: The Books across Time</h2>
+      <p>
+        This timeline shows the publication years of the books. Click on any of the circles to explore the book further (and it might lead you somewhere else...)
+      </p>
+    </div>
+    <div class="row">
+      <svg id="viz1"></svg>
+    </div>
+    <div class="row">
+      <h2>Distribution: The Books across Europe</h2>
+      <p>
+        Idk some Viz on where the books were written, I can add this with
+        leaflet or something.
+      </p>
     </div>
 
-    <script src="src/timeline.js"></script>
-    <script src="src/emotions.js"></script>
-    <script src="src/bubblegraph.js"></script>
-    <script src="src/books.js"></script>
-    <script src="src/navigation.js"></script>
-  </body>
+    <div class="row">
+      <h2>Taking a look inside: NLP</h2>
+    </div>
+
+    <div class="row">
+      <p>Thanks to the Transkribus AI, we can explore the journeys of travelers long time ago. Where did they go? What
+        did they feel? Pick one of the english books from the shelf to explore it.</p>
+    </div>
+
+    <div class="row">
+      <svg id="books"></svg>
+    </div>
+  </div>
+
+  <div id="book-info-container" style="display: none">
+    <div id="navigation-bar">
+      <div id="selected-book">
+        <span id="book-name"></span>
+      </div>
+      <button id="show-svg-button">Return Book to shelf</button>
+    </div>
+
+    <div class="page" id="bubbles">
+      <h2>Locations mentioned in this book</h2>
+      <p>
+        Yada yada there have been locations mentioned. Also change the palette
+        of these bubbles.
+      </p>
+      <div id="bubblegraph"></div>
+    </div>
+
+    <div class="page" id="emotions">
+      <h2>Emotions in this book</h2>
+      <p>
+        Yada Yada Sentiment analysis, Stick those three vizzes together so
+        that it looks nicer
+      </p>
+      <svg id="valence-chart"></svg>
+
+      <svg id="arousal-chart"></svg>
+
+      <svg id="emotion-scatter"></svg>
+    </div>
+    <div class="page" id="viz3">
+      <div>
+        <h2>Link between Emotions and Locations</h2>
+        <h2>We urgently need the third Viz here</h2>
+      </div>
+    </div>
+
+    <!-- Navigation elements -->
+    <div id="navigation">
+      <div id="left-arrow"><i class="fas fa-arrow-left"></i></div>
+      <div id="right-arrow"><i class="fas fa-arrow-right"></i></div>
+    </div>
+
+    <!-- Page indicator dots -->
+    <div id="page-dots"></div>
+  </div>
+
+  <script src="src/timeline.js"></script>
+  <script src="src/emotions.js"></script>
+  <script src="src/bubblegraph.js"></script>
+  <script src="src/books.js"></script>
+  <script src="src/navigation.js"></script>
+</body>
+
 </html>

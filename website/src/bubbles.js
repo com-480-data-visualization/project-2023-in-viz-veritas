@@ -3,6 +3,8 @@
 var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var containerHeight = 600;
 
+
+
 d3.csv("./src/data/books.csv").then(function (data) {
 
     // only the english books so far...
@@ -21,7 +23,9 @@ d3.csv("./src/data/books.csv").then(function (data) {
             const bubbleData = jsonData[bookId];
 
             const diameter = 400; // Diameter of the bubble graph
-            const color = d3.scaleOrdinal(d3.schemeCategory10); // Color scale for bubbles
+
+            const color = d3.scaleOrdinal()
+                .range(customColors);
 
             const bubble = d3.pack()
                 .size([diameter, diameter])
@@ -65,10 +69,10 @@ d3.csv("./src/data/books.csv").then(function (data) {
                     const tooltipHeight = parseInt(tooltip.style("height"), 10);
                     const mouseX = event.clientX - containerRect.left;
                     const mouseY = event.clientY - containerRect.top;
-                
+
                     const tooltipX = mouseX - tooltipWidth / 2;
                     const tooltipY = mouseY - tooltipHeight - 10;
-                
+
                     tooltip
                         .html(d.data[0] + "<br>")
                         .style("left", `${tooltipX}px`)
@@ -88,7 +92,7 @@ d3.csv("./src/data/books.csv").then(function (data) {
             span.filter(d => d.r > threshold)
                 .text(d => d.data[0]);
 
-        
+
         }
 
 

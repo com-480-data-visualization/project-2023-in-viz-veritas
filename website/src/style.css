@@ -80,6 +80,21 @@ p {
   position: absolute;
   background: var(--background-color);
 }
+.bubble-tooltip {
+  color: var(--primary-color);
+  font-size: 12px;
+  padding: 5px;
+  visibility: hidden;
+  z-index: 10;
+  position: absolute;
+  background: var(--background-color);
+}
+.bubble-text {
+  font-family: Georgia, serif;
+  color: var(--text-color);
+  font-size: 8;
+}
+
 .tooltip-image {
   width: 200px;
   height: 200px;

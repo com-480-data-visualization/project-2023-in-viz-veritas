@@ -2,23 +2,30 @@ function createBubbleGraph(bookId) {
     const threshold = 30;
 
     // Clear previous graph content
+    const custom_colours = ["#EA522B", "#EFD4D1", "#2A4978", "#8BDBE1", "#ECA19D", "#B48E36", "#E1DCE0", "#B8BFCE", "#E0DCD1", "#91C5E4",
+        "#6E8EAC", "#D2E7E0", "#ECD096", "#6C9686", "#E6E10F", "#9D4B37", "#A3B49D", "#BDC920", "#DBE3E5", "#6A8B8D", "#EFB3D1"]
 
 
-    
+
     d3.select("#bubblegraph").html("");
 
     d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
+
+        
         // Retrieve the cities data for the selected book
         const bubbleData = jsonData[bookId];
 
-        const diameter = 400; // Diameter of the bubble graph
-        const color = d3.scaleOrdinal(d3.schemeCategory10); // Color scale for bubbles
+        const diameter = 500; // Diameter of the bubble graph
+        const color = d3.scaleOrdinal()
+            .range(custom_colours);
 
         const bubble = d3.pack()
             .size([diameter, diameter])
             .padding(1);
 
-        const div = d3.select("#bubblegraph")
+        const container = d3.select("#bubblegraph")
+
+        const div = container.append("div")
             .style("width", `${diameter}px`)
             .style("height", `${diameter}px`)
             .style("position", "relative");
@@ -30,8 +37,7 @@ function createBubbleGraph(bookId) {
         bubble(root);
 
         // Add tooltip
-        var tooltip = d3
-            .select("#bubblegraph")
+        var tooltip = div
             .append("div")
             .attr("class", "bubble-tooltip")
             .style("visibility", "hidden");
@@ -39,7 +45,7 @@ function createBubbleGraph(bookId) {
         const node = div.selectAll(".node")
             .data(root.descendants().slice(1))
             .enter()
-            .append("div")
+            .append("g")
             .attr("class", "node")
             .style("position", "absolute")
             .style("left", d => `${d.x - d.r}px`)
@@ -49,20 +55,11 @@ function createBubbleGraph(bookId) {
             .style("background-color", (d, i) => color(i))
             .style("border-radius", "50%")
             .on("mouseover", function (event, d) {
-                const containerRect = div.node().getBoundingClientRect();
-                const tooltipWidth = parseInt(tooltip.style("width"), 10);
-                const tooltipHeight = parseInt(tooltip.style("height"), 10);
-                const mouseX = event.clientX - containerRect.left;
-                const mouseY = event.clientY - containerRect.top;
-
-                const tooltipX = mouseX - tooltipWidth / 2;
-                const tooltipY = mouseY - tooltipHeight - 10;
-
-                tooltip
-                    .html(d.data[0] + "<br>")
-                    .style("left", `${tooltipX}px`)
-                    .style("top", `${tooltipY}px`)
-                    .style("visibility", "visible");
+                tooltip.style("visibility", "visible")
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px")
+                    .style("z-index", 10);
+                
             })
             .on("mouseout", function (d) {
                 tooltip.style("visibility", "hidden");
@@ -75,7 +72,8 @@ function createBubbleGraph(bookId) {
             .style("height", "100%");
 
         span.filter(d => d.r > threshold)
-            .text(d => d.data[0]);
+            .text(d => d.data[0])
+            .classed("bubble-text", true);;
 
 
     })
