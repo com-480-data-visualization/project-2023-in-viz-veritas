@@ -293,3 +293,19 @@ circle {
 .selected-book {
   width: 100%;
 }
+
+.checkbox-label {
+  display: block;
+  font-family: Georgia, serif;
+  color: var(--text-color);
+  margin-right: 20px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.checkbox-label input[type="checkbox"]:checked + span {
+  font-weight: bold;
+}
+
