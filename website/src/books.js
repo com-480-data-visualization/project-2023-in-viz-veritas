@@ -63,10 +63,10 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Create book cards for each work
     const bookCards = createBookCards(bookCardContainer, data);
 
-    
+
     // Add event listener to book cards
     bookCards.on("click", function (event, d) {
-      console.log(d);
+
       createBubbleGraph(d.book_id);
       createEmotionViz(d.book_id);
       // Hide the SVG
@@ -78,9 +78,12 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
       // Update the selected book name
       selectedBook.textContent = "Selected Book: " + d.title;
+
+      // Disable scrolling on the body element
+      d3.select("body").style("overflow", "hidden");
     });
 
-    
+
   });
 });
 
@@ -89,6 +92,9 @@ function showBooks() {
   booksSvg.style.display = "block";
   // Hide the navigation bar
   bookInfoContainer.style.display = "none";
+  // Enable scrolling on the body element
+  d3.select("body").style("overflow", "auto");
+
 }
 
 // Add event listener for showing the SVG

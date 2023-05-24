@@ -11,7 +11,7 @@ function createBubbleGraph(bookId) {
 
     d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
 
-        
+
         // Retrieve the cities data for the selected book
         const bubbleData = jsonData[bookId];
 
@@ -37,10 +37,12 @@ function createBubbleGraph(bookId) {
         bubble(root);
 
         // Add tooltip
-        var tooltip = div
+        var tooltip = d3
+            .select("body")
             .append("div")
             .attr("class", "bubble-tooltip")
             .style("visibility", "hidden");
+
 
         const node = div.selectAll(".node")
             .data(root.descendants().slice(1))
@@ -56,10 +58,15 @@ function createBubbleGraph(bookId) {
             .style("border-radius", "50%")
             .on("mouseover", function (event, d) {
                 tooltip.style("visibility", "visible")
+
+                
                     .style("left", event.pageX + 10 + "px")
                     .style("top", event.pageY + 10 + "px")
-                    .style("z-index", 10);
-                
+                    .style("z-index", 10)
+                    .html(
+                        d.data[0]
+                    )
+
             })
             .on("mouseout", function (d) {
                 tooltip.style("visibility", "hidden");
