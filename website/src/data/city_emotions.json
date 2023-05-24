@@ -1,0 +1,477 @@
+{
+    "Benevento": {
+        "emotion": "Calm",
+        "valence": 0.2568428571428572,
+        "arousal": 0.02228571428571428
+    },
+    "Avellino": {
+        "emotion": "Neutral",
+        "valence": -0.17385,
+        "arousal": -0.0045000000000000005
+    },
+    "Hannibal": {
+        "emotion": "Calm",
+        "valence": 0.20290000000000002,
+        "arousal": 0.007875000000000002
+    },
+    "Taranto": {
+        "emotion": "Relaxed",
+        "valence": 0.7578857142857142,
+        "arousal": 0.05557142857142856
+    },
+    "Trieste": {
+        "emotion": "Calm",
+        "valence": 0.13126666666666667,
+        "arousal": 0.013333333333333334
+    },
+    "Salerno": {
+        "emotion": "Relieved",
+        "valence": 0.5896333333333335,
+        "arousal": 0.04533333333333333
+    },
+    "Rialto": {
+        "emotion": "Calm",
+        "valence": 0.27152,
+        "arousal": 0.013050000000000004
+    },
+    "Turin": {
+        "emotion": "Relieved",
+        "valence": 0.6159074347874348,
+        "arousal": 0.06000887723387723
+    },
+    "Manfredonia": {
+        "emotion": "Calm",
+        "valence": 0.22744615384615388,
+        "arousal": 0.022999999999999996
+    },
+    "Arona": {
+        "emotion": "Neutral",
+        "valence": -0.008799999999999994,
+        "arousal": 0.013999999999999999
+    },
+    "Westminster": {
+        "emotion": "Relieved",
+        "valence": 0.59705,
+        "arousal": 0.050499999999999996
+    },
+    "Rome": {
+        "emotion": "Relieved",
+        "valence": 0.4803608422306154,
+        "arousal": 0.048435668202007204
+    },
+    "Alba": {
+        "emotion": "Relaxed",
+        "valence": 0.7431749999999999,
+        "arousal": 0.070125
+    },
+    "Hercules": {
+        "emotion": "Relaxed",
+        "valence": 0.7211591478016479,
+        "arousal": 0.08052184299684301
+    },
+    "Orlando": {
+        "emotion": "Content",
+        "valence": 0.9484571428571428,
+        "arousal": 0.12600000000000003
+    },
+    "Ancona": {
+        "emotion": "Calm",
+        "valence": 0.3288313756613756,
+        "arousal": 0.05182645502645502
+    },
+    "St. Charles": {
+        "emotion": "Relieved",
+        "valence": 0.46086,
+        "arousal": 0.031
+    },
+    "Mosul": {
+        "emotion": "Content",
+        "valence": 0.9994,
+        "arousal": 0.15
+    },
+    "Quito": {
+        "emotion": "Relieved",
+        "valence": 0.4398636363636364,
+        "arousal": 0.01845454545454545
+    },
+    "Messina": {
+        "emotion": "Relieved",
+        "valence": 0.458601822855579,
+        "arousal": 0.037576900070372975
+    },
+    "Baghdad": {
+        "emotion": "Content",
+        "valence": 0.9994,
+        "arousal": 0.15
+    },
+    "Memphis": {
+        "emotion": "Content",
+        "valence": 0.9917,
+        "arousal": 0.11499999999999999
+    },
+    "Tivoli": {
+        "emotion": "Relieved",
+        "valence": 0.5831707147435898,
+        "arousal": 0.04962669871794871
+    },
+    "Alice": {
+        "emotion": "Neutral",
+        "valence": -0.7096,
+        "arousal": -0.02
+    },
+    "Ostuni": {
+        "emotion": "Calm",
+        "valence": 0.34715555555555555,
+        "arousal": 0.007222222222222225
+    },
+    "Siena": {
+        "emotion": "Content",
+        "valence": 0.8353,
+        "arousal": 0.12666666666666668
+    },
+    "Blainville": {
+        "emotion": "Relaxed",
+        "valence": 0.734988888888889,
+        "arousal": 0.062481481481481485
+    },
+    "Romulus": {
+        "emotion": "Neutral",
+        "valence": 0.041999999999999996,
+        "arousal": -0.0033749999999999995
+    },
+    "London": {
+        "emotion": "Relieved",
+        "valence": 0.5652929902620528,
+        "arousal": 0.058723341733498004
+    },
+    "Brescia": {
+        "emotion": "Relieved",
+        "valence": 0.540946,
+        "arousal": 0.04931333333333333
+    },
+    "Sciacca": {
+        "emotion": "Relieved",
+        "valence": 0.4769166666666667,
+        "arousal": 0.06983333333333333
+    },
+    "Lausanne": {
+        "emotion": "Relieved",
+        "valence": 0.4777071428571429,
+        "arousal": 0.045446428571428575
+    },
+    "Gela": {
+        "emotion": "Relaxed",
+        "valence": 0.9531666666666666,
+        "arousal": 0.07766666666666666
+    },
+    "Boston": {
+        "emotion": "Relieved",
+        "valence": 0.6384044642857143,
+        "arousal": 0.06431250000000001
+    },
+    "Corona": {
+        "emotion": "Relieved",
+        "valence": 0.50525,
+        "arousal": 0.07849999999999999
+    },
+    "Bronte": {
+        "emotion": "Relieved",
+        "valence": 0.4443166666666667,
+        "arousal": 0.02566666666666667
+    },
+    "Toledo": {
+        "emotion": "Relieved",
+        "valence": 0.5950333333333333,
+        "arousal": 0.066
+    },
+    "Padova": {
+        "emotion": "Content",
+        "valence": 0.9581437500000001,
+        "arousal": 0.1053125
+    },
+    "Macon": {
+        "emotion": "Content",
+        "valence": 0.995925,
+        "arousal": 0.19625
+    },
+    "Pescara": {
+        "emotion": "Relaxed",
+        "valence": 0.7494333333333333,
+        "arousal": 0.05716666666666667
+    },
+    "Nice": {
+        "emotion": "Relaxed",
+        "valence": 0.9851,
+        "arousal": 0.094
+    },
+    "Baden": {
+        "emotion": "Content",
+        "valence": 0.9828599999999998,
+        "arousal": 0.12120000000000002
+    },
+    "Munich": {
+        "emotion": "Content",
+        "valence": 0.9617166666666667,
+        "arousal": 0.10033333333333334
+    },
+    "Pozzuoli": {
+        "emotion": "Calm",
+        "valence": 0.11996000000000002,
+        "arousal": 0.006400000000000003
+    },
+    "Augsburg": {
+        "emotion": "Relieved",
+        "valence": 0.46423,
+        "arousal": 0.0376
+    },
+    "Santa Maria": {
+        "emotion": "Neutral",
+        "valence": -0.31587,
+        "arousal": -0.009500000000000001
+    },
+    "Geneva": {
+        "emotion": "Relieved",
+        "valence": 0.5995276623376625,
+        "arousal": 0.058429653679653686
+    },
+    "Gori": {
+        "emotion": "Relaxed",
+        "valence": 0.958,
+        "arousal": 0.073
+    },
+    "Imperia": {
+        "emotion": "Relieved",
+        "valence": 0.495525,
+        "arousal": 0.09425
+    },
+    "Holland": {
+        "emotion": "Relieved",
+        "valence": 0.65845,
+        "arousal": 0.09274999999999999
+    },
+    "Padua": {
+        "emotion": "Relieved",
+        "valence": 0.48476074829931975,
+        "arousal": 0.04135646258503402
+    },
+    "Terracina": {
+        "emotion": "Relaxed",
+        "valence": 0.7446916666666668,
+        "arousal": 0.06958333333333333
+    },
+    "George": {
+        "emotion": "Relaxed",
+        "valence": 0.7774333333333333,
+        "arousal": 0.03900000000000001
+    },
+    "Chieti": {
+        "emotion": "Relaxed",
+        "valence": 0.9125500000000001,
+        "arousal": 0.07183333333333333
+    },
+    "Perugia": {
+        "emotion": "Content",
+        "valence": 0.859509090909091,
+        "arousal": 0.10004545454545455
+    },
+    "Frascati": {
+        "emotion": "Relaxed",
+        "valence": 0.7211875000000001,
+        "arousal": 0.06858333333333334
+    },
+    "Baja": {
+        "emotion": "Calm",
+        "valence": 0.3068583333333333,
+        "arousal": 0.03816666666666667
+    },
+    "Palermo": {
+        "emotion": "Relieved",
+        "valence": 0.6281402391645086,
+        "arousal": 0.06516945566989232
+    },
+    "Sulmona": {
+        "emotion": "Calm",
+        "valence": 0.28103,
+        "arousal": 0.018300000000000004
+    },
+    "Philadelphia": {
+        "emotion": "Tired",
+        "valence": -0.9698,
+        "arousal": -0.10699999999999998
+    },
+    "Varese": {
+        "emotion": "Relieved",
+        "valence": 0.6401,
+        "arousal": 0.045
+    },
+    "Verona": {
+        "emotion": "Relieved",
+        "valence": 0.5010426549401639,
+        "arousal": 0.04359458757852037
+    },
+    "Venice": {
+        "emotion": "Relieved",
+        "valence": 0.557682343269176,
+        "arousal": 0.0562990775951599
+    },
+    "Brindisi": {
+        "emotion": "Relieved",
+        "valence": 0.5610090909090909,
+        "arousal": 0.04881818181818182
+    },
+    "Tehran": {
+        "emotion": "Content",
+        "valence": 0.9994,
+        "arousal": 0.15
+    },
+    "Antonina": {
+        "emotion": "Relaxed",
+        "valence": 0.9054,
+        "arousal": 0.05449999999999999
+    },
+    "Lucera": {
+        "emotion": "Calm",
+        "valence": 0.16974444444444445,
+        "arousal": 0.023000000000000003
+    },
+    "Bologna": {
+        "emotion": "Relieved",
+        "valence": 0.6277117346938775,
+        "arousal": 0.07329591836734695
+    },
+    "Ferrara": {
+        "emotion": "Relieved",
+        "valence": 0.5589930952380953,
+        "arousal": 0.049111904761904766
+    },
+    "Concord": {
+        "emotion": "Relaxed",
+        "valence": 0.7625250000000001,
+        "arousal": 0.0775
+    },
+    "Jerusalem": {
+        "emotion": "Relieved",
+        "valence": 0.4496183333333333,
+        "arousal": 0.028583333333333336
+    },
+    "Dublin": {
+        "emotion": "Relaxed",
+        "valence": 0.8263666666666666,
+        "arousal": 0.061333333333333344
+    },
+    "San Sebastiano": {
+        "emotion": "Calm",
+        "valence": 0.29390000000000005,
+        "arousal": 0.02225
+    },
+    "Athens": {
+        "emotion": "Relieved",
+        "valence": 0.4877967261904762,
+        "arousal": 0.04757440476190476
+    },
+    "Pavia": {
+        "emotion": "Relaxed",
+        "valence": 0.7669843838383839,
+        "arousal": 0.0692469696969697
+    },
+    "Catania": {
+        "emotion": "Calm",
+        "valence": 0.35857638145670756,
+        "arousal": 0.029766950018580457
+    },
+    "Cambridge": {
+        "emotion": "Relaxed",
+        "valence": 0.7915749999999999,
+        "arousal": 0.0225
+    },
+    "Valletta": {
+        "emotion": "Neutral",
+        "valence": -0.20294999999999996,
+        "arousal": -0.013666666666666666
+    },
+    "Terni": {
+        "emotion": "Calm",
+        "valence": 0.19848750000000004,
+        "arousal": 0.01575
+    },
+    "San Lorenzo": {
+        "emotion": "Relaxed",
+        "valence": 0.8689,
+        "arousal": 0.065
+    },
+    "Paris": {
+        "emotion": "Relieved",
+        "valence": 0.6516239063876796,
+        "arousal": 0.06549493897734637
+    },
+    "Porta": {
+        "emotion": "Relaxed",
+        "valence": 0.9143,
+        "arousal": 0.053
+    },
+    "Isernia": {
+        "emotion": "Calm",
+        "valence": 0.2005166666666667,
+        "arousal": 0.014499999999999999
+    },
+    "Lucca": {
+        "emotion": "Relaxed",
+        "valence": 0.8399655555555555,
+        "arousal": 0.08603333333333334
+    },
+    "Foggia": {
+        "emotion": "Calm",
+        "valence": 0.2778823529411764,
+        "arousal": 0.022705882352941176
+    },
+    "Milan": {
+        "emotion": "Relieved",
+        "valence": 0.6706858731420983,
+        "arousal": 0.06139917444184525
+    },
+    "Chioggia": {
+        "emotion": "Calm",
+        "valence": 0.36697500000000005,
+        "arousal": 0.030250000000000006
+    },
+    "Baku": {
+        "emotion": "Content",
+        "valence": 0.9994,
+        "arousal": 0.15
+    },
+    "Rivoli": {
+        "emotion": "Content",
+        "valence": 0.9692916666666667,
+        "arousal": 0.11008333333333334
+    },
+    "Vienna": {
+        "emotion": "Relaxed",
+        "valence": 0.7942273809523809,
+        "arousal": 0.06386904761904762
+    },
+    "Florence": {
+        "emotion": "Relaxed",
+        "valence": 0.7259508349751383,
+        "arousal": 0.0732736342862504
+    },
+    "Naples": {
+        "emotion": "Relieved",
+        "valence": 0.4465816565738082,
+        "arousal": 0.04321436627947533
+    },
+    "Spoleto": {
+        "emotion": "Relaxed",
+        "valence": 0.97315,
+        "arousal": 0.088
+    },
+    "Vittoria": {
+        "emotion": "Calm",
+        "valence": 0.34113333333333334,
+        "arousal": 0.06033333333333334
+    },
+    "Palmerston": {
+        "emotion": "Neutral",
+        "valence": -0.376725,
+        "arousal": -0.04325
+    }
+}

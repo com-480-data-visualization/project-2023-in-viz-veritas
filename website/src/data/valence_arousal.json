@@ -1,0 +1,2296 @@
+{
+    "856797": [
+        {
+            "city": "Rome",
+            "city_valence": 0.7327380000000002,
+            "city_arousal": 0.07761000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.6847,
+            "city_arousal": 0.057,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.7864000000000001,
+            "city_arousal": 0.07594999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.5422833333333332,
+            "city_arousal": 0.04422222222222222,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.4482157894736843,
+            "city_arousal": 0.04294736842105263,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.9302166666666666,
+            "city_arousal": 0.09199999999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.3997857142857143,
+            "city_arousal": 0.04442857142857143,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Imperia",
+            "city_valence": 0.495525,
+            "city_arousal": 0.09425,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Vittoria",
+            "city_valence": 0.34113333333333334,
+            "city_arousal": 0.06033333333333334,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.53026,
+            "city_arousal": 0.06539999999999999,
+            "emotion": "Relieved"
+        }
+    ],
+    "856798": [
+        {
+            "city": "Venice",
+            "city_valence": 0.5768263157894739,
+            "city_arousal": 0.07185526315789474,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.6984864864864866,
+            "city_arousal": 0.07914864864864868,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.732044,
+            "city_arousal": 0.07128000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Ferrara",
+            "city_valence": 0.636315,
+            "city_arousal": 0.08305000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.61922,
+            "city_arousal": 0.0502,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Orlando",
+            "city_valence": 0.9484571428571428,
+            "city_arousal": 0.12600000000000003,
+            "emotion": "Content"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.7600800000000001,
+            "city_arousal": 0.0823,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.34855714285714295,
+            "city_arousal": 0.019,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.9799571428571429,
+            "city_arousal": 0.12614285714285717,
+            "emotion": "Content"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.28513333333333335,
+            "city_arousal": 0.0265,
+            "emotion": "Calm"
+        }
+    ],
+    "856813": [
+        {
+            "city": "Geneva",
+            "city_valence": 0.5881142857142859,
+            "city_arousal": 0.053500000000000006,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.5006260869565218,
+            "city_arousal": 0.04186956521739131,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.1496222222222222,
+            "city_arousal": 0.023666666666666662,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.5052333333333333,
+            "city_arousal": 0.025999999999999995,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "St. Charles",
+            "city_valence": 0.46086,
+            "city_arousal": 0.031,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.676825,
+            "city_arousal": 0.07325,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Lausanne",
+            "city_valence": 0.44249999999999995,
+            "city_arousal": 0.02975,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Pavia",
+            "city_valence": 0.888625,
+            "city_arousal": 0.045,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Arona",
+            "city_valence": -0.008799999999999994,
+            "city_arousal": 0.013999999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.9463,
+            "city_arousal": 0.0745,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856815": [
+        {
+            "city": "Venice",
+            "city_valence": 0.26595555555555556,
+            "city_arousal": 0.02188888888888889,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Catania",
+            "city_valence": 0.24090769230769232,
+            "city_arousal": 0.01276923076923077,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.40737692307692314,
+            "city_arousal": 0.03907692307692307,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Palermo",
+            "city_valence": 0.6018909090909091,
+            "city_arousal": 0.07872727272727274,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Valletta",
+            "city_valence": -0.20294999999999996,
+            "city_arousal": -0.013666666666666666,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.1140142857142857,
+            "city_arousal": -0.002857142857142853,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.19807142857142854,
+            "city_arousal": 0.02457142857142857,
+            "emotion": "Calm"
+        },
+        {
+            "city": "George",
+            "city_valence": 0.7774333333333333,
+            "city_arousal": 0.03900000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Concord",
+            "city_valence": 0.7625250000000001,
+            "city_arousal": 0.0775,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.89775,
+            "city_arousal": 0.08475,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856816": [
+        {
+            "city": "Rome",
+            "city_valence": 0.3972607142857142,
+            "city_arousal": 0.04764285714285714,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.483962962962963,
+            "city_arousal": 0.04251851851851852,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8768000000000001,
+            "city_arousal": 0.09887499999999998,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.5301818181818182,
+            "city_arousal": 0.048999999999999995,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Pavia",
+            "city_valence": 0.678322222222222,
+            "city_arousal": 0.063,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.8309363636363636,
+            "city_arousal": 0.08654545454545454,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.8170000000000001,
+            "city_arousal": 0.08866666666666666,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.4678285714285714,
+            "city_arousal": 0.022428571428571433,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Terni",
+            "city_valence": 0.43152500000000005,
+            "city_arousal": 0.0405,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Brescia",
+            "city_valence": 0.9308000000000001,
+            "city_arousal": 0.12325,
+            "emotion": "Content"
+        }
+    ],
+    "856817": [
+        {
+            "city": "Naples",
+            "city_valence": 0.3299244444444445,
+            "city_arousal": 0.038988888888888906,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.33901884057971016,
+            "city_arousal": 0.037478260869565225,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.5966749999999998,
+            "city_arousal": 0.060375000000000005,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.6001800000000002,
+            "city_arousal": 0.06520000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Geneva",
+            "city_valence": 0.3751750000000001,
+            "city_arousal": 0.03825,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.17415714285714287,
+            "city_arousal": 0.006,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Toledo",
+            "city_valence": -0.1848,
+            "city_arousal": -0.0055000000000000005,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.14890000000000003,
+            "city_arousal": 0.05933333333333333,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.8903285714285715,
+            "city_arousal": 0.08099999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Terracina",
+            "city_valence": 0.6991833333333334,
+            "city_arousal": 0.08266666666666667,
+            "emotion": "Relieved"
+        }
+    ],
+    "856818": [
+        {
+            "city": "Naples",
+            "city_valence": 0.46831298701298707,
+            "city_arousal": 0.03637662337662337,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Benevento",
+            "city_valence": 0.2568428571428572,
+            "city_arousal": 0.02228571428571428,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Foggia",
+            "city_valence": 0.2778823529411764,
+            "city_arousal": 0.022705882352941176,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Manfredonia",
+            "city_valence": 0.22744615384615388,
+            "city_arousal": 0.022999999999999996,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Taranto",
+            "city_valence": 0.7578857142857142,
+            "city_arousal": 0.05557142857142856,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.46228749999999996,
+            "city_arousal": 0.050625,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Ostuni",
+            "city_valence": 0.34715555555555555,
+            "city_arousal": 0.007222222222222225,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Brindisi",
+            "city_valence": 0.5610090909090909,
+            "city_arousal": 0.04881818181818182,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Lucera",
+            "city_valence": 0.16974444444444445,
+            "city_arousal": 0.023000000000000003,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.5879,
+            "city_arousal": 0.03660000000000001,
+            "emotion": "Relieved"
+        }
+    ],
+    "856820": [
+        {
+            "city": "Rome",
+            "city_valence": 0.5417157894736843,
+            "city_arousal": 0.0688421052631579,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.9027142857142857,
+            "city_arousal": 0.08514285714285715,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.8678923076923077,
+            "city_arousal": 0.1086923076923077,
+            "emotion": "Content"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.6099153846153846,
+            "city_arousal": 0.10023076923076922,
+            "emotion": "Curious"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.7644083333333334,
+            "city_arousal": 0.09083333333333332,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Pavia",
+            "city_valence": 0.8018583333333335,
+            "city_arousal": 0.09441666666666666,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.7950454545454545,
+            "city_arousal": 0.09227272727272728,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.7209749999999999,
+            "city_arousal": 0.086,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Rivoli",
+            "city_valence": 0.9568333333333333,
+            "city_arousal": 0.09866666666666668,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Macon",
+            "city_valence": 0.9955499999999999,
+            "city_arousal": 0.1865,
+            "emotion": "Content"
+        }
+    ],
+    "856821": [
+        {
+            "city": "Paris",
+            "city_valence": 0.8156846153846155,
+            "city_arousal": 0.10861538461538461,
+            "emotion": "Content"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8675357142857144,
+            "city_arousal": 0.0915,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.9727125000000001,
+            "city_arousal": 0.143125,
+            "emotion": "Content"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.7404307692307692,
+            "city_arousal": 0.10561538461538461,
+            "emotion": "Content"
+        },
+        {
+            "city": "Pavia",
+            "city_valence": 0.8041363636363638,
+            "city_arousal": 0.07481818181818181,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.6929285714285714,
+            "city_arousal": 0.09999999999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.8495,
+            "city_arousal": 0.101,
+            "emotion": "Content"
+        },
+        {
+            "city": "Rivoli",
+            "city_valence": 0.9817499999999999,
+            "city_arousal": 0.1215,
+            "emotion": "Content"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.8712666666666667,
+            "city_arousal": 0.10266666666666668,
+            "emotion": "Content"
+        },
+        {
+            "city": "Macon",
+            "city_valence": 0.9963,
+            "city_arousal": 0.20600000000000002,
+            "emotion": "Content"
+        }
+    ],
+    "856822": [
+        {
+            "city": "Rome",
+            "city_valence": 0.639244,
+            "city_arousal": 0.08575999999999998,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.4237947368421052,
+            "city_arousal": 0.06305263157894737,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Baja",
+            "city_valence": 0.3068583333333333,
+            "city_arousal": 0.03816666666666667,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.6989583333333332,
+            "city_arousal": 0.10133333333333333,
+            "emotion": "Curious"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.28042000000000006,
+            "city_arousal": 0.04379999999999999,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Pozzuoli",
+            "city_valence": 0.11996000000000002,
+            "city_arousal": 0.006400000000000003,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Athens",
+            "city_valence": 0.4699,
+            "city_arousal": 0.08433333333333333,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "San Lorenzo",
+            "city_valence": 0.8689,
+            "city_arousal": 0.065,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Memphis",
+            "city_valence": 0.9917,
+            "city_arousal": 0.11499999999999999,
+            "emotion": "Content"
+        },
+        {
+            "city": "Toledo",
+            "city_valence": 0.9817,
+            "city_arousal": 0.1145,
+            "emotion": "Content"
+        }
+    ],
+    "856823": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6368162790697675,
+            "city_arousal": 0.05244186046511628,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Catania",
+            "city_valence": 0.7095478260869564,
+            "city_arousal": 0.07373913043478261,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.8094555555555554,
+            "city_arousal": 0.072,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Palermo",
+            "city_valence": 0.6951687499999999,
+            "city_arousal": 0.05578125,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.8080045454545456,
+            "city_arousal": 0.06231818181818182,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hannibal",
+            "city_valence": 0.20290000000000002,
+            "city_arousal": 0.007875000000000002,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Athens",
+            "city_valence": 0.49832857142857145,
+            "city_arousal": 0.06271428571428572,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.3124800000000001,
+            "city_arousal": 0.0396,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Sciacca",
+            "city_valence": 0.4769166666666667,
+            "city_arousal": 0.06983333333333333,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Gela",
+            "city_valence": 0.9531666666666666,
+            "city_arousal": 0.07766666666666666,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856824": [
+        {
+            "city": "Venice",
+            "city_valence": 0.36850227272727254,
+            "city_arousal": 0.029227272727272734,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Geneva",
+            "city_valence": 0.8865545454545457,
+            "city_arousal": 0.09586363636363639,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.48977142857142864,
+            "city_arousal": 0.04876190476190475,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.7192312499999998,
+            "city_arousal": 0.06112500000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.94893125,
+            "city_arousal": 0.0926875,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.51927,
+            "city_arousal": 0.042499999999999996,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.45071000000000006,
+            "city_arousal": 0.0683,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Lausanne",
+            "city_valence": 0.5129142857142858,
+            "city_arousal": 0.06114285714285715,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Ferrara",
+            "city_valence": 0.6161500000000001,
+            "city_arousal": 0.049499999999999995,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rialto",
+            "city_valence": 0.2361,
+            "city_arousal": 0.0135,
+            "emotion": "Calm"
+        }
+    ],
+    "856829": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6500709677419353,
+            "city_arousal": 0.0563225806451613,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.6222099999999999,
+            "city_arousal": 0.052550000000000006,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Pescara",
+            "city_valence": 0.5942333333333333,
+            "city_arousal": 0.04800000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Alba",
+            "city_valence": 0.7431749999999999,
+            "city_arousal": 0.070125,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Chieti",
+            "city_valence": 0.9125500000000001,
+            "city_arousal": 0.07183333333333333,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Santa Maria",
+            "city_valence": 0.30785999999999997,
+            "city_arousal": 0.031,
+            "emotion": "Calm"
+        },
+        {
+            "city": "San Sebastiano",
+            "city_valence": 0.29390000000000005,
+            "city_arousal": 0.02225,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Frascati",
+            "city_valence": 0.975775,
+            "city_arousal": 0.09775,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.64255,
+            "city_arousal": 0.08249999999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.0,
+            "city_arousal": 0.0,
+            "emotion": "Neutral"
+        }
+    ],
+    "856831": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6835738461538464,
+            "city_arousal": 0.06012307692307693,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.6674375000000001,
+            "city_arousal": 0.057208333333333326,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.8060714285714284,
+            "city_arousal": 0.04550000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.5323,
+            "city_arousal": 0.037800000000000014,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Catania",
+            "city_valence": 0.44278888888888884,
+            "city_arousal": 0.02588888888888889,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.7827666666666667,
+            "city_arousal": 0.04966666666666667,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.8166571428571429,
+            "city_arousal": 0.095,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.93455,
+            "city_arousal": 0.08125,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.879775,
+            "city_arousal": 0.06825,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Cambridge",
+            "city_valence": 0.7915749999999999,
+            "city_arousal": 0.0225,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856835": [
+        {
+            "city": "Catania",
+            "city_valence": 0.09496249999999998,
+            "city_arousal": 0.0105625,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Palermo",
+            "city_valence": 0.5746482758620691,
+            "city_arousal": 0.03879310344827586,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.5065,
+            "city_arousal": 0.029560000000000003,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.11704827586206897,
+            "city_arousal": 0.016827586206896554,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.395076923076923,
+            "city_arousal": 0.030769230769230767,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Athens",
+            "city_valence": 0.26108333333333333,
+            "city_arousal": 0.0049999999999999975,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Bronte",
+            "city_valence": 0.4443166666666667,
+            "city_arousal": 0.02566666666666667,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.9325857142857144,
+            "city_arousal": 0.08157142857142856,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Palmerston",
+            "city_valence": 0.18819999999999998,
+            "city_arousal": 0.003499999999999998,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Corona",
+            "city_valence": 0.50525,
+            "city_arousal": 0.07849999999999999,
+            "emotion": "Relieved"
+        }
+    ],
+    "856838": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6883405405405406,
+            "city_arousal": 0.05993693693693693,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.7264914893617022,
+            "city_arousal": 0.0665531914893617,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.24744999999999998,
+            "city_arousal": 0.022375000000000003,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.5126899999999999,
+            "city_arousal": 0.04109999999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.6573818181818182,
+            "city_arousal": 0.055,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8680857142857142,
+            "city_arousal": 0.07114285714285713,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Boston",
+            "city_valence": 0.5470714285714285,
+            "city_arousal": 0.06700000000000002,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.8977499999999999,
+            "city_arousal": 0.08800000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Trieste",
+            "city_valence": 0.13126666666666667,
+            "city_arousal": 0.013333333333333334,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Holland",
+            "city_valence": 0.99055,
+            "city_arousal": 0.15399999999999997,
+            "emotion": "Content"
+        }
+    ],
+    "856839": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6157506976744183,
+            "city_arousal": 0.055251162790697625,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.688457777777778,
+            "city_arousal": 0.06291111111111111,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.8188777777777777,
+            "city_arousal": 0.09116666666666666,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.8633266666666667,
+            "city_arousal": 0.064,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Lucca",
+            "city_valence": 0.9841799999999999,
+            "city_arousal": 0.1263,
+            "emotion": "Content"
+        },
+        {
+            "city": "Boston",
+            "city_valence": 0.7297375,
+            "city_arousal": 0.061625,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.9720454545454547,
+            "city_arousal": 0.1011818181818182,
+            "emotion": "Content"
+        },
+        {
+            "city": "Frascati",
+            "city_valence": 0.6482125000000001,
+            "city_arousal": 0.07600000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.979525,
+            "city_arousal": 0.11900000000000002,
+            "emotion": "Content"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.7806714285714286,
+            "city_arousal": 0.08957142857142857,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856840": [
+        {
+            "city": "Venice",
+            "city_valence": 0.8674754098360654,
+            "city_arousal": 0.07947540983606562,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.7878377358490566,
+            "city_arousal": 0.06911320754716982,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8810761904761903,
+            "city_arousal": 0.07476190476190475,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Brescia",
+            "city_valence": 0.7584800000000002,
+            "city_arousal": 0.07139999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.44771818181818174,
+            "city_arousal": 0.041545454545454545,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Pavia",
+            "city_valence": 0.66198,
+            "city_arousal": 0.06899999999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.7653666666666666,
+            "city_arousal": 0.062166666666666676,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Varese",
+            "city_valence": 0.6401,
+            "city_arousal": 0.045,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.24291666666666667,
+            "city_arousal": 0.048499999999999995,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Baden",
+            "city_valence": 0.9828599999999998,
+            "city_arousal": 0.12120000000000002,
+            "emotion": "Content"
+        }
+    ],
+    "856841": [
+        {
+            "city": "Rome",
+            "city_valence": 0.7305556818181814,
+            "city_arousal": 0.06995454545454544,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.730185185185185,
+            "city_arousal": 0.07714814814814813,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Perugia",
+            "city_valence": 0.859509090909091,
+            "city_arousal": 0.10004545454545455,
+            "emotion": "Content"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.8859,
+            "city_arousal": 0.096,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.89638,
+            "city_arousal": 0.10940000000000001,
+            "emotion": "Content"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": 0.273425,
+            "city_arousal": 0.027499999999999997,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Siena",
+            "city_valence": 0.8353,
+            "city_arousal": 0.12666666666666668,
+            "emotion": "Content"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.733,
+            "city_arousal": 0.042,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Spoleto",
+            "city_valence": 0.97315,
+            "city_arousal": 0.088,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.8402499999999999,
+            "city_arousal": 0.07450000000000001,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856842": [
+        {
+            "city": "Rome",
+            "city_valence": -0.04424285714285721,
+            "city_arousal": 0.0007410714285714306,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.3404651515151514,
+            "city_arousal": 0.02083333333333334,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.1647267857142857,
+            "city_arousal": 0.006803571428571427,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.19063461538461535,
+            "city_arousal": 0.008115384615384618,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.21143750000000003,
+            "city_arousal": 0.015375,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Ferrara",
+            "city_valence": 0.42451428571428573,
+            "city_arousal": 0.014785714285714287,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": 0.89871,
+            "city_arousal": 0.045,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.7395799999999999,
+            "city_arousal": 0.0546,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.09713333333333334,
+            "city_arousal": 0.011,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Romulus",
+            "city_valence": 0.13823333333333332,
+            "city_arousal": 0.009000000000000001,
+            "emotion": "Calm"
+        }
+    ],
+    "856843": [
+        {
+            "city": "Rome",
+            "city_valence": 0.2184965811965812,
+            "city_arousal": 0.018316239316239314,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Romulus",
+            "city_valence": -0.054233333333333335,
+            "city_arousal": -0.01575,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8107545454545455,
+            "city_arousal": 0.04209090909090908,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.2636125,
+            "city_arousal": 0.024,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.42105714285714285,
+            "city_arousal": 0.04257142857142858,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.25748333333333334,
+            "city_arousal": 0.0011666666666666676,
+            "emotion": "Calm"
+        },
+        {
+            "city": "London",
+            "city_valence": -0.028628571428571416,
+            "city_arousal": 0.006000000000000005,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Brescia",
+            "city_valence": 0.4132,
+            "city_arousal": 0.01625,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": -0.21565,
+            "city_arousal": -0.008249999999999999,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.7341000000000001,
+            "city_arousal": 0.05233333333333334,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856844": [
+        {
+            "city": "Venice",
+            "city_valence": 0.36574939759036146,
+            "city_arousal": 0.040975903614457854,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Verona",
+            "city_valence": 0.5549629629629629,
+            "city_arousal": 0.044037037037037034,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.4982999999999999,
+            "city_arousal": 0.048111111111111104,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Augsburg",
+            "city_valence": 0.46423,
+            "city_arousal": 0.0376,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.0020500000000000297,
+            "city_arousal": -0.0010999999999999981,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.0012700000000000155,
+            "city_arousal": 0.0013000000000000067,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Chioggia",
+            "city_valence": 0.36697500000000005,
+            "city_arousal": 0.030250000000000006,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Munich",
+            "city_valence": 0.9617166666666667,
+            "city_arousal": 0.10033333333333334,
+            "emotion": "Content"
+        },
+        {
+            "city": "Rialto",
+            "city_valence": 0.30694,
+            "city_arousal": 0.012600000000000009,
+            "emotion": "Calm"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.9372,
+            "city_arousal": 0.11740000000000002,
+            "emotion": "Content"
+        }
+    ],
+    "856845": [
+        {
+            "city": "Rome",
+            "city_valence": 0.7426571428571425,
+            "city_arousal": 0.05305357142857143,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.49842999999999993,
+            "city_arousal": 0.035733333333333346,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.9809285714285715,
+            "city_arousal": 0.07942857142857143,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.64521,
+            "city_arousal": 0.04510000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.8680333333333334,
+            "city_arousal": 0.035,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.98214,
+            "city_arousal": 0.094,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.9216000000000001,
+            "city_arousal": 0.0805,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": 0.849675,
+            "city_arousal": 0.07200000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Nice",
+            "city_valence": 0.9851,
+            "city_arousal": 0.094,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Toledo",
+            "city_valence": 0.9882,
+            "city_arousal": 0.089,
+            "emotion": "Relaxed"
+        }
+    ],
+    "856846": [
+        {
+            "city": "Naples",
+            "city_valence": 0.13244761904761895,
+            "city_arousal": 0.010904761904761903,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Palermo",
+            "city_valence": 0.453015,
+            "city_arousal": 0.03685,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Catania",
+            "city_valence": 0.30467500000000003,
+            "city_arousal": 0.025875000000000002,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.44259999999999994,
+            "city_arousal": 0.02583333333333333,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Messina",
+            "city_valence": 0.33485714285714285,
+            "city_arousal": 0.014142857142857143,
+            "emotion": "Calm"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.0185,
+            "city_arousal": 0.010000000000000004,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Salerno",
+            "city_valence": 0.5542333333333334,
+            "city_arousal": 0.056666666666666664,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Palmerston",
+            "city_valence": -0.94165,
+            "city_arousal": -0.09,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.9627,
+            "city_arousal": 0.154,
+            "emotion": "Content"
+        },
+        {
+            "city": "Philadelphia",
+            "city_valence": -0.9698,
+            "city_arousal": -0.10699999999999998,
+            "emotion": "Tired"
+        }
+    ],
+    "856847": [
+        {
+            "city": "Naples",
+            "city_valence": 0.4932935483870967,
+            "city_arousal": 0.04109677419354839,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.4480583333333333,
+            "city_arousal": 0.051416666666666666,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.79332,
+            "city_arousal": 0.11480000000000001,
+            "emotion": "Content"
+        },
+        {
+            "city": "Baghdad",
+            "city_valence": 0.9994,
+            "city_arousal": 0.15,
+            "emotion": "Content"
+        },
+        {
+            "city": "Salerno",
+            "city_valence": 0.6250333333333334,
+            "city_arousal": 0.033999999999999996,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Tehran",
+            "city_valence": 0.9994,
+            "city_arousal": 0.15,
+            "emotion": "Content"
+        },
+        {
+            "city": "Antonina",
+            "city_valence": 0.9054,
+            "city_arousal": 0.05449999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Baku",
+            "city_valence": 0.9994,
+            "city_arousal": 0.15,
+            "emotion": "Content"
+        },
+        {
+            "city": "Mosul",
+            "city_valence": 0.9994,
+            "city_arousal": 0.15,
+            "emotion": "Content"
+        },
+        {
+            "city": "Avellino",
+            "city_valence": -0.17385,
+            "city_arousal": -0.0045000000000000005,
+            "emotion": "Neutral"
+        }
+    ],
+    "856851": [
+        {
+            "city": "Rome",
+            "city_valence": 0.9286572580645163,
+            "city_arousal": 0.12033064516129025,
+            "emotion": "Content"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.9099906976744185,
+            "city_arousal": 0.11283720930232555,
+            "emotion": "Content"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8458326086956521,
+            "city_arousal": 0.10219565217391305,
+            "emotion": "Content"
+        },
+        {
+            "city": "Palermo",
+            "city_valence": 0.8159782608695652,
+            "city_arousal": 0.11569565217391306,
+            "emotion": "Content"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.9196074074074075,
+            "city_arousal": 0.11037037037037038,
+            "emotion": "Content"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.9577350000000001,
+            "city_arousal": 0.13284999999999997,
+            "emotion": "Content"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.8413117647058823,
+            "city_arousal": 0.10988235294117646,
+            "emotion": "Content"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.9659312500000001,
+            "city_arousal": 0.14887499999999998,
+            "emotion": "Content"
+        },
+        {
+            "city": "Padova",
+            "city_valence": 0.9581437500000001,
+            "city_arousal": 0.1053125,
+            "emotion": "Content"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.8895000000000001,
+            "city_arousal": 0.11242857142857143,
+            "emotion": "Content"
+        }
+    ],
+    "856852": [
+        {
+            "city": "Sulmona",
+            "city_valence": 0.28103,
+            "city_arousal": 0.018300000000000004,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Isernia",
+            "city_valence": 0.2005166666666667,
+            "city_arousal": 0.014499999999999999,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.06667499999999996,
+            "city_arousal": 0.030500000000000003,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Rome",
+            "city_valence": -0.59888,
+            "city_arousal": -0.031400000000000004,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": -0.7120666666666667,
+            "city_arousal": -0.007333333333333333,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Pescara",
+            "city_valence": 0.9046333333333333,
+            "city_arousal": 0.06633333333333333,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Alice",
+            "city_valence": -0.7096,
+            "city_arousal": -0.02,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Santa Maria",
+            "city_valence": -0.9396,
+            "city_arousal": -0.05,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": -0.9835,
+            "city_arousal": -0.068,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Porta",
+            "city_valence": 0.9143,
+            "city_arousal": 0.053,
+            "emotion": "Relaxed"
+        }
+    ],
+    "866611": [
+        {
+            "city": "Venice",
+            "city_valence": 0.38108,
+            "city_arousal": 0.03724444444444444,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.5941740740740741,
+            "city_arousal": 0.05096296296296296,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.5517862068965517,
+            "city_arousal": 0.04393103448275862,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.4147499999999999,
+            "city_arousal": 0.037821428571428575,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.3607857142857142,
+            "city_arousal": 0.04064285714285715,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.4347818181818182,
+            "city_arousal": 0.0369090909090909,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.5967444444444445,
+            "city_arousal": 0.059111111111111114,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Brescia",
+            "city_valence": -0.12559999999999996,
+            "city_arousal": 0.010166666666666666,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Lucca",
+            "city_valence": 0.8569666666666667,
+            "city_arousal": 0.0775,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.28702000000000005,
+            "city_arousal": 0.0422,
+            "emotion": "Calm"
+        }
+    ],
+    "866612": [
+        {
+            "city": "Venice",
+            "city_valence": 0.5415151515151514,
+            "city_arousal": 0.05112121212121209,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.266864,
+            "city_arousal": 0.0332,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.19093333333333332,
+            "city_arousal": 0.01973333333333333,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.6893399999999998,
+            "city_arousal": 0.0502,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.5532750000000001,
+            "city_arousal": 0.046,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.5333857142857144,
+            "city_arousal": 0.03628571428571429,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Brescia",
+            "city_valence": 0.72785,
+            "city_arousal": 0.025500000000000002,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.35835,
+            "city_arousal": 0.020999999999999994,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Gori",
+            "city_valence": 0.958,
+            "city_arousal": 0.073,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.21515,
+            "city_arousal": 0.0405,
+            "emotion": "Calm"
+        }
+    ],
+    "866613": [
+        {
+            "city": "Florence",
+            "city_valence": 0.24883529411764704,
+            "city_arousal": 0.03029411764705882,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.11106666666666669,
+            "city_arousal": 0.015166666666666667,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.4936153846153845,
+            "city_arousal": 0.05253846153846153,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.7558,
+            "city_arousal": 0.065125,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Westminster",
+            "city_valence": 0.59705,
+            "city_arousal": 0.050499999999999996,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.2272,
+            "city_arousal": 0.044,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.964175,
+            "city_arousal": 0.09975,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.31403333333333333,
+            "city_arousal": 0.056666666666666664,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Dublin",
+            "city_valence": 0.8263666666666666,
+            "city_arousal": 0.061333333333333344,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Holland",
+            "city_valence": 0.32635000000000003,
+            "city_arousal": 0.0315,
+            "emotion": "Calm"
+        }
+    ],
+    "866620": [
+        {
+            "city": "Venice",
+            "city_valence": 0.3919941666666667,
+            "city_arousal": 0.04129166666666666,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.4426220779220777,
+            "city_arousal": 0.03697402597402597,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.32591538461538466,
+            "city_arousal": 0.036384615384615376,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Padua",
+            "city_valence": 0.48932999999999993,
+            "city_arousal": 0.0479,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.4525555555555556,
+            "city_arousal": 0.059555555555555556,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.61625,
+            "city_arousal": 0.058100000000000006,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Vienna",
+            "city_valence": 0.6389571428571428,
+            "city_arousal": 0.05085714285714286,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Terni",
+            "city_valence": -0.03455,
+            "city_arousal": -0.008999999999999998,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.5814333333333334,
+            "city_arousal": 0.037333333333333336,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": 0.8592333333333334,
+            "city_arousal": 0.05066666666666667,
+            "emotion": "Relaxed"
+        }
+    ],
+    "866621": [
+        {
+            "city": "Rome",
+            "city_valence": 0.5416492063492063,
+            "city_arousal": 0.0609047619047619,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.6128925000000002,
+            "city_arousal": 0.06737499999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.5869238095238095,
+            "city_arousal": 0.05028571428571429,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.44602777777777786,
+            "city_arousal": 0.04644444444444444,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.40716923076923084,
+            "city_arousal": 0.043846153846153854,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.8417090909090909,
+            "city_arousal": 0.09627272727272729,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Geneva",
+            "city_valence": 0.5782571428571428,
+            "city_arousal": 0.031714285714285716,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.8719333333333333,
+            "city_arousal": 0.09250000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.9129499999999999,
+            "city_arousal": 0.07125000000000001,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.7335,
+            "city_arousal": 0.05625000000000001,
+            "emotion": "Relaxed"
+        }
+    ],
+    "867651": [
+        {
+            "city": "Rome",
+            "city_valence": 0.5029093749999999,
+            "city_arousal": 0.04821874999999999,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.41573793103448275,
+            "city_arousal": 0.03672413793103448,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.7164999999999999,
+            "city_arousal": 0.058846153846153854,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.36106,
+            "city_arousal": 0.024200000000000003,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.4634666666666667,
+            "city_arousal": 0.053666666666666675,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.19028333333333333,
+            "city_arousal": 0.0029999999999999957,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Bologna",
+            "city_valence": 0.13570000000000002,
+            "city_arousal": 0.008000000000000004,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.8475666666666667,
+            "city_arousal": 0.041,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Terracina",
+            "city_valence": 0.7902,
+            "city_arousal": 0.0565,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.2773666666666667,
+            "city_arousal": 0.05066666666666667,
+            "emotion": "Calm"
+        }
+    ],
+    "867652": [
+        {
+            "city": "Rome",
+            "city_valence": 0.5364922077922076,
+            "city_arousal": 0.04836363636363637,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.3155280000000001,
+            "city_arousal": 0.028839999999999998,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.6498999999999999,
+            "city_arousal": 0.040875,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.61315,
+            "city_arousal": 0.04916666666666667,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Athens",
+            "city_valence": 0.721875,
+            "city_arousal": 0.03825,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.9556,
+            "city_arousal": 0.105,
+            "emotion": "Content"
+        },
+        {
+            "city": "Jerusalem",
+            "city_valence": 0.8001666666666667,
+            "city_arousal": 0.044333333333333336,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Vienna",
+            "city_valence": 0.82485,
+            "city_arousal": 0.041,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.08715,
+            "city_arousal": 0.011,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.8192,
+            "city_arousal": 0.13233333333333333,
+            "emotion": "Content"
+        }
+    ],
+    "867653": [
+        {
+            "city": "Naples",
+            "city_valence": 0.3324457627118643,
+            "city_arousal": 0.0291864406779661,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Rome",
+            "city_valence": 0.3743866666666667,
+            "city_arousal": 0.03113333333333333,
+            "emotion": "Calm"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.45628124999999997,
+            "city_arousal": 0.04190625,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.44783200000000006,
+            "city_arousal": 0.03828,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.6688846153846153,
+            "city_arousal": 0.06492307692307692,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Turin",
+            "city_valence": 0.5995461538461538,
+            "city_arousal": 0.05661538461538462,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Geneva",
+            "city_valence": 0.69994,
+            "city_arousal": 0.088,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.9605,
+            "city_arousal": 0.09666666666666668,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.72666,
+            "city_arousal": 0.04839999999999999,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Ancona",
+            "city_valence": 0.51224,
+            "city_arousal": 0.05559999999999998,
+            "emotion": "Relieved"
+        }
+    ],
+    "867654": [
+        {
+            "city": "Rome",
+            "city_valence": 0.6974374301675977,
+            "city_arousal": 0.059173184357541896,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.6221187500000002,
+            "city_arousal": 0.054837499999999983,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.7740941176470589,
+            "city_arousal": 0.0671764705882353,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Hercules",
+            "city_valence": 0.8427891891891892,
+            "city_arousal": 0.07694594594594593,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Blainville",
+            "city_valence": 0.734988888888889,
+            "city_arousal": 0.062481481481481485,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": 0.6682312499999999,
+            "city_arousal": 0.04806250000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.73326875,
+            "city_arousal": 0.058,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Florence",
+            "city_valence": 0.6986333333333333,
+            "city_arousal": 0.06480000000000001,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "London",
+            "city_valence": 0.7878799999999999,
+            "city_arousal": 0.059800000000000006,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Lucca",
+            "city_valence": 0.67875,
+            "city_arousal": 0.0543,
+            "emotion": "Relieved"
+        }
+    ],
+    "867655": [
+        {
+            "city": "Rome",
+            "city_valence": 0.382638888888889,
+            "city_arousal": 0.027962962962962967,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Paris",
+            "city_valence": 0.45783437499999996,
+            "city_arousal": 0.025750000000000002,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Naples",
+            "city_valence": 0.35447142857142866,
+            "city_arousal": 0.02304761904761905,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Quito",
+            "city_valence": 0.4398636363636364,
+            "city_arousal": 0.01845454545454545,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Venice",
+            "city_valence": 0.26515714285714287,
+            "city_arousal": 0.027428571428571434,
+            "emotion": "Calm"
+        },
+        {
+            "city": "Geneva",
+            "city_valence": 0.469125,
+            "city_arousal": 0.04325,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Milan",
+            "city_valence": 0.86812,
+            "city_arousal": 0.0732,
+            "emotion": "Relaxed"
+        },
+        {
+            "city": "Tivoli",
+            "city_valence": -0.029360000000000053,
+            "city_arousal": -0.006000000000000003,
+            "emotion": "Neutral"
+        },
+        {
+            "city": "Frascati",
+            "city_valence": 0.5395749999999999,
+            "city_arousal": 0.032,
+            "emotion": "Relieved"
+        },
+        {
+            "city": "Vienna",
+            "city_valence": 0.918875,
+            "city_arousal": 0.09974999999999999,
+            "emotion": "Relaxed"
+        }
+    ]
+}
