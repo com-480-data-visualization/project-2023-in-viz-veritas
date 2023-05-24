@@ -118,6 +118,10 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
                 // Create a container element for the book card
                 var bookCardContainer = tooltip.append("div")
+                .on("click", function() {
+                    // Open a new page in the browser
+                    window.open(d.manifest, "_blank");
+                });
 
                 // Call the createBookCards function to populate the book card container with the book card
                 createBookCards(bookCardContainer, [d]);
