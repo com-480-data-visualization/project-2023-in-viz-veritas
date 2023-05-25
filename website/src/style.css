@@ -91,6 +91,9 @@ p {
   z-index: 10;
   position: absolute;
   background: var(--background-color);
+  border: solid;
+  border-width: 1px;
+  border-radius : 5px;
 }
 .bubble-text {
   font-family: Georgia, serif;

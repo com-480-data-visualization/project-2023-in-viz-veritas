@@ -64,7 +64,7 @@ function createBubbleGraph(bookId) {
                     .style("top", event.pageY + 10 + "px")
                     .style("z-index", 10)
                     .html(
-                        d.data[0]
+                        `<b>${d.data[0]}</b>` + "<br> Cited " + d.data[1] + " times"
                     )
 
             })

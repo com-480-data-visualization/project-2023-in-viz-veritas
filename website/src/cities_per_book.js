@@ -98,11 +98,12 @@ function createCitiesViz(bookid) {
          const mousemove = function(event, d) {
             
             tooltip_cityemo.style("visibility", "visible");
+            const textcity= d.city.toString();
 
             tooltip_cityemo
-              .html("City: " + d.city + "<br> Valence: " + d.city_valence.toFixed(2)
+              .html( `<b>${textcity}</b>` +" <br> Valence: " + d.city_valence.toFixed(2)
                + "<br> Arousal: "+ d.city_arousal.toFixed(2) + "<br> Emotion: "+ d.emotion
-               + "<br> Frequency: " + d.freq)
+               + "<br> Cited: " + d.freq + " times")
               .style("left", event.pageX + 90 + "px")
               .style("top", event.pageY + 90 +"px")
           }
