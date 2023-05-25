@@ -70,6 +70,9 @@ p {
   z-index: 10;
   position: absolute;
   background: var(--background-color);
+  border: solid;
+  border-width: 1px;
+  border-radius : 5px;
 }
 .timeline-tooltip {
   color: var(--primary-color);
