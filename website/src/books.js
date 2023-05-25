@@ -104,3 +104,8 @@ showSvgButton.addEventListener("click", function () {
   showBooks();
 });
 
+bookInfoContainer.addEventListener("click", function (event) {
+    if(event.target.id != "book-info-container") return;
+    showBooks();
+});
+

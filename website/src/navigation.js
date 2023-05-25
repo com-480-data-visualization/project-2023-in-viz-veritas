@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const leftArrow = document.getElementById("left-arrow");
     const rightArrow = document.getElementById("right-arrow");
     const pageDotsContainer = document.getElementById("page-dots");
+    
   
     let currentPageIndex = 0;
   
