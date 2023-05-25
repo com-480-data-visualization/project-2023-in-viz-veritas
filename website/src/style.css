@@ -170,25 +170,88 @@ circle {
   height: 100%;
   background-color: rgba(30, 30, 30, 0.8);
   box-sizing: border-box;
-  z-index: 8;
-}
-
-.page {
-  padding-top: 70px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 100%;
-  display: none;
-  text-align: center;
+  align-content: center;
   flex-direction: column; /* Align items vertically */
   align-items: center; /* Center align horizontally */
   justify-content: center; /* Center align vertically */
-  background-color: #fefcf5;
-  box-shadow: rgba(30, 30, 30, 0.8);
+  z-index: 8;
 }
+
+.page.exit-left {
+  animation-name: pageExitLeft;
+}
+
+.page.enter-left {
+  animation-name: pageEnterLeft;
+}
+
+.page.exit-right {
+  animation-name: pageExitRight;
+}
+
+.page.enter-right {
+  animation-name: pageEnterRight;
+}
+
+@keyframes pageExitLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes pageEnterLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pageExitRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pageEnterRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.page {
+    padding-top: 70px;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center align horizontally */
+    justify-content: center; /* Center align vertically */
+    background-color: #fefcf5;
+    box-shadow: rgba(30, 30, 30, 0.8);
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
 
 #navigation {
   position: fixed;
@@ -212,16 +275,14 @@ circle {
   margin-left: 10px;
   margin-right: 10px;
   color: white;
-  text-align:center;
+  text-align: center;
   border: 1px solid #333;
-
 }
 
 /* add border to div on hover*/
 #left-arrow:hover,
-#right-arrow:hover{
-    border: 1px solid #fff;
-
+#right-arrow:hover {
+  border: 1px solid #fff;
 }
 
 #page-dots {
@@ -318,4 +379,3 @@ circle {
 .checkbox-label input[type="checkbox"]:checked + span {
   font-weight: bold;
 }
-
