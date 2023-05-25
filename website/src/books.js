@@ -69,6 +69,8 @@ d3.csv("./src/data/books.csv").then(function (data) {
 
       createBubbleGraph(d.book_id);
       createEmotionViz(d.book_id);
+      createCitiesViz(d.book_id);
+
       // Hide the SVG
       booksSvg.style.display = "none";
 
