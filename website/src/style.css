@@ -153,13 +153,17 @@ circle {
 
 #navigation-bar {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: #446900;
+  background-color: var(--secondary-color);
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
   z-index: 9999;
+  box-shadow: rgba(30, 30, 30, 0.8);
 }
 
 #book-info-container {
@@ -175,6 +179,12 @@ circle {
   align-items: center; /* Center align horizontally */
   justify-content: center; /* Center align vertically */
   z-index: 8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#book-info-container.show {
+  opacity: 1;
 }
 
 .page.exit-left {
@@ -230,20 +240,20 @@ circle {
 }
 
 .page {
-    padding-top: 70px;
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    display: none;
-    text-align: center;
-    flex-direction: column; /* Align items vertically */
-    align-items: center; /* Center align horizontally */
-    justify-content: center; /* Center align vertically */
-    background-color: #fefcf5;
-    box-shadow: rgba(30, 30, 30, 0.8);
-    animation-duration: 0.75s;
-    animation-timing-function: ease-in-out;
-  }
+  padding-top: 70px;
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center align horizontally */
+  justify-content: center; /* Center align vertically */
+  background-color: #fefcf5;
+  box-shadow: rgba(30, 30, 30, 0.8);
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in-out;
+}
 
 #navigation {
   position: fixed;
@@ -346,13 +356,6 @@ circle {
   color: var(--hover);
 }
 
-#navigation-bar {
-  width: 100%;
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
-}
-
 .selected-book {
   width: 100%;
 }
@@ -370,4 +373,29 @@ circle {
 
 .checkbox-label input[type="checkbox"]:checked + span {
   font-weight: bold;
+}
+
+.vertical-line{
+    color:rgba(30, 30, 30, 0.8);
+    border-left: 1px solid;
+}
+
+.emotion-vizzes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.emotion-linecharts{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emotion-scatter{
+    width: 40%;
+    display: flex;
+
 }

@@ -3,9 +3,8 @@ const primaryColor = getComputedStyle(
 ).getPropertyValue("--primary-color");
 console.log(primaryColor);
 
-var pages; // Declare the variable outside the scope
+let pages; // Declare the variable outside the scope
 function createEmotionViz(bookid) {
-
   // Clear previous charts
   d3.select("#valence-chart").selectAll("*").remove();
   d3.select("#arousal-chart").selectAll("*").remove();
@@ -16,11 +15,11 @@ function createEmotionViz(bookid) {
       pages = data.pages; // Assign the value to the variable
 
       // Extract valence and arousal values
-      var valenceData = pages.map(function (page) {
+      const valenceData = pages.map(function (page) {
         return page.valence;
       });
 
-      var arousalData = pages.map(function (page) {
+      const arousalData = pages.map(function (page) {
         return page.arousal;
       });
 
@@ -37,12 +36,12 @@ function createEmotionViz(bookid) {
 
 function createScatterPlot(data, title, chartId) {
   // Set up the dimensions and margins of the chart
-  var margin = { top: 20, right: 20, bottom: 30, left: 40 },
-    width = 600 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+  const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+  const width = 400 - margin.left - margin.right;
+  const height = 400 - margin.top - margin.bottom;
 
   // Create the SVG element
-  var svg = d3
+  const svg = d3
     .select("#" + chartId)
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -50,10 +49,10 @@ function createScatterPlot(data, title, chartId) {
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   // Set the x-axis scale
-  var x = d3.scaleLinear().domain([-1, 1]).nice().range([0, width]);
+  const x = d3.scaleLinear().domain([-1, 1]).nice().range([0, width]);
 
   // Set the y-axis scale
-  var y = d3.scaleLinear().domain([-1, 1]).nice().range([height, 0]);
+  const y = d3.scaleLinear().domain([-1, 1]).nice().range([height, 0]);
 
   // Create the x-axis
   svg
@@ -81,13 +80,13 @@ function createScatterPlot(data, title, chartId) {
   svg
     .append("text")
     .attr("x", width / 2)
-    .attr("y", 0 - margin.top / 2)
+    .attr("y", 0)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text(title);
 
   // Add tooltip
-  var tooltip = d3
+  const tooltip = d3
     .select("body")
     .append("div")
     .attr("class", "emotion-tooltip")
@@ -99,12 +98,12 @@ function createScatterPlot(data, title, chartId) {
     .on("mouseover", function (event, d) {
       tooltip.style("visibility", "visible");
 
-      var page = data.indexOf(d) + 1;
-      var valence = d.valence;
-      var arousal = d.arousal;
-      var emotion = d.emotion;
-      var valText = "Valence: " + valence.toFixed(2);
-      var arousalText = "Arousal: " + arousal.toFixed(2);
+      const page = data.indexOf(d) + 1;
+      const valence = d.valence;
+      const arousal = d.arousal;
+      const emotion = d.emotion;
+      const valText = "Valence: " + valence.toFixed(2);
+      const arousalText = "Arousal: " + arousal.toFixed(2);
 
       tooltip
         .html(
@@ -127,40 +126,76 @@ function createScatterPlot(data, title, chartId) {
 }
 
 function createLineChart(data, title, chartId) {
-  var width = d3
-    .select(".row")
-    .node()
-    .getBoundingClientRect().width;
-  var height = 400;
-  var margin = { top: 20, right: 20, bottom: 40, left: 40 };
-  var chartWidth = width - margin.left - margin.right;
-  var chartHeight = height - margin.top - margin.bottom;
+  //FIXME: want this dynamic
+  const width = 400;
+  const height = 200;
+  const margin = { top: 20, right: 20, bottom: 40, left: 40 };
+  const chartWidth = width - margin.left - margin.right;
+  const chartHeight = height - margin.top - margin.bottom;
 
-  var svg = d3
+  const svg = d3
     .select("#" + chartId)
     .attr("width", width)
     .attr("height", height);
 
-  var chart = svg
+  const chart = svg
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+  // Append a transparent overlay rectangle to capture mouse events
+  chart
+    .append("rect")
+    .attr("class", "overlay")
+    .attr("width", chartWidth)
+    .attr("height", chartHeight)
+    .style("opacity", 0)
+    .on("mouseover", function () {
+      tooltip.style("visibility", "visible");
+    })
+    .on("mouseout", function () {
+      tooltip.style("visibility", "hidden");
+      chart.select(".vertical-line").style("visibility", "hidden");
+    })
+    .on("mousemove", function (event) {
+      const mouseX = d3.pointer(event)[0];
+      const mouseY = d3.pointer(event)[1];
+
+      // Display tooltip and vertical line at the X position of the mouse
+      tooltip.style("visibility", "visible");
+      tooltip
+        .style("left", event.pageX + 10 + "px")
+        .style("top", event.pageY + 10 + "px");
+      chart
+        .select(".vertical-line")
+        .attr("x1", mouseX)
+        .attr("x2", mouseX)
+        .attr("y1", 0)
+        .attr("y2", chartHeight)
+        .style("visibility", "visible");
+
+      const index = Math.round(xScale.invert(mouseX));
+      const val = data[index];
+      const page = index + 1;
+      const emotion = pages[index].emotion;
+      const valText = title + ": " + val.toFixed(2);
+
+      tooltip.html(
+        "Page: " + page + "<br>" + valText + "<br>" + "Emotion: " + emotion
+      );
+    });
+
   // Set the scales for x and y axes
-  var xScale = d3
+  const xScale = d3
     .scaleLinear()
     .domain([0, data.length - 1])
     .range([0, chartWidth]);
-  var yScale = d3.scaleLinear().domain([-1, 1]).range([chartHeight, 0]);
+  const yScale = d3.scaleLinear().domain([-1, 1]).range([chartHeight, 0]);
 
   // Define the line generator
-  var line = d3
+  const line = d3
     .line()
-    .x(function (d, i) {
-      return xScale(i);
-    })
-    .y(function (d) {
-      return yScale(d);
-    });
+    .x((d, i) => xScale(i))
+    .y((d) => yScale(d));
 
   // Append the line path to the chart
   chart
@@ -194,18 +229,29 @@ function createLineChart(data, title, chartId) {
   chart
     .append("text")
     .attr("x", chartWidth / 2)
-    .attr("y", -margin.top / 2)
+    .attr("y", -margin.top / 4)
     .attr("text-anchor", "middle")
     .style("font-size", "16px")
     .text(title);
 
   // Add tooltip
   //TODO : modularize this
-  var tooltip = d3
+  const tooltip = d3
     .select("body")
     .append("div")
     .attr("class", "emotion-tooltip")
     .style("visibility", "hidden");
+
+  chart
+    .append("line")
+    .attr("class", "vertical-line")
+    .attr("x1", 0)
+    .attr("x2", 0)
+    .attr("y1", 0)
+    .attr("y2", chartHeight)
+    .attr("stroke", "black")
+    .attr("stroke-dasharray", "3 3")
+    .style("visiblity", "hidden");
 
   // Add mouseover event handler
   chart
@@ -216,20 +262,20 @@ function createLineChart(data, title, chartId) {
       tooltip.style("visibility", "hidden");
     })
     .on("mousemove", function (event) {
-      var mouseX = d3.pointer(event)[0];
-      var mouseY = d3.pointer(event)[1];
+      const mouseX = d3.pointer(event)[0];
+      const mouseY = d3.pointer(event)[1];
 
-      var index = Math.round(xScale.invert(mouseX));
-      var val = data[index];
-      var page = index + 1;
-      var emotion = pages[index].emotion;
-      var valText = title + ": " + val.toFixed(2);
+      const index = Math.round(xScale.invert(mouseX));
+      const val = data[index];
+      const page = index + 1;
+      const emotion = pages[index].emotion;
+      const valText = title + ": " + val.toFixed(2);
 
       tooltip
         .html(
           "Page: " + page + "<br>" + valText + "<br>" + "Emotion: " + emotion
         )
-        .style("left", event.x + 10 + "px")
-        .style("top", event.y + 10 + "px");
+        .style("left", event.pageX + 10 + "px")
+        .style("top", event.pageY + 10 + "px");
     });
 }

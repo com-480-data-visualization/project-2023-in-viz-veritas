@@ -63,40 +63,43 @@ d3.csv("./src/data/books.csv").then(function (data) {
     // Create book cards for each work
     const bookCards = createBookCards(bookCardContainer, data);
 
-
     // Add event listener to book cards
     bookCards.on("click", function (event, d) {
+  
 
-      createBubbleGraph(d.book_id);
-      createEmotionViz(d.book_id);
-      createCitiesViz(d.book_id);
-
-      // Hide the SVG
-      booksSvg.style.display = "none";
-
-      // Show the navigation bar
+      // Show the navigation bar with opacity transition
+      bookInfoContainer.style.opacity = "0";
       bookInfoContainer.style.display = "flex";
 
+      setTimeout(function () {
+        bookInfoContainer.style.opacity = "1";
+      }, 0);
 
       // Update the selected book name
       selectedBook.textContent = "Selected Book: " + d.title;
 
       // Disable scrolling on the body element
       d3.select("body").style("overflow", "hidden");
+
+      createBubbleGraph(d.book_id);
+      createEmotionViz(d.book_id);
+      createCitiesViz(d.book_id);
     });
-
-
   });
 });
 
 function showBooks() {
-  // Show the SVG
-  booksSvg.style.display = "block";
-  // Hide the navigation bar
-  bookInfoContainer.style.display = "none";
+  // Hide the navigation bar with opacity transition
+  bookInfoContainer.style.opacity = "0";
+
+  setTimeout(function () {
+    // Reset the opacity and hide the navigation bar
+    bookInfoContainer.style.opacity = "1";
+    bookInfoContainer.style.display = "none";
+  }, 300);
+
   // Enable scrolling on the body element
   d3.select("body").style("overflow", "auto");
-
 }
 
 // Add event listener for showing the SVG
@@ -105,7 +108,6 @@ showSvgButton.addEventListener("click", function () {
 });
 
 bookInfoContainer.addEventListener("click", function (event) {
-    if(event.target.id != "book-info-container") return;
-    showBooks();
+  if (event.target.id != "book-info-container") return;
+  showBooks();
 });
-

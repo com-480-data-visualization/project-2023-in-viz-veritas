@@ -64,18 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentPage = pages[currentPageIndex];
     const nextPage = pages[pageIndex];
 
-    currentPage.classList.add("exit-left");
-    nextPage.classList.add("enter-left");
-
-    // Wait for the animation to complete before updating the pages
-    setTimeout(function () {
-      currentPage.classList.remove("exit-left");
-      nextPage.classList.remove("enter-left");
-      currentPage.style.display = "none";
-      nextPage.style.display = "flex";
-      currentPageIndex = pageIndex;
-      updateActivePageDot();
-    }, 750);
+    currentPage.style.display = "none";
+    nextPage.style.display = "flex";
+    currentPageIndex = pageIndex;
+    updateActivePageDot();
   }
   // Function to create page indicator dots
   function createPageDots() {
