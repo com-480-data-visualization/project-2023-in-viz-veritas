@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       currentPageIndex = nextPageIndex;
       updateActivePageDot();
-    }, 500);
+    }, 750);
   }
 
   // Function to navigate to a specific page
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nextPage.style.display = "flex";
       currentPageIndex = pageIndex;
       updateActivePageDot();
-    }, 500);
+    }, 750);
   }
   // Function to create page indicator dots
   function createPageDots() {
