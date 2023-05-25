@@ -8,6 +8,7 @@ function createEmotionViz(bookid) {
   // Clear previous charts
   d3.select("#valence-chart").selectAll("*").remove();
   d3.select("#arousal-chart").selectAll("*").remove();
+  d3.select("#emotion-scatter").selectAll("*").remove();
 
   // Load the selected book's data
   d3.json("./src/data/emotions/" + bookid + ".json")
@@ -74,7 +75,8 @@ function createScatterPlot(data, title, chartId) {
     .attr("cx", (d) => x(d.valence))
     .attr("cy", (d) => y(d.arousal))
     .attr("r", 3)
-    .style("fill", primaryColor);
+    .style("fill", primaryColor)
+    .style("stroke", "none");
 
   // Add title
   svg
@@ -95,7 +97,12 @@ function createScatterPlot(data, title, chartId) {
   // Add mouseover event handler to scatterplot points
   svg
     .selectAll(".dot")
-    .on("mouseover", function (event, d) {
+    .on("mouseover", function () {
+      tooltip.style("visibility", "hidden");
+      d3.select(this).style("stroke", "black");
+      
+    })
+    .on("mousemove", function (event,d){
       tooltip.style("visibility", "visible");
 
       const page = data.indexOf(d) + 1;
@@ -119,9 +126,11 @@ function createScatterPlot(data, title, chartId) {
         )
         .style("left", event.pageX + 10 + "px")
         .style("top", event.pageY + 10 + "px");
+
     })
-    .on("mouseout", function () {
+    .on("mouseleave", function () {
       tooltip.style("visibility", "hidden");
+      d3.select(this).style("stroke", "none")
     });
 }
 

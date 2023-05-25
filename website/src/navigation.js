@@ -1,4 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+function whenDocumentLoaded(action) {
+	if (document.readyState === "loading") {
+    	document.addEventListener("DOMContentLoaded", action);
+	} else {  // `DOMContentLoaded` already fired
+		action();
+	}
+}
+
+whenDocumentLoaded(() => {
   const pages = document.getElementsByClassName("page");
   const leftArrow = document.getElementById("left-arrow");
   const rightArrow = document.getElementById("right-arrow");
@@ -12,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener for left arrow click
   leftArrow.addEventListener("click", function () {
-    navigatePage("left");
+    navigatePage("right");
   });
 
   // Event listener for right arrow click
   rightArrow.addEventListener("click", function () {
-    navigatePage("right");
+    navigatePage("left");
   });
 
   // Event listener for page dot click

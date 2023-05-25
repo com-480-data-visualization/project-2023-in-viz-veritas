@@ -1,13 +1,22 @@
-function createBubbleGraph(bookId) {
-    const threshold = 30;
+function whenDocumentLoaded(action) {
+	if (document.readyState === "loading") {
+    	document.addEventListener("DOMContentLoaded", action);
+	} else {  // `DOMContentLoaded` already fired
+		action();
+	}
+}
 
-    // Clear previous graph content
-    const custom_colours = ["#EA522B", "#EFD4D1", "#2A4978", "#8BDBE1", "#ECA19D", "#B48E36", "#E1DCE0", "#B8BFCE", "#E0DCD1", "#91C5E4",
+function createBubbleGraph(bookId) {
+  const threshold = 30;
+
+  // Clear previous graph content
+  const custom_colours = ["#EA522B", "#EFD4D1", "#2A4978", "#8BDBE1", "#ECA19D", "#B48E36", "#E1DCE0", "#B8BFCE", "#E0DCD1", "#91C5E4",
         "#6E8EAC", "#D2E7E0", "#ECD096", "#6C9686", "#E6E10F", "#9D4B37", "#A3B49D", "#BDC920", "#DBE3E5", "#6A8B8D", "#EFB3D1"]
 
 
 
-    d3.select("#bubblegraph").html("");
+  d3.select("#bubblegraph").html("");
+  whenDocumentLoaded(() =>{
 
     d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
 
@@ -84,4 +93,5 @@ function createBubbleGraph(bookId) {
 
 
     })
+  });
 }

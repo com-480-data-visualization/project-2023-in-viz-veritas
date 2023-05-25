@@ -1,3 +1,11 @@
+function whenDocumentLoaded(action) {
+	if (document.readyState === "loading") {
+    	document.addEventListener("DOMContentLoaded", action);
+	} else {  // `DOMContentLoaded` already fired
+		action();
+	}
+}
+
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var containerHeight = 600;
@@ -42,72 +50,75 @@ function createBookCards(container, books) {
   return bookCards;
 }
 
-d3.csv("./src/data/books.csv").then(function (data) {
-  data = data.filter((d) => d.language === "eng");
+whenDocumentLoaded( () =>{
 
-  d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
-    const svg = d3
-      .select("#books")
-      .attr("width", containerWidth)
-      .attr("height", containerHeight);
+  d3.csv("./src/data/books.csv").then(function (data) {
+    data = data.filter((d) => d.language === "eng");
 
-    const bookCardContainer = svg
-      .append("foreignObject")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("width", containerWidth)
-      .attr("height", containerHeight)
-      .append("xhtml:div")
-      .attr("id", "book-cards");
+    d3.json("./src/data/locations_per_work.json").then(function (jsonData) {
+      const svg = d3
+        .select("#books")
+        .attr("width", containerWidth)
+        .attr("height", containerHeight);
 
-    // Create book cards for each work
-    const bookCards = createBookCards(bookCardContainer, data);
+      const bookCardContainer = svg
+        .append("foreignObject")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", containerWidth)
+        .attr("height", containerHeight)
+        .append("xhtml:div")
+        .attr("id", "book-cards");
 
-    // Add event listener to book cards
-    bookCards.on("click", function (event, d) {
+      // Create book cards for each work
+      const bookCards = createBookCards(bookCardContainer, data);
+
+      // Add event listener to book cards
+      bookCards.on("click", function (event, d) {
   
 
-      // Show the navigation bar with opacity transition
-      bookInfoContainer.style.opacity = "0";
-      bookInfoContainer.style.display = "flex";
+        // Show the navigation bar with opacity transition
+        bookInfoContainer.style.opacity = "0";
+        bookInfoContainer.style.display = "flex";
 
-      setTimeout(function () {
-        bookInfoContainer.style.opacity = "1";
-      }, 0);
+        setTimeout(function () {
+          bookInfoContainer.style.opacity = "1";
+        }, 0);
 
-      // Update the selected book name
-      selectedBook.textContent = "Selected Book: " + d.title;
+        // Update the selected book name
+        selectedBook.textContent = "Selected Book: " + d.title;
 
-      // Disable scrolling on the body element
-      d3.select("body").style("overflow", "hidden");
+        // Disable scrolling on the body element
+        d3.select("body").style("overflow", "hidden");
 
-      createBubbleGraph(d.book_id);
-      createEmotionViz(d.book_id);
-      createCitiesViz(d.book_id);
+        createBubbleGraph(d.book_id);
+        createEmotionViz(d.book_id);
+        createCitiesViz(d.book_id);
+      });
     });
   });
-});
 
-function showBooks() {
-  // Hide the navigation bar with opacity transition
-  bookInfoContainer.style.opacity = "0";
+  function showBooks() {
+    // Hide the navigation bar with opacity transition
+    bookInfoContainer.style.opacity = "0";
 
-  setTimeout(function () {
-    // Reset the opacity and hide the navigation bar
-    bookInfoContainer.style.opacity = "1";
-    bookInfoContainer.style.display = "none";
-  }, 300);
+    setTimeout(function () {
+      // Reset the opacity and hide the navigation bar
+      bookInfoContainer.style.opacity = "1";
+      bookInfoContainer.style.display = "none";
+    }, 300);
 
-  // Enable scrolling on the body element
-  d3.select("body").style("overflow", "auto");
-}
+    // Enable scrolling on the body element
+    d3.select("body").style("overflow", "auto");
+  }
 
-// Add event listener for showing the SVG
-showSvgButton.addEventListener("click", function () {
-  showBooks();
-});
+  // Add event listener for showing the SVG
+  showSvgButton.addEventListener("click", function () {
+    showBooks();
+  });
 
-bookInfoContainer.addEventListener("click", function (event) {
-  if (event.target.id != "book-info-container") return;
-  showBooks();
+  bookInfoContainer.addEventListener("click", function (event) {
+    if (event.target.id != "book-info-container") return;
+    showBooks();
+  });
 });
