@@ -68,47 +68,74 @@ whenDocumentLoaded(() => {
             .attr("class", "timeline-tooltip")
             .style("visibility", "hidden");
 
-        function updateBeeswarm(data) {
 
-            var selectedLanguages = div.selectAll(".checkbox:checked").nodes().map(function (checkbox) {
+
+
+        function updateBeeswarm() {
+
+            var selectedLanguages = d3.select("#timeline").selectAll(".checkbox:checked").nodes().map(function (checkbox) {
                 return checkbox.value;
             });
-            console.log(selectedLanguages)
-            var newData = data.filter(function (d) {
+
+            var filteredData = data.filter(function (d) {
                 return selectedLanguages.includes(d.language);
             });
 
-            // Set up the simulation
-            var simulation = d3.forceSimulation(newData)
+
+            var simulation = d3.forceSimulation(filteredData)
                 .force("x", d3.forceX(function (d) { return xScale(d.date); }).strength(0.1))
                 .force("y", d3.forceY(height / 4).strength(0.1))
                 .force("collide", d3.forceCollide(radius + dis_circles))
                 .stop();
 
-            for (let i = 0; i < newData.length; ++i) {
+            for (let i = 0; i < filteredData.length; ++i) {
                 simulation.tick(10);
             }
 
             var circles = svg.selectAll("circle")
-                .data(newData, function (d) { return d.book_id; });
+                .data(filteredData, function (d) { return d.book_id; });
 
             circles.exit().remove();
 
-            circles.enter()
+            var merged = circles.enter()
                 .append("circle")
                 .attr("r", radius)
                 .attr("cx", function (d) { return d.x; })
                 .attr("cy", function (d) { return d.y; })
                 .attr("fill", function (d) { return "url(#" + d.book_id + ")"; })
-                // .on("mouseover", handleMouseOver) // Use a separate function for mouseover event
-                // .on("mouseout", handleMouseOut)
-                .merge(circles)
+                .merge(circles);
+
+            merged.transition()
+                .duration(500)
+                .attr("r", radius)
+                .attr("cx", function (d) { return d.x; })
+                .attr("cy", function (d) { return d.y; })
+                .attr("fill", function (d) { return "url(#" + d.book_id + ")"; });
+            merged.on("mouseover", function (e, d) {
+                // Get the mouse position
+                var mouse = d3.pointer(e);
+                // Iterate over all circles and calculate the distance between the mouse and each circle
+                merged.each(function (d) {
+                    var circle = d3.select(this);
+                    var distance = Math.sqrt(Math.pow(circle.attr("cx") - mouse[0], 2) + Math.pow(circle.attr("cy") - mouse[1], 2));
+
+                    // If the circle is within the hover radius, increase its size based on distance from mouse
+                    if (distance <= hoverRadius) {
+                        var increase = hoverIncrease * (1 - distance / hoverRadius);
+                        circle.attr("r", radius + increase);
+                    }
+                });
+            })
+                .on("mouseout", function (d) {
+                    d3.selectAll("circle")
+                        .attr("r", radius)
+                        .attr("z-index", null);
+                })
                 .on("click", function (event, d) {
                     event.stopPropagation(); // Prevent click event from bubbling up to the SVG element
                     tooltip.style("visibility", "visible")
                         .style("left", event.pageX + 10 + "px")
                         .style("top", event.pageY + 10 + "px");
-
                     tooltip.selectAll("*").remove();
 
                     // Create a container element for the book card
@@ -124,37 +151,8 @@ whenDocumentLoaded(() => {
                     // Position the book card container relative to the mouse cursor
                     bookCardContainer.style("left", event.pageX + 10 + "px")
                         .style("top", event.pageY + 10 + "px");
-
-                })
-                .transition()
-                .duration(500)
-                .attr("r", radius)
-                .attr("cx", function (d) { return d.x; })
-                .attr("cy", function (d) { return d.y; })
-                .attr("fill", function (d) { return "url(#" + d.book_id + ")"; });
-            // function handleMouseOver(e, d) {
-            //     // Get the mouse position
-            //     var mouse = d3.pointer(e);
-            //     // Iterate over all circles and calculate the distance between the mouse and each circle
-            //     circles.each(function (d) {
-            //         var circle = d3.select(this);
-            //         var distance = Math.sqrt(Math.pow(circle.attr("cx") - mouse[0], 2) + Math.pow(circle.attr("cy") - mouse[1], 2));
-
-            //         // If the circle is within the hover radius, increase its size based on distance from mouse
-            //         if (distance <= hoverRadius) {
-            //             var increase = hoverIncrease * (1 - distance / hoverRadius);
-            //             circle.attr("r", radius + increase);
-            //         }
-            //     });
-            // }
-            // function handleMouseOut(e, d) {
-            //     d3.selectAll("circle")
-            //         .attr("r", radius)
-            //         .attr("z-index", null)
-            // }
-
-
-}
+                });
+        }
 
 
 
@@ -162,55 +160,44 @@ whenDocumentLoaded(() => {
         // Get unique language values
         var languages = [... new Set(d3.map(data, function (d) { return d.language; }))]
 
-var div = d3.select("#timeline")
+        var div = d3.select("#timeline")
 
-// Append checkboxes for each language
-div.selectAll(".checkbox")
-    .data(languages)
-    .enter()
-    .append("label")
-    .attr("class", "checkbox-label")
-    .text(function (d) { return d; })
-    .append("input")
-    .attr("type", "checkbox")
-    .attr("class", "checkbox")
-    .attr("value", function (d) { return d; })
-    .on("change", function () {
-        updateBeeswarm(data);
+        // Append checkboxes for each language
+        div.selectAll(".checkbox")
+            .data(languages)
+            .enter()
+            .append("label")
+            .attr("class", "checkbox-label")
+            .text(function (d) { return d; })
+            .append("input")
+            .attr("type", "checkbox")
+            .attr("class", "checkbox")
+            .attr("checked", "checked")
+            .attr("value", function (d) { return d; })
+            .on("change", function () {
+                updateBeeswarm();
+            });
+
+
+        // Add click event listener to document object
+        d3.select(document).on("click", function () {
+            tooltip.style("visibility", "hidden");
+        });
+
+        // Add axes and labels
+        var xAxis = d3.axisBottom(xScale);
+
+
+        svg.append("g")
+            .attr("transform", "translate(0, " + (height / 2) + " )")
+            .call(xAxis);
+
+        updateBeeswarm();
     });
 
-// init simulation
-
-var checkboxes = document.getElementsByClassName("checkbox");
-for (var i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].checked = true;
-}
-updateBeeswarm(data);
-// var selectedLanguages = div.selectAll(".checkbox:checked").nodes().map(function (checkbox) {
-//     return checkbox.value;
-// });
-
-// var filteredData = data.filter(function (d) {
-//     return selectedLanguages.includes(d.language);
-// });
-// updateBeeswarm(filteredData);
-
-// Add click event listener to document object
-d3.select(document).on("click", function () {
-    tooltip.style("visibility", "hidden");
-});
-
-// Add axes and labels
-var xAxis = d3.axisBottom(xScale);
-
-
-svg.append("g")
-    .attr("transform", "translate(0, " + (height / 2) + " )")
-    .call(xAxis);
-
-
-    });
 
 });
+
+
 
 
