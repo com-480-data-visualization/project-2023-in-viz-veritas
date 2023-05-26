@@ -287,6 +287,11 @@ circle {
   z-index: 9; /* Adjust the z-index as needed */
 }
 
+#map {
+  z-index: 7;
+}
+
+
 #left-arrow,
 #right-arrow {
   width: 30px;

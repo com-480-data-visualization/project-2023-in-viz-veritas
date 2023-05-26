@@ -1,7 +1,6 @@
 const primaryColor = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--primary-color");
-console.log(primaryColor);
 
 let pages; // Declare the variable outside the scope
 function createEmotionViz(bookid) {

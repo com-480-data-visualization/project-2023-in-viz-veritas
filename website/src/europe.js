@@ -66,9 +66,7 @@ whenDocumentLoaded(() => {
                 const marker = L.marker([coord.lat, coord.lng]).addTo(map);
                 marker.bindPopup(`<b>${city}</b><br>Here we put the frequency or instead of popup 
                 visualize it with a circle radius and 
-                link with the timeline with book ids if possible`).openPopup();
-                
-                
+                link with the timeline with book ids if possible`).openPopup(); 
                 
               }
         }
