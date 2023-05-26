@@ -23,7 +23,7 @@ whenDocumentLoaded(() => {
         console.log(cities);
 
         // Create a Leaflet map
-        const map = L.map('map').setView([ 48.8566, 2.3522], 4);
+        const map = L.map('map').setView([ 48.945594, -35.550782], 4);
 
         // Add a tile layer with the custom tile URL
         
@@ -72,6 +72,11 @@ whenDocumentLoaded(() => {
                 
               }
         }
+        function onMapClick(e) {
+            alert("You clicked the map at " + e.latlng);
+        }
+        
+        map.on('click', onMapClick);
     }); 
          
 
