@@ -46,7 +46,7 @@ function createBubbleGraph(bookId) {
 
                 }
 
-                function createLinePlot(cardContainer, city, data) {
+                function createLinePlot(cardContainer, city, data, total) {
 
                     cardContainer.html("");
 
@@ -59,7 +59,11 @@ function createBubbleGraph(bookId) {
                         .attr("class", "bubbleCard");
                     // Add the city name to the card
                     card.append("h3")
-                        .text(city);
+                        .text(city)
+                        .attr("x", (linePlotWidth + linePlotMargin.left) / 2);
+                    card.append("p")
+                        .text("Total times mentioned: " + total)
+                        .attr("x", (linePlotWidth + linePlotMargin.left) / 2);
 
                     var svg = card.append("svg")
                         .attr("class", "line-plot")
@@ -91,7 +95,7 @@ function createBubbleGraph(bookId) {
 
                     svg.append("text")
                         .attr("class", "axis-label")
-                        .attr("x", (linePlotWidth + linePlotMargin.left)/ 2 )
+                        .attr("x", (linePlotWidth + linePlotMargin.left) / 2)
                         .attr("y", linePlotHeight + linePlotMargin.top + linePlotMargin.bottom - 5)
                         .style("text-anchor", "middle")
                         .text("Pages");
@@ -142,6 +146,7 @@ function createBubbleGraph(bookId) {
                     .append("div")
                     .attr("class", "bubble-tooltip")
                     .style("visibility", "hidden");
+                    
 
 
                 const node = div.selectAll(".node")
@@ -156,13 +161,13 @@ function createBubbleGraph(bookId) {
                     .style("height", d => `${d.r * 2}px`)
                     .style("background-color", (d, i) => color(i))
                     .style("border-radius", "50%")
-                    .on("mouseover", function (event, d) {
+                    .on("click", function (event, d) {
 
                         var data = getFrequencyData(d.data[0], bookId);
-                        cardContainer = createLinePlot(tooltip, d.data[0], data);
+                        cardContainer = createLinePlot(tooltip, d.data[0], data, d.data[1]);
 
-                        cardContainer.style("left", event.pageX + 10 + "px")
-                            .style("top", event.pageY + 10 + "px");
+                        cardContainer.style("left", event.pageX - 270 + "px")
+                            .style("top", event.pageY - 250 + "px");
                         tooltip.style("visibility", "visible")
 
                     })
