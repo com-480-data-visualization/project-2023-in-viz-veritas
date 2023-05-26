@@ -22,9 +22,16 @@
 
     <link rel="stylesheet" href="./src/style.css" />
     <link rel="stylesheet" href="./src/book-card.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://d3js.org/d3-time-format.v3.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
   </head>
 
   <body>
@@ -73,6 +80,7 @@
           leaflet or something.
         </p>
       </div>
+      <div class="row" id="map"></div>
 
       <div class="row">
         <h2>Taking a look inside: NLP</h2>
@@ -129,7 +137,7 @@
       </div>
     <div class="page" id="cities">
       
-      <h2>Emotions of the author about their most cited cities</h2>
+      <h2>Supposed emotions of the author for the cited cities</h2>
       <svg id="cities-scatter"></svg>
       
     </div>
@@ -145,6 +153,7 @@
     </div>
 
     <script src="src/timeline.js"></script>
+    <script src="src/europe.js"></script>
     <script src="src/emotions.js"></script>
     <script src="src/bubblegraph.js"></script>
     <script src="src/cities_per_book.js"></script>

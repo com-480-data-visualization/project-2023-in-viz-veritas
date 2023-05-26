@@ -1,0 +1,180 @@
+{
+    "Amsterdam": {
+        "books_id": [
+            866583,
+            866584,
+            866585,
+            866586
+        ],
+        "frequency": 4
+    },
+    "Berlin": {
+        "books_id": [
+            856810
+        ],
+        "frequency": 1
+    },
+    "Bologna": {
+        "books_id": [
+            867194
+        ],
+        "frequency": 1
+    },
+    "Boston": {
+        "books_id": [
+            856838,
+            856839
+        ],
+        "frequency": 2
+    },
+    "Dublin": {
+        "books_id": [
+            856835
+        ],
+        "frequency": 1
+    },
+    "Edinburgh": {
+        "books_id": [
+            856820,
+            856845
+        ],
+        "frequency": 2
+    },
+    "Frankfurt": {
+        "books_id": [
+            856825,
+            856826,
+            856827,
+            869676
+        ],
+        "frequency": 4
+    },
+    "Goettingen": {
+        "books_id": [
+            856809
+        ],
+        "frequency": 1
+    },
+    "Helmstedt": {
+        "books_id": [
+            867196
+        ],
+        "frequency": 1
+    },
+    "Leide": {
+        "books_id": [
+            856536,
+            856537,
+            866588
+        ],
+        "frequency": 3
+    },
+    "Leipzig": {
+        "books_id": [
+            856806,
+            856807,
+            856808,
+            856830
+        ],
+        "frequency": 4
+    },
+    "London": {
+        "books_id": [
+            856797,
+            856798,
+            856813,
+            856815,
+            856816,
+            856817,
+            856818,
+            856823,
+            856824,
+            856829,
+            856831,
+            856840,
+            856841,
+            856842,
+            856843,
+            856844,
+            856846,
+            856847,
+            866611,
+            866612,
+            866613,
+            866620,
+            866621,
+            867651,
+            867652,
+            867653,
+            867654,
+            867655
+        ],
+        "frequency": 28
+    },
+    "Milano": {
+        "books_id": [
+            825301
+        ],
+        "frequency": 1
+    },
+    "Naples": {
+        "books_id": [
+            856821,
+            856822
+        ],
+        "frequency": 2
+    },
+    "New York": {
+        "books_id": [
+            856851
+        ],
+        "frequency": 1
+    },
+    "Paris": {
+        "books_id": [
+            856538,
+            856539,
+            856850,
+            866615,
+            866616,
+            866617,
+            866618,
+            856836
+        ],
+        "frequency": 8
+    },
+    "Roma": {
+        "books_id": [
+            825300,
+            867197,
+            867201,
+            867650
+        ],
+        "frequency": 4
+    },
+    "Stuttgart": {
+        "books_id": [
+            824777
+        ],
+        "frequency": 1
+    },
+    "Turin": {
+        "books_id": [
+            856819
+        ],
+        "frequency": 1
+    },
+    "Venetia": {
+        "books_id": [
+            867195,
+            867648
+        ],
+        "frequency": 2
+    },
+    "Vicenza": {
+        "books_id": [
+            867200
+        ],
+        "frequency": 1
+    }
+}

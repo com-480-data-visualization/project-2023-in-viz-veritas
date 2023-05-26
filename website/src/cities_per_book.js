@@ -21,8 +21,11 @@ function createCitiesViz(bookid) {
 
       d3.json("./src/data/locations_per_work.json").then(function (datawork){
             //console.log("datawork",datawork[bookid][data[bookid][0].city]);
+            
+            const length = Object.keys(data[bookid]).length;
+            console.log("length?"+ length);
 
-         for (let i=0; i<10; i++){
+         for (let i=0; i< length; i++){
                 let dict=data[bookid][i];
 
                 dict['freq']=datawork[bookid][data[bookid][i].city];
@@ -30,6 +33,7 @@ function createCitiesViz(bookid) {
                 citiesdata[i]=dict;
             }
          console.log(citiesdata[0]);
+         
 
         
         
@@ -120,7 +124,7 @@ function createCitiesViz(bookid) {
          const rescale= function(d) {
             const max=450; //max seems to be 420 for Rome somewhere
             const min = 1;
-            const rescaled_max = 20;
+            const rescaled_max = 25;
             const rescaled_min = 5;
 
             const normalized = (d-min)/(max-min);
