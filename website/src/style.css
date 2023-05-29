@@ -6,13 +6,13 @@ body {
 }
 
 :root {
-  --primary-color: #446900;
+  --primary-color: #304c00;
   --secondary-color: #586249;
-  --background-color: #fefcf5;
-  --text-color: #111f00;
-  --link-color: #dce7c7;
+  --background-color: #ffffff;
+  --text-color: #1b1c18;
+  --link-color: #c6f08a;
   --secondary-container: #dce7c7;
-  --hover: #c3f27e;
+  --hover: #bcece6;
 }
 
 .container {
@@ -48,8 +48,9 @@ h6 {
 
 a,
 p {
-  color: #201a1a;
-  font-family: 'Times New Roman', Times, serif;
+  color: var(--text-color);
+  font-weight: lighter;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 /** this will conflict if we use several tooltips **/
@@ -269,7 +270,7 @@ circle {
   flex-direction: column; /* Align items vertically */
   align-items: center; /* Center align horizontally */
   justify-content: center; /* Center align vertically */
-  background-color: #fefcf5;
+  background-color: var(--background-color);
   box-shadow: rgba(30, 30, 30, 0.8);
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
@@ -424,3 +425,25 @@ circle {
     display: flex;
 
 }
+
+#show-svg-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12x;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  color: var(--text-color);
+  background-color: var(--secondary-container) ;
+  cursor: pointer;
+}
+
+
+
+#show-svg-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #8a9478;
+}
+

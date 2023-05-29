@@ -1,9 +1,9 @@
 function whenDocumentLoaded(action) {
-	if (document.readyState === "loading") {
-    	document.addEventListener("DOMContentLoaded", action);
-	} else {  // `DOMContentLoaded` already fired
-		action();
-	}
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", action);
+    } else {  // `DOMContentLoaded` already fired
+        action();
+    }
 }
 
 
@@ -15,18 +15,18 @@ var height = 400;
 
 
 whenDocumentLoaded(() => {
-    d3.json("./src/data/publilocations.json").then(function (data){
+    d3.json("./src/data/publilocations.json").then(function (data) {
         console.log(data)
-        
-        
-        const cities=Object.keys(data);
+
+
+        const cities = Object.keys(data);
         console.log(cities);
 
         // Create a Leaflet map
-        const map = L.map('map').setView([ 48.945594, -35.550782], 4);
+        const map = L.map('map').setView([48.945594, -35.550782], 4);
 
         // Add a tile layer with the custom tile URL
-        
+
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -54,8 +54,8 @@ whenDocumentLoaded(() => {
             'Turin': { lat: 45.0703, lng: 7.6869 },
             'Venetia': { lat: 45.4408, lng: 12.3155 },
             'Vicenza': { lat: 45.5455, lng: 11.5353 }
-          };
-          
+        };
+
 
         // Geocode each city to obtain its coordinates
         for (let city in cityCoordinates) {
@@ -66,17 +66,17 @@ whenDocumentLoaded(() => {
                 const marker = L.marker([coord.lat, coord.lng]).addTo(map);
                 marker.bindPopup(`<b>${city}</b><br>Here we put the frequency or instead of popup 
                 visualize it with a circle radius and 
-                link with the timeline with book ids if possible`).openPopup(); 
-                
-              }
+                link with the timeline with book ids if possible`).openPopup();
+
+            }
         }
         function onMapClick(e) {
             alert("You clicked the map at " + e.latlng);
         }
-        
+
         map.on('click', onMapClick);
-    }); 
-         
+    });
+
 
 });
 

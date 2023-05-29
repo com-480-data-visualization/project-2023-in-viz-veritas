@@ -15,12 +15,8 @@ var height = 400;
 // Size of circles
 var radius = 10;
 var enlarged = radius * 8;
-
-// Define the radius of the hover effect
 var hoverRadius = 20;
-// Define the maximum increase in radius when hovered
 var hoverIncrease = 10;
-
 var dis_circles = 2;
 
 
@@ -29,25 +25,28 @@ whenDocumentLoaded(() => {
 
     d3.csv("./src/data/books.csv").then(function (data) {
 
+
+        // Parse data
         var parseDate = d3.timeParse("%Y");
         data.forEach(function (d) {
             d.date = parseDate(Number(d.year))
         });
 
+        // Set up svg
         var svg = d3.select("#viz1")
             .attr("width", width)
             .attr("height", height + margin.top + margin.bottom);
 
-        // actual width and height
+        // Get the actual width and height
         width = d3.select("#viz1").node().getBoundingClientRect().width
         height = d3.select("#viz1").node().getBoundingClientRect().height
 
-        // Set up the scales
+        // Set up the scales for the timeline
         var xScale = d3.scaleTime()
             .domain([new Date(1440, 0, 1), new Date()])
             .range([0, width]);
 
-        // Add the image pattern definitions
+        // Add the image pattern definitions for background of the circles
         var defs = svg.append("defs");
         data.forEach(function (d) {
             defs.append("pattern")
@@ -64,39 +63,36 @@ whenDocumentLoaded(() => {
         });
 
 
+        // Tooltip div
         var tooltip = d3.select("body").append("div")
             .attr("class", "timeline-tooltip")
             .style("visibility", "hidden");
 
-
-
-
+        // Function to generate the beeswarm 
         function updateBeeswarm() {
 
+            // Filter data 
             var selectedLanguages = d3.select("#timeline").selectAll(".checkbox:checked").nodes().map(function (checkbox) {
                 return checkbox.value;
             });
-
             var filteredData = data.filter(function (d) {
                 return selectedLanguages.includes(d.language);
             });
 
-
+            // Simulation for arranging the circles
             var simulation = d3.forceSimulation(filteredData)
-                .force("x", d3.forceX(function (d) { return xScale(d.date); }).strength(0.1))
+                .force("x", d3.forceX(function (d) { return xScale(d.date); }).strength(0.1)) // Arrange circles by year of publication
                 .force("y", d3.forceY(height / 4).strength(0.1))
                 .force("collide", d3.forceCollide(radius + dis_circles))
                 .stop();
-
             for (let i = 0; i < filteredData.length; ++i) {
                 simulation.tick(10);
             }
 
+            // Appending circles 
             var circles = svg.selectAll("circle")
                 .data(filteredData, function (d) { return d.book_id; });
-
             circles.exit().remove();
-
             var merged = circles.enter()
                 .append("circle")
                 .attr("r", radius)
@@ -104,7 +100,6 @@ whenDocumentLoaded(() => {
                 .attr("cy", function (d) { return d.y; })
                 .attr("fill", function (d) { return "url(#" + d.book_id + ")"; })
                 .merge(circles);
-
             merged.transition()
                 .duration(500)
                 .attr("r", radius)
@@ -112,8 +107,10 @@ whenDocumentLoaded(() => {
                 .attr("cy", function (d) { return d.y; })
                 .attr("fill", function (d) { return "url(#" + d.book_id + ")"; });
             merged.on("mouseover", function (e, d) {
+
                 // Get the mouse position
                 var mouse = d3.pointer(e);
+
                 // Iterate over all circles and calculate the distance between the mouse and each circle
                 merged.each(function (d) {
                     var circle = d3.select(this);
@@ -127,18 +124,20 @@ whenDocumentLoaded(() => {
                 });
             })
                 .on("mouseout", function (d) {
+                    // Decrease raidus on mouseout again
                     d3.selectAll("circle")
                         .attr("r", radius)
                         .attr("z-index", null);
                 })
                 .on("click", function (event, d) {
+
                     event.stopPropagation(); // Prevent click event from bubbling up to the SVG element
                     tooltip.style("visibility", "visible")
                         .style("left", event.pageX + 10 + "px")
                         .style("top", event.pageY + 10 + "px");
                     tooltip.selectAll("*").remove();
 
-                    // Create a container element for the book card
+                    // Show bookcard on click
                     var bookCardContainer = tooltip.append("div")
                         .on("click", function () {
                             // Open a new page in the browser

@@ -99,9 +99,9 @@ function createScatterPlot(data, title, chartId) {
     .on("mouseover", function () {
       tooltip.style("visibility", "hidden");
       d3.select(this).style("stroke", "black");
-      
+
     })
-    .on("mousemove", function (event,d){
+    .on("mousemove", function (event, d) {
       tooltip.style("visibility", "visible");
 
       const page = data.indexOf(d) + 1;
@@ -114,14 +114,14 @@ function createScatterPlot(data, title, chartId) {
       tooltip
         .html(
           "Page: " +
-            page +
-            "<br>" +
-            valText +
-            "<br>" +
-            arousalText +
-            "<br>" +
-            "Emotion: " +
-            emotion
+          page +
+          "<br>" +
+          valText +
+          "<br>" +
+          arousalText +
+          "<br>" +
+          "Emotion: " +
+          emotion
         )
         .style("left", event.pageX + 10 + "px")
         .style("top", event.pageY + 10 + "px");

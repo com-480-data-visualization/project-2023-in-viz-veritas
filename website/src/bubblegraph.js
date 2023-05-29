@@ -23,29 +23,24 @@ function createBubbleGraph(bookId) {
 
             d3.json("./src/data/locations_per_page.json").then(function (pageData) {
 
+                // Function to get the frequency per page of the city in a given book
                 function getFrequencyData(city, book_id) {
-
                     var bookData = pageData[book_id];
                     var frequencyData = [];
-
                     for (var page in bookData) {
                         if (bookData.hasOwnProperty(page)) {
                             var cities = bookData[page];
-
                             // Count the frequency of the specified city on the page
                             var frequency = cities.filter(function (c) {
                                 return c === city;
                             }).length;
-
                             frequencyData.push({ page: +page, frequency: frequency });
-
                         }
                     }
-
                     return frequencyData;
-
                 }
 
+                // Function to create the line plot for each bubble
                 function createLinePlot(cardContainer, city, data, total) {
 
                     cardContainer.html("");
@@ -57,6 +52,7 @@ function createBubbleGraph(bookId) {
                     // Create a card element
                     var card = cardContainer.append("div")
                         .attr("class", "bubbleCard");
+                        
                     // Add the city name to the card
                     card.append("h3")
                         .text(city)
@@ -146,9 +142,8 @@ function createBubbleGraph(bookId) {
                     .append("div")
                     .attr("class", "bubble-tooltip")
                     .style("visibility", "hidden");
-                    
-
-
+                  
+                
                 const node = div.selectAll(".node")
                     .data(root.descendants().slice(1))
                     .enter()
@@ -161,7 +156,7 @@ function createBubbleGraph(bookId) {
                     .style("height", d => `${d.r * 2}px`)
                     .style("background-color", (d, i) => color(i))
                     .style("border-radius", "50%")
-                    .on("click", function (event, d) {
+                    .on("mouseover", function (event, d) {
 
                         var data = getFrequencyData(d.data[0], bookId);
                         cardContainer = createLinePlot(tooltip, d.data[0], data, d.data[1]);

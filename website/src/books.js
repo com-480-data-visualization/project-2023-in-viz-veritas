@@ -86,7 +86,7 @@ whenDocumentLoaded( () =>{
         }, 0);
 
         // Update the selected book name
-        selectedBook.textContent = "Selected Book: " + d.title;
+        selectedBook.textContent =  d.title;
 
         // Disable scrolling on the body element
         d3.select("body").style("overflow", "hidden");
