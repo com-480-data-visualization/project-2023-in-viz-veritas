@@ -19,6 +19,16 @@ var hoverRadius = 20;
 var hoverIncrease = 10;
 var dis_circles = 2;
 
+var languageLabels = {
+    deu: "German",
+    ita_old: "Old Italian",
+    fra: "French",
+    eng: "English",
+    lat: "Latin",
+    dutch: "Dutch"
+  };
+  
+
 
 whenDocumentLoaded(() => {
 
@@ -167,7 +177,7 @@ whenDocumentLoaded(() => {
             .enter()
             .append("label")
             .attr("class", "checkbox-label")
-            .text(function (d) { return d; })
+            .text(function (d) { return languageLabels[d];})
             .append("input")
             .attr("type", "checkbox")
             .attr("class", "checkbox")

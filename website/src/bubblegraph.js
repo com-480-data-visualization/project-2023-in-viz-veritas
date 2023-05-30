@@ -52,7 +52,7 @@ function createBubbleGraph(bookId) {
                     // Create a card element
                     var card = cardContainer.append("div")
                         .attr("class", "bubbleCard");
-                        
+
                     // Add the city name to the card
                     card.append("h3")
                         .text(city)
@@ -147,7 +147,7 @@ function createBubbleGraph(bookId) {
                 const node = div.selectAll(".node")
                     .data(root.descendants().slice(1))
                     .enter()
-                    .append("g")
+                    .append("circle")
                     .attr("class", "node")
                     .style("position", "absolute")
                     .style("left", d => `${d.x - d.r}px`)
@@ -156,7 +156,7 @@ function createBubbleGraph(bookId) {
                     .style("height", d => `${d.r * 2}px`)
                     .style("background-color", (d, i) => color(i))
                     .style("border-radius", "50%")
-                    .on("mouseover", function (event, d) {
+                    .on("click", function (event, d) {
 
                         var data = getFrequencyData(d.data[0], bookId);
                         cardContainer = createLinePlot(tooltip, d.data[0], data, d.data[1]);
