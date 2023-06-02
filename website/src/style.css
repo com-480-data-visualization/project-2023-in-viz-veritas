@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Ultra', serif;
   font-weight: bold;
   color: var(--primary-color);
 }
@@ -50,7 +50,7 @@ a,
 p {
   color: var(--text-color);
   font-weight: lighter;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 /** this will conflict if we use several tooltips **/
