@@ -60,16 +60,23 @@ whenDocumentLoaded(() => {
         // Geocode each city to obtain its coordinates
         for (let city in cityCoordinates) {
             if (cityCoordinates.hasOwnProperty(city)) {
+                if (cities.includes(city)){
                 let coord = cityCoordinates[city];
-
+                let freq=data[city].frequency;
+                //console.log(freq)
                 // Add a marker to the map using the obtained coordinates
                 const marker = L.marker([coord.lat, coord.lng]).addTo(map);
-                marker.bindPopup(`<b>${city}</b><br>Here we put the frequency or instead of popup 
-                visualize it with a circle radius and 
-                link with the timeline with book ids if possible`).openPopup();
+                if (freq>1){
+                    marker.bindPopup(`<b>${city}</b><br> ${freq} books were published here !`).openPopup();
+                }else{
+                    marker.bindPopup(`<b>${city}</b><br> ${freq} book was published here !`).openPopup();
+                }                
+                }
 
             }
         }
+
+
         function onMapClick(e) {
             alert("You clicked the map at " + e.latlng);
         }
