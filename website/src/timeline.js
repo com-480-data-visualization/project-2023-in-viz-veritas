@@ -5,6 +5,7 @@ function whenDocumentLoaded(action) {
         action();
     }
 }
+
 // Get the width of the Bootstrap container
 var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
 var margin = { top: 20, right: 20, bottom: 30, left: 40 };
@@ -28,8 +29,6 @@ var languageLabels = {
     dutch: "Dutch"
   };
   
-
-
 whenDocumentLoaded(() => {
 
 
