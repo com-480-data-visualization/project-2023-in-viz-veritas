@@ -171,6 +171,11 @@ circle {
   height: 400px;
 }
 
+.custom-popup .leaflet-popup-content {
+  max-height: 200px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
 .row {
   min-width: 400px;
   padding: 20px;

@@ -208,16 +208,16 @@ function createBubbleGraph(bookId) {
           .style("border-radius", "50%")
           .on("click", function (event, d) {
             var data = getFrequencyData(d.data[0], bookId);
-            cardContainer = createLinePlot(tooltip, d.data[0], data, d.data[1]);
+            const cardContainer = createLinePlot(tooltip, d.data[0], data, d.data[1]);
             cardContainer
-              .style("left", event.pageX - 300 + "px")
+              .style("left", event.pageX - 10 + "px")
               .style("top", event.pageY - 270 + "px");
              
             cardContainer.style("visibility", "visible");
             d3.select(".bubble-tooltip").style("visibility", "visible");
           })
           .on("mouseout", function (d) {
-            cardContainer.style("visibility", "hidden");
+            tooltip.style("visibility", "hidden");
             d3.select(".bubble-tooltip").style("visibility", "hidden");
           });
 

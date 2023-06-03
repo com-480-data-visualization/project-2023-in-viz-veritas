@@ -15,13 +15,10 @@ var height = 400;
 
 
 whenDocumentLoaded(() => {
-    d3.json("./src/data/publilocations.json").then(function (data) {
-        console.log(data)
-
+    d3.csv("./src/data/books.csv").then(function (bookdata){
+      d3.json("./src/data/publilocations.json").then(function (data) {
 
         const cities = Object.keys(data);
-        console.log(cities);
-
         // Create a Leaflet map
         const map = L.map('map').setView([49.849318, -28.335938], 4);
 
@@ -63,43 +60,90 @@ whenDocumentLoaded(() => {
             'Vicenza': { lat: 45.5455, lng: 11.5353 }
         };
 
-
         // Geocode each city to obtain its coordinates
         for (let city in cityCoordinates) {
             if (cityCoordinates.hasOwnProperty(city)) {
                 if (cities.includes(city)){
                 let coord = cityCoordinates[city];
                 let freq=data[city].frequency;
-                //console.log(freq)
+                let books_id=data[city].books_id;
+                let dict={};
+
+                for (let index in bookdata){
+                    let book=parseInt(bookdata[index].book_id);
+                    //console.log(books_id, book);
+                    if (books_id.includes(book)){
+                        let title=bookdata[index].title;
+                        let url=bookdata[index].manifest;
+                        dict[title]=url;
+                    }
+                }
+
+
+                let clickText = '<ul>';
+                Object.entries(dict).map(function (entries) {
+                    key=entries[0];
+                    value=entries[1];
+                    clickText += `<li><a href=${value}>${key}</a></li>`;
+                });
+                clickText += '</ul>';
+
                 // Add a marker to the map using the obtained coordinates
                 const marker = L.marker([coord.lat, coord.lng]).addTo(map);
 
+                let hoverText='';
+
                 marker.on('mouseover', function (e) {
+                    this.setPopupContent(hoverText);
                     this.openPopup();
                 });
-                
-                marker.on('mouseout', function (e) {
-                    this.closePopup();
+
+                marker.on('click', function (e) {
+                    this.unbindPopup(); // Unbind the popup to prevent automatic closing
+                    this.setPopupContent(clickText);
+
+                    const customPopup = L.popup({
+                        closeButton: true,
+                        autoClose: false,
+                        closeOnClick: false,
+                        className: 'custom-popup'
+                    });
+
+                    const customPopupContent = document.createElement('div');
+                    customPopupContent.innerHTML = clickText;
+
+                    // Enable scrolling inside the custom popup
+                    customPopupContent.style.maxHeight = '200px';
+                    customPopupContent.style.overflowY = 'auto';
+
+                    customPopup.setContent(customPopupContent);
+                    this.bindPopup(customPopup);
+                    this.openPopup();
+
+                    //customPopupContent.addEventListener('click', function (e) {
+                     //   e.stopPropagation();
                 });
-    
+                
+                map.on('click', function (e) {
+                    marker.closePopup();
+                });
+                
                 if (freq>1){
-                    marker.bindPopup(`<b>${city}</b><br> ${freq} books were published here !`);
+                   hoverText=`<b>${city}</b><br> ${freq} books were published here !`;
                 }else{
-                    marker.bindPopup(`<b>${city}</b><br> ${freq} book was published here !`);
-                }                
+                    hoverText=`<b>${city}</b><br> ${freq} book was published here !`;
+                }
+
+                marker.bindPopup(hoverText, {
+                    closeOnClick: false
+                });  
+
                 }
 
             }
         }
-
-
-        function onMapClick(e) {
-            alert("You clicked the map at " + e.latlng);
-        }
-
-        map.on('click', onMapClick);
+      });
     });
-
 
 });
 
