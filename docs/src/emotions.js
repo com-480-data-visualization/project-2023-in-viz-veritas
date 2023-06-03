@@ -135,7 +135,7 @@ function createScatterPlot(data, title, chartId) {
 
 function createLineChart(data, title, chartId) {
   //FIXME: want this dynamic
-  const width = 400;
+  const width = 500;
   const height = 200;
   const margin = { top: 20, right: 20, bottom: 40, left: 40 };
   const chartWidth = width - margin.left - margin.right;
