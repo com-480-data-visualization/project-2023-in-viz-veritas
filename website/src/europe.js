@@ -25,6 +25,13 @@ whenDocumentLoaded(() => {
         // Create a Leaflet map
         const map = L.map('map').setView([49.849318, -28.335938], 4);
 
+        map.eachLayer(function (layer) {
+            if (layer instanceof L.Marker) {
+              layer.unbindPopup();
+              map.removeLayer(layer);
+            }
+          });
+
         // Add a tile layer with the custom tile URL
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -76,9 +83,9 @@ whenDocumentLoaded(() => {
                 });
     
                 if (freq>1){
-                    marker.bindPopup(`<b>${city}</b><br> ${freq} books were published here !`).openPopup();
+                    marker.bindPopup(`<b>${city}</b><br> ${freq} books were published here !`);
                 }else{
-                    marker.bindPopup(`<b>${city}</b><br> ${freq} book was published here !`).openPopup();
+                    marker.bindPopup(`<b>${city}</b><br> ${freq} book was published here !`);
                 }                
                 }
 

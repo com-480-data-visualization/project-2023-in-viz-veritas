@@ -97,16 +97,62 @@ function color(img){
   }
 }
 
+function rescale (d) {
+  const max = 450; //max seems to be 420 for Rome somewhere
+  const min = 1;
+  const rescaled_max = 25;
+  const rescaled_min = 5;
+
+  const normalized = (d - min) / (max - min);
+  return normalized * (rescaled_max - rescaled_min) + rescaled_min;
+
+ }
+
 function createMap(citiesdata, map, cached){
-    for (index in citiesdata){
-      city= citiesdata[index].city;
-      if (cached && cached.hasOwnProperty(city)){
-        lat=cached[city]['lat'];
-        lon=cached[city]['lon'];
-        const marker = L.marker([lat,lon]).addTo(map);
+
+  map.eachLayer(function (layer) {
+    if (layer instanceof L.Marker) {
+      layer.unbindPopup();
+      map.removeLayer(layer);
+    }
+  });
+
+  for (index in citiesdata){
+    city= citiesdata[index].city;
+    if (cached && cached.hasOwnProperty(city)){
+      lat=cached[city]['lat'];
+      lon=cached[city]['lon'];
+      let frequency=citiesdata[index].freq;
+      //const marker = L.marker([lat,lon]).addTo(map);
+
+      let circle = L.circle([lat, lon], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 5000*rescale(frequency) 
+      }).addTo(map);
+
+      // Bind popup on hover
+      circle.on('mouseover', function (e) {
+        this.openPopup();
+      });
+
+      // Hide popup on mouseout
+      circle.on('mouseout', function (e) {
+        this.closePopup();
+      });
+
+      if (frequency===1){
+        circle.bindPopup(`<b>${city}</b><br> was named once`);
+      } else if (frequency===2){
+        circle.bindPopup(`<b>${city}</b><br> was named twice`);
+      }else{
+        circle.bindPopup(`<b>${city}</b><br> was named ${frequency} times`)
       }
 
     }
+
+  }
 }
 
 function createEmotionCities(citiesdata){
@@ -179,7 +225,7 @@ function createEmotionCities(citiesdata){
             + "<br> Arousal: " + d.city_arousal.toFixed(2) + "<br> Emotion: " + d.emotion
             + "<br> Cited: " + d.freq + " times")
           .style("left", event.pageX + 10 + "px")
-          .style("top", event.pageY + 10 + "px");
+          .style("top", event.pageY - 90 + "px");
        }
        const mouseleave = function (d) {
         tooltip_cityemo
@@ -190,18 +236,6 @@ function createEmotionCities(citiesdata){
         d3.select(this)
           .style("stroke", "none")
           .style("opacity", 0.8)
-       }
-      
-
-       const rescale = function (d) {
-        const max = 450; //max seems to be 420 for Rome somewhere
-        const min = 1;
-        const rescaled_max = 25;
-        const rescaled_min = 5;
-
-        const normalized = (d - min) / (max - min);
-        return normalized * (rescaled_max - rescaled_min) + rescaled_min;
-
        }
 
 
