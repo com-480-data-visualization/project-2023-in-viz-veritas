@@ -15,6 +15,14 @@ body {
   --hover: #bcece6;
 }
 
+#book-cards{
+    background: var(--secondary-container);
+}
+
+.book-card{
+    background: var(--background-color);
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -42,7 +50,7 @@ h4,
 h5,
 h6 {
   font-family: 'Ultra', serif;
-  font-weight: bold;
+  font-weight: regular;
   color: var(--primary-color);
 }
 
@@ -111,7 +119,7 @@ p {
 
 .tooltip-text p {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: regular;
   margin-top: 10;
   white-space: normal;
   display: -webkit-box;
@@ -375,7 +383,7 @@ circle {
 .row a {
   text-decoration: none;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: regular;
 }
 
 .row a:hover {
@@ -398,7 +406,7 @@ circle {
 }
 
 .checkbox-label input[type="checkbox"]:checked + span {
-  font-weight: bold;
+  font-weight: regular;
 }
 
 .vertical-line{

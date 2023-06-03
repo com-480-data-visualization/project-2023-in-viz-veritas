@@ -33,32 +33,24 @@
   </div>
   <div class="container">
     <div class="row">
-      <p>
-        Welcome, on this page you will get to explore a collection of
-        old travel guides for Italy from the rare books collection of the
-        <a href="https://https://www.biblhertz.it/it/home">
-          Bibliotheca Hertziana
-        </a>
-        in Rome.
-        <br />
-        The collection contains around 800 documents in several languages from
-        the years 1550 up until 1930. They are sparsely illustrated and
-        contain a lot of recognizable place names. All of them have been
-        recently digitized, but only around 80 have also been transcribed
-        using
-        <a href="https://readcoop.eu/transkribus/?sc=Transkribus">Transkribus</a>. Tranksribus is an AI supported
-        platform for text recognition and
-        transcriptions. These are the books you will get to explore through
-        the following visualisations. Enjoy!
-      </p>
+        <p>
+            Welcome to our website, where you can embark on a captivating journey through a remarkable collection of historical travel guides for Italy. Discover a treasure trove of rare books from the prestigious <a href="https://www.biblhertz.it/it/home">Bibliotheca Hertziana</a> in Rome, offering a unique glimpse into the past.
+            <br />
+            Within this collection, you will find approximately 800 captivating documents spanning from 1550 to 1930, showcasing the evolution of travel literature over the centuries. While these books are sparsely illustrated, they vividly depict countless iconic landmarks and locales, immersing you in the rich tapestry of Italy's historical charm.
+            <br />
+            All of these invaluable works have been meticulously digitized, ensuring their preservation for future generations. Futhermore, around 80 of these books have been transcribed using <a href="https://readcoop.eu/transkribus/?sc=Transkribus">Transkribus</a>, an advanced AI-supported platform for text recognition and transcription. This revolutionary tool enables to unlock the wealth of knowledge contained within these historical texts and bring them to life in a new and accessible format.
+            <br />
+            Through our carefully crafted visualizations, you will have the opportunity to explore these fascinating books, providing a window into Italy's captivating past. Immerse yourself in the vivid descriptions, detailed accounts, and intriguing narratives that will transport you back in time and ignite your wanderlust.
+            <br />
+            We invite you to embark on this captivating journey and indulge in the rich history and allure of Italy through the lens of these extraordinary travel books. Enjoy the experience!
+          </p>
     </div>
 
     <div class="row">
       <h2>The Books across Time</h2>
       <p>
-        This timeline shows the publication years of the books. Click on any
-        of the circles to explore the book further (and it might lead you
-        somewhere else...)
+        This timeline shows when each book was published. Click on any
+        of the circles to explore the book further - click on it again to see the full digitized version of it!
       </p>
     </div>
     <div class="row" id="timeline">
@@ -82,18 +74,16 @@
     <div class="row" id="map"></div>
 
     <div class="row">
-      <h2>Taking a look inside: the english guides</h2>
+      <h2>Taking a look inside: a closer look at the english guides</h2>
     </div>
 
     <div class="row">
       <p>
-        Thanks to the Transkribus AI, we can explore the journeys of travelers and using NLP tools such as named entity
-        recognition and sentiment analysis, we were able to extract some infromation about the content of the english
-        books.
-        long time ago.
 
-        Where did they go? What did they feel? Pick one of the
-        english books from the shelf to explore it.
+        We chose to analyze the English books further using NLP tools such as named entity recognition and sentiment analysis. Click on a book of your liking to explore it further.
+
+        Where have these people been? What did they feel? Pick one of the
+        English books from the shelf to explore it.
       </p>
     </div>
 
@@ -107,13 +97,13 @@
       <div id="selected-book">
         <h4 id="book-name"></h4>
       </div>
-      <button id="show-svg-button">Return Book to shelf</button>
+      <button id="show-svg-button">Return book to shelf</button>
     </div>
 
     <div class="page" id="bubbles">
       <h2>Locations mentioned in this book</h2>
       <p>
-        Using Named Entity Recognition the cities mentioned in the book were extracted. Clicking on a circle will show
+        Using Named Entity Recognition we extracted the cities mentioned in this book. Clicking on a circle will show
         you which city was mentioned when in the guide.
       </p>
       <div id="bubblegraph"></div>
@@ -122,7 +112,10 @@
     <div class="page" id="emotions">
       <h2>Emotions in this book</h2>
       <p>
-        These graphs show... PLEASE ENTER HERE :D
+        Using sentiment analysis we extracted the emotions expressed in this book on a per-page basis.
+        We extracted the valence (ranging from negative to positive) and arousal (ranging from calm to excited) of the text on each page.
+        We then used a model based on the two dimensional categorical model
+        of emotion proposed by <a href="https://psycnet.apa.org/fulltext/1981-25062-001.pdf?auth_token=0a8031dc1232cba3ab69dbc52df7b83c0247034c">Russel</a> to categorize the emotions felt per page.
       </p>
 
       <div class="emotion-vizzes">
