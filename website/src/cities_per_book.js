@@ -1,15 +1,34 @@
-var width = d3
+var width = (d3
   .select(".row")
   .node()
-  .getBoundingClientRect().width;
-
+  .getBoundingClientRect().width)/2;
 var height = 400;
 var margin = { top: 20, right: 20, bottom: 40, left: 40 };
+const chartWidth = width - margin.left - margin.right;
+const chartHeight = height - margin.top - margin.bottom;
+
+
+function checkFileExists(fileUrl) {
+  return fetch(fileUrl, { method: 'HEAD' })
+    .then(response => response.ok)
+    .catch(error => {
+      console.log('Error:', error);
+      return false;
+    });
+}
 
 
 function createCitiesViz(bookid) {
   // Clear previous charts
   d3.select("#cities-scatter").selectAll("*").remove();
+  //d3.select("#cities-map").selectAll("*").remove();
+  console.log(width, height, chartWidth, chartHeight);
+
+  const mapContainer = document.getElementById('cities-map');
+  if (mapContainer._leaflet_id) {
+    mapContainer._leaflet_id = null;
+    mapContainer.innerHTML = '';
+  }
 
   console.log("Cities load");
 
@@ -20,28 +39,14 @@ function createCitiesViz(bookid) {
     const citiesdata = d3.range(1).map(() => null);
 
     d3.json("./src/data/locations_per_work.json").then(function (datawork) {
-      //console.log("datawork",datawork[bookid][data[bookid][0].city]);
 
       const length = Object.keys(data[bookid]).length;
-      //console.log("length?" + length);
 
       for (let i = 0; i < length; i++) {
         let dict = data[bookid][i];
 
         dict['freq'] = datawork[bookid][data[bookid][i].city];
-        //console.log("dict",dict);
         citiesdata[i] = dict;
-      }
-
-      //console.log(citiesdata[0]);
-
-      function checkFileExists(fileUrl) {
-        return fetch(fileUrl, { method: 'HEAD' })
-          .then(response => response.ok)
-          .catch(error => {
-            console.log('Error:', error);
-            return false;
-          });
       }
       
       const fetchPromises = [];
@@ -56,58 +61,85 @@ function createCitiesViz(bookid) {
         fetchPromises.push(fetchPromise);
       }
 
-      function color(img){
-        if (img) {
-          return primaryColor;
-        } else {
-          const lightgreen = 'rgb(119, 179, 0)';
-          return lightgreen;
-        }
-      }
       
       Promise.all(fetchPromises)
         .then(() => {
-          console.log(citiesdata);
+          
+      
+        createEmotionCities(citiesdata);
 
+        // Fetch the coordinates.json file and cache the data
+        d3.json("./src/data/coordinates.json").then(function (data) {
+          const cachedCoordinates = data;
+          const map = L.map('cities-map').setView([41.8933203, 12.4829321], 6);
 
-        /*for (let i = 0; i < length; i++){
-          citiesdata[i]['image']=`./src/img/cities/${citydata.city}_image.png`;
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+          }).addTo(map);
 
-        }*/
+          createMap(citiesdata, map, cachedCoordinates);
+        });
 
+    });
 
-       //document.getElementById("output").innerHTML=blablabla;//citiesdata[0].toString();
+    });
 
-       const svg = d3.select("#cities-scatter")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+  });
+}
+
+function color(img){
+  if (img) {
+    return primaryColor;
+  } else {
+    const lightgreen = 'rgb(119, 179, 0)';
+    return lightgreen;
+  }
+}
+
+function createMap(citiesdata, map, cached){
+    for (index in citiesdata){
+      city= citiesdata[index].city;
+      if (cached && cached.hasOwnProperty(city)){
+        lat=cached[city]['lat'];
+        lon=cached[city]['lon'];
+        const marker = L.marker([lat,lon]).addTo(map);
+      }
+
+    }
+}
+
+function createEmotionCities(citiesdata){
+  const svg = d3.select("#cities-scatter")
+        .attr("width", width )
+        .attr("height", height )
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
        const XScale = d3.scaleLinear()
         .domain([-1, 1])
-        .range([0, width]);
+        .range([0, chartWidth]);
 
        svg.append("g")
         .attr("class", "x-axis")
-        .attr("transform", "translate(0," + height / 2 + ")")
+        .attr("transform", "translate(0," + chartHeight/2 + ")")
         .call(d3.axisBottom(XScale));
 
 
        const YScale = d3.scaleLinear()
         .domain([-1, 1])
-        .range([height, 0]);
+        .range([chartHeight, 0]);
 
        svg.append("g")
         .attr("class", "y-axis")
-        .attr("transform", "translate(" + width / 2 + ", 0)")
+        .attr("transform", "translate(" + chartWidth / 2 + ", 0)")
         .call(d3.axisLeft(YScale))
 
        // Add X axis label:
        svg.append("text")
         .attr("text-anchor", "middle")
-        .attr("x", width - 30)
-        .attr("y", height / 2 + 35)
+        .attr("x", chartWidth - 30)
+        .attr("y", chartHeight / 2 + 35)
         .text("Arousal")
         .style("font-size", "16px")
 
@@ -115,7 +147,7 @@ function createCitiesViz(bookid) {
        svg.append("text")
         .attr("text-anchor", "middle")
         .attr("transform", "rotate(-90)")
-        .attr("y", -margin.left + width / 2)
+        .attr("y", -margin.left + chartWidth / 2)
         .attr("x", -margin.top)
         .text("Valence")
         .style("font-size", "16px")
@@ -154,13 +186,12 @@ function createCitiesViz(bookid) {
           .transition()
           .duration(200)
           .style("visibility", "hidden")
+          tooltip_cityemo.html("");
         d3.select(this)
           .style("stroke", "none")
           .style("opacity", 0.8)
        }
-       const mouseout = function (d) {
-        tooltip_cityemo.html("");
-       }
+      
 
        const rescale = function (d) {
         const max = 450; //max seems to be 420 for Rome somewhere
@@ -192,14 +223,15 @@ function createCitiesViz(bookid) {
         .on("mouseleave", mouseleave)
         .on("click", (event, d) => {
 
-          event.stopPropagation();
-          //ImageContainer.html('');
-          tooltip_cityemo.style("visibility", "visible")
-            .style("left","50")
-            .style("top", "200");
-          tooltip_cityemo.selectAll("*").remove();
+          
           //console.log(d.img);
           if (d.img) {
+            event.stopPropagation();
+            //ImageContainer.html('');
+            tooltip_cityemo.style("visibility", "visible")
+              .style("left","50")
+              .style("top", "200");
+            tooltip_cityemo.selectAll("*").remove();
 
             const image = new Image();
             const imagesrc = "./src/img/cities/" + d.city + "_image.png";
@@ -215,31 +247,15 @@ function createCitiesViz(bookid) {
               .append("img")
               .attr("src", imagesrc)
               .style("width", "auto")  // Set the desired width
-              .style("height", "400px"); // Adjust the height accordingly
+              .style("height", "300px"); // Adjust the height accordingly
                   
               ImageContainer
               .style("left", "50")
-              .style("top", "100");
-
-            
+              .style("top", "100");  
 
           }
         })
 
-
-       /* // Add click event listener to document object
-        d3.select(document).on("click", function () {
-          tooltip.style("visibility", "hidden");
-      });
-
-      */
-
-
-    });
-
-    });
-
-  });
 }
 
 

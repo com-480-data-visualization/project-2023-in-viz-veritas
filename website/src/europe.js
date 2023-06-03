@@ -8,7 +8,7 @@ function whenDocumentLoaded(action) {
 
 
 // Get the width of the Bootstrap container
-var containerWidth = d3.select(".row").node().getBoundingClientRect().width;
+var containerWidth = (d3.select(".row").node().getBoundingClientRect().width)/2;
 var margin = { top: 20, right: 20, bottom: 30, left: 40 };
 var width = containerWidth - margin.left - margin.right;
 var height = 400;
@@ -23,7 +23,7 @@ whenDocumentLoaded(() => {
         console.log(cities);
 
         // Create a Leaflet map
-        const map = L.map('map').setView([48.945594, -35.550782], 4);
+        const map = L.map('map').setView([49.849318, -28.335938], 4);
 
         // Add a tile layer with the custom tile URL
 
@@ -66,6 +66,15 @@ whenDocumentLoaded(() => {
                 //console.log(freq)
                 // Add a marker to the map using the obtained coordinates
                 const marker = L.marker([coord.lat, coord.lng]).addTo(map);
+
+                marker.on('mouseover', function (e) {
+                    this.openPopup();
+                });
+                
+                marker.on('mouseout', function (e) {
+                    this.closePopup();
+                });
+    
                 if (freq>1){
                     marker.bindPopup(`<b>${city}</b><br> ${freq} books were published here !`).openPopup();
                 }else{
