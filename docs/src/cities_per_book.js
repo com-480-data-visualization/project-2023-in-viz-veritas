@@ -4,7 +4,7 @@ var width = (d3
   .getBoundingClientRect().width);
 var height = 400;
 var margin = { top: 20, right: 20, bottom: 40, left: 40 };
-const chartWidth = width - margin.left - margin.right;
+const chartWidth = width/2 - margin.left - margin.right;
 const chartHeight = height - margin.top - margin.bottom;
 
 function whenDocumentLoaded(action) {
