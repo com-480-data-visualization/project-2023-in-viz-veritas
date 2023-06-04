@@ -11,8 +11,6 @@
 | Zoé Jeandupeux| 301373 |
 
 
-[Screencast](https://drive.google.com/file/d/1jbeosjXkectm43pLbShROUntwZEI_SjZ/view?usp=sharing)
-
 
 ## Milestone 1 
  
@@ -25,3 +23,6 @@
 
 ## Milestone 3 (4th June, 5pm)
 
+[Website](https://com-480-data-visualization.github.io/project-2023-in-viz-veritas/)
+[Screencast](https://drive.google.com/file/d/1jbeosjXkectm43pLbShROUntwZEI_SjZ/view?usp=sharing)
+[Process Book]
