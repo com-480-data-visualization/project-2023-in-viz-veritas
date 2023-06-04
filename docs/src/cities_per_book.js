@@ -76,19 +76,21 @@ function createCitiesViz(bookid) {
         let dots;
         let svg;
         createEmotionCities(citiesdata);
-
-        const map = L.map('cities-map').setView([41.8933203, 12.4829321], 6);
+        whenDocumentLoaded(() => {
+          const map = L.map('cities-map').setView([41.8933203, 12.4829321], 6);
 
           L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 10,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           }).addTo(map);
+        
 
-        // Fetch the coordinates.json file and cache the data
-        d3.json("./src/data/coordinates.json").then(function (data) {
-          let cachedCoordinates = data;
+          // Fetch the coordinates.json file and cache the data
+          d3.json("./src/data/coordinates.json").then(function (data) {
+            let cachedCoordinates = data;
           
-          createMap(citiesdata, map, cachedCoordinates);
+            createMap(citiesdata, map, cachedCoordinates);
+          });
         });
 
     });
@@ -137,7 +139,7 @@ function createMap(citiesdata, map, cached){
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.5,
-        radius: 5000*rescale(frequency, 30, 2) 
+        radius: 5000*rescale(frequency, 30, 2) ,
       }).addTo(map);
 
       // Bind popup on hover
@@ -145,19 +147,27 @@ function createMap(citiesdata, map, cached){
         this.openPopup();
         console.log(city);
         const selectedName = city;
+        const selectedPoint=dots.filter(d => d.city === selectedName);
+
+        selectedPoint.raise();
 
         // Highlight the corresponding point in the second graph
-        dots.filter(d => d.city === selectedName)
+        selectedPoint
            .style('fill', '#f03')
            .style('opacity', 0.8);
       });
 
+
       // Hide popup on mouseout
       circle.on('mouseout', function (e) {
         this.closePopup();
-        dots.filter(d => d.city === city)
+        const selectedName=city;
+        dots.filter(d => d.city === selectedName)
            .style('fill', d => color(d.img));
+        
+        //dots.filter(d => d.city === city).node().dispatchEvent(new MouseEvent('mouseleave'))
       });
+
 
       if (frequency===1){
         circle.bindPopup(`<b>${city}</b><br> was named once`);
@@ -228,11 +238,13 @@ function createEmotionCities(citiesdata){
   const mouseover = function (d) {
         tooltip_cityemo
           .style("visibility", "visible")
-        d3.select(this)
+        d3.select(this).raise()
           .style("stroke", "black")
           .style("opacity", 0.8)
   }
   const mousemove = function (event, d) {
+        console.log('Inside mousemove!');
+        console.log(d.city, event.detail);
 
         tooltip_cityemo.style("visibility", "visible");
         const textcity = d.city.toString();
@@ -251,7 +263,7 @@ function createEmotionCities(citiesdata){
           .style("visibility", "hidden")
           tooltip_cityemo.html("");
         d3.select(this)
-          .style("stroke", "none")
+          .style("stroke", primaryColor)
           .style("opacity", 0.8)
   }
 
@@ -267,7 +279,7 @@ function createEmotionCities(citiesdata){
         .attr("cy", d => YScale(d.city_valence))
         .attr("r", d => rescale(d.freq))
         .style("fill", d => color(d.img))
-        .style("stroke", "none")
+        .style("stroke", primaryColor)
         .style("opacity", 0.8)
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
