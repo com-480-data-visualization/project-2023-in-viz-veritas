@@ -86,6 +86,20 @@ function createScatterPlot(data, title, chartId) {
     .style("font-size", "16px")
     .text(title);
 
+  svg
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", height + 30)
+    .attr("text-anchor", "middle")
+    .text("Valence");
+  svg
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", -margin.left + 10)
+    .attr("text-anchor", "middle")
+    .text("Arousal");
+
   // Add tooltip
   const tooltip = d3
     .select("body")
@@ -99,7 +113,6 @@ function createScatterPlot(data, title, chartId) {
     .on("mouseover", function () {
       tooltip.style("visibility", "hidden");
       d3.select(this).style("stroke", "black");
-
     })
     .on("mousemove", function (event, d) {
       tooltip.style("visibility", "visible");
@@ -114,22 +127,21 @@ function createScatterPlot(data, title, chartId) {
       tooltip
         .html(
           "Page: " +
-          page +
-          "<br>" +
-          valText +
-          "<br>" +
-          arousalText +
-          "<br>" +
-          "Emotion: " +
-          emotion
+            page +
+            "<br>" +
+            valText +
+            "<br>" +
+            arousalText +
+            "<br>" +
+            "Emotion: " +
+            emotion
         )
         .style("left", event.pageX + 10 + "px")
         .style("top", event.pageY + 10 + "px");
-
     })
     .on("mouseleave", function () {
       tooltip.style("visibility", "hidden");
-      d3.select(this).style("stroke", "none")
+      d3.select(this).style("stroke", "none");
     });
 }
 
