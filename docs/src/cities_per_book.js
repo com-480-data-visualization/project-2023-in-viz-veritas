@@ -20,17 +20,18 @@ function checkFileExists(fileUrl) {
   return fetch(fileUrl, { method: 'HEAD' })
     .then(response => response.ok)
     .catch(error => {
-      console.log('Error:', error);
+      // console.log('Error:', error);
       return false;
     });
 }
+
 
 
 function createCitiesViz(bookid) {
   // Clear previous charts
   d3.select("#cities-scatter").selectAll("*").remove();
   //d3.select("#cities-map").selectAll("*").remove();
-  console.log(width, height, chartWidth, chartHeight);
+  // console.log(width, height, chartWidth, chartHeight);
 
   const mapContainer = document.getElementById('cities-map');
   if (mapContainer._leaflet_id) {
@@ -38,7 +39,7 @@ function createCitiesViz(bookid) {
     mapContainer.innerHTML = '';
   }
 
-  console.log("Cities load");
+  // console.log("Cities load");
 
 
   // Load the selected book's data
@@ -145,7 +146,7 @@ function createMap(citiesdata, map, cached){
       // Bind popup on hover
       circle.on('mouseover', function (e) {
         this.openPopup();
-        console.log(city);
+        // console.log(city);
         const selectedName = city;
         const selectedPoint=dots.filter(d => d.city === selectedName);
 
@@ -243,8 +244,8 @@ function createEmotionCities(citiesdata){
           .style("opacity", 0.8)
   }
   const mousemove = function (event, d) {
-        console.log('Inside mousemove!');
-        console.log(d.city, event.detail);
+        // console.log('Inside mousemove!');
+        // console.log(d.city, event.detail);
 
         tooltip_cityemo.style("visibility", "visible");
         const textcity = d.city.toString();

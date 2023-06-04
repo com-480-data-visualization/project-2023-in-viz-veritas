@@ -27,7 +27,7 @@ function createEmotionViz(bookid) {
       createLineChart(valenceData, "Valence", "valence-chart");
       createLineChart(arousalData, "Arousal", "arousal-chart");
       createScatterPlot(pages, "Emotion Scatter Plot", "emotion-scatter");
-      console.log("Loaded emotion data correctly");
+      // console.log("Loaded emotion data correctly");
     })
     .catch(function (error) {
       console.log("Error fetching data:", error);
