@@ -6,7 +6,7 @@ Discover a treasure trove of rare books from the prestigious Bibliotheca Hertzia
 Through our carefully crafted visualizations, you will have the opportunity to explore these fascinating books, providing a window into Italy's captivating past. Immerse yourself in the vivid descriptions, detailed accounts, and intriguing narratives that will transport you back in time and ignite your wanderlust. 
 We invite you to embark on this captivating journey and indulge in the rich history and allure of Italy through the lens of these extraordinary travel books. 
 
-Enjoy the experience!
+Enjoy the [experience](https://com-480-data-visualization.github.io/project-2023-in-viz-veritas/)!
 
 
 ## Milestone 1 
